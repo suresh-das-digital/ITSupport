@@ -18,6 +18,7 @@ import SpecificIssueList from "./_components/SpecificIssueList";
 import { ServiceMeta, servicesMeta } from "@/lib/servicesMeta";
 import { buildMetadata, renderJsonLd } from "@/lib/seo";
 import HeroSection from "@/components/HeroSection";
+import { servicesMenuItem } from "@/utils/constant/defaultNavLinks";
 
 interface Props {
   params: { slug: string };
@@ -49,6 +50,7 @@ export default function ServiceDetail({ params }: Props) {
   // } else {
   service = servicesDetailData.find((s) => s.slug === decodedString) || {};
   // }
+  const menuItem = servicesMenuItem.find((s) => s.href.includes(decodedString));
 
   if (!service) {
     return <div className="p-8">Service not found</div>;
@@ -56,9 +58,7 @@ export default function ServiceDetail({ params }: Props) {
 
   const jsonLdScripts = renderJsonLd(meta?.jsonLd ?? []);
 
-  console.log(
-    "service.issuecategory2?.issueCategories?????",
-  );
+  console.log("service.issuecategory2?.issueCategories?????");
   return (
     <>
       <Head>
@@ -88,7 +88,7 @@ export default function ServiceDetail({ params }: Props) {
             home: "Services",
           },
           {
-            home: "Tech Support",
+            home: menuItem?.label || '',
           },
         ]}
         imageSrc={service.heroImage}
@@ -170,21 +170,21 @@ export default function ServiceDetail({ params }: Props) {
                 bottomDesc={cat.bottomDesc}
               >
                 {cat?.issues?.map((catIssue) =>
-                    catIssue.type === "list" ? (
-                      <SpecificIssueList
-                        key={`service-issue-category-categories-${cat.title}-${catIssue.title}`}
-                        title={catIssue.title}
-                        options={catIssue.options || []}
-                      />
-                    ) : (
-                      <SpecificIssue
-                        key={`service-issue-category-categories-${cat.title}-${catIssue.title}`}
-                        title={catIssue.title}
-                        problemDescription={catIssue.problemDescription}
-                        solution={catIssue.solution}
-                      />
-                    )
-                  )}
+                  catIssue.type === "list" ? (
+                    <SpecificIssueList
+                      key={`service-issue-category-categories-${cat.title}-${catIssue.title}`}
+                      title={catIssue.title}
+                      options={catIssue.options || []}
+                    />
+                  ) : (
+                    <SpecificIssue
+                      key={`service-issue-category-categories-${cat.title}-${catIssue.title}`}
+                      title={catIssue.title}
+                      problemDescription={catIssue.problemDescription}
+                      solution={catIssue.solution}
+                    />
+                  )
+                )}
               </IssueCategory>
             </div>
           ))}

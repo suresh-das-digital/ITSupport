@@ -15,6 +15,8 @@ import {
   Service,
   serviceDetailDataEs,
 } from "@/utils/constant/serviceDetailData";
+import { servicesMenuItemEs } from "@/utils/constant/defaultNavLinksES";
+import { spnaishServiceFooterLink } from "@/utils/constant/footerServicesLinks";
 
 interface ServiceDetailSpanishProps {
   params: { slug: string };
@@ -38,6 +40,9 @@ export default function InsightDetail({ params }: ServiceDetailSpanishProps) {
 
   const t = useTranslations();
   const locale = useLocale();
+  const menuItem = spnaishServiceFooterLink.find((s) =>
+    s.href.includes(decodedString)
+  );
 
   let service: Service =
     serviceDetailDataEs.find((s) => s.slug === decodedString) || {};
@@ -66,18 +71,18 @@ export default function InsightDetail({ params }: ServiceDetailSpanishProps) {
         heroTitle={service.title || ""}
         heroIntro={service.subtitle || ""}
         buttonTexts={[
-          { label: "Get Support Now" },
-          { label: "Request a Call" },
+          { label: "Obtenga SAoporte Ahora" },
+          { label: "Solicitar una Llamada" },
         ]}
         breadcrumbs={[
           {
-            home: "Home",
+            home: "Hogar",
           },
           {
-            home: "Services",
+            home: "Servicios De TI",
           },
           {
-            home: "Tech Support",
+            home: menuItem?.label || "",
           },
         ]}
         imageSrc={service.heroImage}

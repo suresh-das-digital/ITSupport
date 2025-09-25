@@ -93,7 +93,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                           <path d="m12 5 7 7-7 7" />
                         </svg>
                       )}
-                      <span>{parse(breadcrumb.home)}</span>
+                      <span className="capitalize">{parse(breadcrumb.home)}</span>
                     </>
                   ))}
                 </div>
