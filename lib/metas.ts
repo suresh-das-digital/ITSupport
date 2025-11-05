@@ -5,13 +5,13 @@ import { privacyMeta } from './privacyMeta'
 import { termsMeta } from './termsMeta'
 import { citiesMeta } from './citiesMeta'
 import { contactMeta } from './contactMeta'
-import { industriesMeta } from './industriesMeta'
 import { insightsMeta } from './insightsMeta'
 import { locationsMeta } from './locationsMeta'
 import { servicesMeta } from './servicesMeta'
 import { serviciosdetiMeta } from './serviciosdetiMeta'
 import { homeMeta } from './homeMeta'
 import { servicesMetaMeta } from './servicesMetaMeta'
+import { industriesMeta } from "./industriesMeta";
 
 export const metas: {
   [type in string]: PageMeta
