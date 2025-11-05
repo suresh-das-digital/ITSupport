@@ -11,7 +11,7 @@ import { servicesMeta } from './servicesMeta'
 import { serviciosdetiMeta } from './serviciosdetiMeta'
 import { homeMeta } from './homeMeta'
 import { servicesMetaMeta } from './servicesMetaMeta'
-import { industriesMeta } from "./industriesMeta";
+// import { industriesMeta } from "./industriesMeta";
 
 export const metas: {
   [type in string]: PageMeta
@@ -22,7 +22,7 @@ export const metas: {
   'terms': termsMeta,
   'cities': citiesMeta,
   'contact': contactMeta,
-  'industries': industriesMeta,
+  'industries': {},
   'insights': insightsMeta,
   'locations': locationsMeta,
   'services': servicesMeta,
