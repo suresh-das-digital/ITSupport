@@ -290,6 +290,48 @@
       "description": "We envision a world where <b>technology is an enabler, not a barrier</b>, for businesses of all sizes. Our goal is to become the <b>go-to IT support partner globally</b>, recognized for <b>unmatched service quality, reliability, and innovation</b> in every project we undertake."
     }
   },
+  "locations": {
+    "heroTitle": "Global <siteTitle>IT Support</siteTitle> Services - ITSupport.net.in",
+    "heroIntro": "Reliable, Scalable, and 24/7 IT Support Across the US, UK, India, Australia, Germany, France, and Canada"
+  },
+  "InsightsPage": {
+    "hero": {
+      "title": "Insights, Blog, Case Studies & News - <siteTitle>ITSupport.net.in</siteTitle>",
+      "intro": "Insights - Expert Knowledge to Empower Your Business"
+    },
+    "para": [
+      "The <b>Insights</b> section of ITSupport.net.in is your trusted source for <b>in-depth analysis, expert advice, and strategic guidance</b> in the world of IT support and network solutions. Our aim is to <b>equip businesses, IT managers, and individuals</b> with the information they need to make informed technology decisions.",
+      "From <b>cybersecurity best practices</b> and <b>network optimization strategies</b> to <b>cloud migration planning</b> and <b>disaster recovery preparedness</b>, our insights are built on <b>years of hands-on experience</b> and the latest industry research."
+    ],
+    "faq": [
+      {
+        "label": "Q1: How can I use your Insights section to improve my IT strategy?",
+        "desc": "Our Insights provide expert analysis and practical advice that you can apply directly to your IT planning, helping you stay ahead of technology trends and challenges."
+      },
+      {
+        "label": "Q2: Can I contribute to the ITSupport.net.in Blog?",
+        "desc": "Yes. We accept guest contributions from IT professionals who can share valuable, relevant, and original content with our audience."
+      },
+      {
+        "label": "Q3: How do you choose which case studies to feature?",
+        "desc": "We select projects that demonstrate significant problem-solving, measurable results, and innovative approaches relevant to our audience."
+      },
+      {
+        "label": "Q4: How often is the News section updated?",
+        "desc": "We update our News section regularly with company announcements, service updates, and important industry developments."
+      },
+      {
+        "label": "Q5: Why should I read your Blog and Insights regularly?",
+        "desc": "By reading regularly, you gain continuous access to expert tips, guides, and updates that help you optimize your IT systems and protect your business."
+      }
+    ]
+  },
+  "PricingPage": {
+    "hero": {
+      "title": "Pricing - Affordable & Transparent <siteTitle>IT Support</siteTitle> Plans for Every Business",
+      "intro": "Your Technology. Our Expertise. One Clear Price."
+    }
+  },
   "IndustriesPage": {
     "heroTitle": "Global",
     "heroHighlight": "IT Support",
@@ -304,5 +346,231 @@
     "forEveryBusinessStage": "Serivce",
     "comprehensiveRange1": "At ",
     "comprehensiveRange2": " , we provide a comprehensive range of services designed to cover every aspect of your IT infrastructure. Click on any service to learn more about our specialized solutions"
+  },
+  "CookiePage": {
+    "whatAreCookies": "What Are Cookies",
+    "whatAreCookiesDesc": "Cookies are small text files that websites send to your browser and store on your device. They enable website functionality (e.g., remembering login sessions), facilitate analytics, and help deliver personalized content. <link>Wikipedia</link>",
+    "whatAreCookiesDescWikipediaRef": "https://en.wikipedia.org/wiki/HTTP_cookie?utm_source=chatgpt.com"
+  },
+  "PrivacyPage": {
+    "para": "ITSupport.net.in (“we”, “us”, “our”) is committed to protecting your privacy and personal information. This Privacy Policy describes what information we collect, how we use and share it, your choices and rights, and how we protect that information in accordance with applicable U.S. government guidance and state privacy laws.",
+    
+    "scopeTitle": "1. Scope & Who this Policy Covers",
+    "scopePara": "This policy applies to information collected on our website (https://www.itsupport.net.in), via our contact forms, support portals, live chat, email, phone, and other services we provide. It covers personal information about consumers, customers, job applicants, and visitors. If you are a California resident, see the Your Rights section for additional CCPA/CPRA information. California Attorney General",
+    
+    "infoCollectTitle": "2. Information We Collect",
+    "infoCollectSubTitle": "We collect information you provide directly and information collected automatically:",
+    "infoCollectPara": [
+      {
+        "heading": "Information you provide:",
+        "text": "name, email, phone number, company, job title, billing/shipping address (when relevant), service requests, support tickets, attachments you send (logs, screenshots), and other messages."
+      },
+      {
+        "heading": "Automatically collected information:",
+        "text": "IP address, device/browser type, pages visited, referrer, cookies and similar tracking technologies, and analytics data. We may collect usage metrics (e.g., session duration, error logs) to improve our services. We use cookies and tracking for site functionality, analytics, and marketing. (See Cookies section below.) Federal Trade Commission"
+      }
+    ],
+    
+    "howWeUseInfoTitle": "3. How We Use Information",
+    "howWeUseInfoSubTitle": "We use personal information to:",
+    "howWeUseInfoPoints": [
+      "Provide, operate, maintain, and improve our services and website.",
+      "Respond to requests, provide customer support, and manage accounts.",
+      "Process payments and invoices (if applicable).",
+      "Communicate about service status, updates, security alerts, and marketing (with your consent where required).",
+      "Detect, prevent and respond to security incidents and abuse.",
+      "Comply with legal obligations and exercise legal rights."
+    ],
+    "howWeUseInfoFooterText": "We limit use to the purpose for which the data was collected, consistent with industry practices and applicable law. Federal Trade Commission NIST",
+    
+    "legalBasicTitle": "4. Legal Basis & Lawful Uses",
+    "legalBasicPara": "For U.S.-based operations, our processing is based on contractual necessity (service delivery), legitimate interests (security, analytics, product improvement), consent (for marketing where required), and legal compliance. If you are a California resident or located in a jurisdiction with special privacy laws, additional rights may apply (see <b>Your Rights</b>).",
+    
+    "sharingTitle": "5. Sharing & Disclosure",
+    "sharingSubTitle": "We may share personal information with:",
+    "sharingPoints": [
+      "<b>Service providers</b> and vendors (hosting providers, email services, analytics, payment processors) under contracts requiring them to protect data.",
+      "<b>Affiliates</b> or business partners when needed to serve you.",
+      "<b>Law enforcement or government authorities</b> when required by law, subpoena, or legitimate legal request.",
+      "<b>Business transfers —</b> in connection with a merger, acquisition, or sale of assets (with notice).<br></br>We do not sell personal information for advertising purposes. Where \"sale\" or \"sharing\" is possible under state law (e.g., CCPA/CPRA definitions), we will disclose applicable choices and opt-outs. California Attorney Genera"
+    ],
+    
+    "dataSecurityTitle": "6. Data Security",
+    "dataSecurityDesc": "We implement administrative, technical, and physical safeguards reasonably designed to protect personal information from unauthorized access, disclosure, alteration, and destruction. Our security practices align with recognized frameworks and guidance such as NIST’s Cybersecurity Framework and FTC recommendations (access controls, encryption in transit and at rest where feasible, regular patching, monitoring, and employee training). However, no system is 100% secure; we will notify affected individuals and regulators where required by law if we become aware of a data breach. NISTFederal Trade Commission",
+
+    "cookieTrackingTitle": "7. Cookies & Tracking Technologies",
+    "cookieTrackingSubTitle": "We use cookies, web beacons, and similar technologies:",
+    "cookieTrackingPoints": [
+      {
+        "heading": "Essential cookies",
+        "text": "for site functionality and security."
+      },
+      {
+        "heading": "Performance/analytics cookies",
+        "text": "to measure and improve site experience."
+      },
+      {
+        "heading": "Advertising/marketing cookies",
+        "text": "(if used) to deliver relevant content. You can manage cookies via your browser settings, and some tracking choices can be controlled through cookie preference tools provided on our site."
+      }
+    ],
+
+    "dataRetentionTitle": "8. Data Retention",
+    "dataRetentionDesc": "We retain personal information as necessary to fulfill business or legal obligations, resolve disputes, enforce agreements, and maintain security. Typical retention periods will reflect the type of data and the purpose (e.g., support tickets — retained while active + X months after resolution; marketing lists — retained until opt-out). Specific retention schedules will be defined internally and are available upon request.",
+
+    "yourChoice": {
+      "title": "9. Your Choices & Rights",
+      "general": {
+        "title": "General",
+        "points": [
+          {
+            "heading": "Access & correction:",
+            "text": "You can request access to or correction of your personal data."
+          },
+          {
+            "heading": "Delete/Limit:",
+            "text": "Where applicable, request deletion or restriction of processing."
+          },
+          {
+            "heading": "Marketing opt-out:",
+            "text": "You can opt out of marketing emails using the unsubscribe link or by contacting us."
+          }
+        ]
+      },
+      "ccap": {
+        "title": "California Residents (CCPA/CPRA)",
+        "desc": "California residents may have additional rights including: (a) right to know categories and specific pieces of personal information collected; (b) right to deletion; (c) right to opt out of sale/sharing; and (d) right to non-discrimination for exercising privacy rights. To exercise CCPA/CPRA rights, submit a verifiable consumer request as described in our <b>Contact</b> section. We will verify requests reasonably to protect privacy and security. California Attorney General"
+      },
+      "coppa": {
+        "title": "Children's Privacy (COPPA)",
+        "desc": "Our services are not directed to children under 13. We do not knowingly collect personal information from children under 13. If we become aware we have collected such information, we will delete it immediately. Operators of sites that knowingly collect children’s data must follow COPPA requirements (parental consent, notice). If you believe we hold information of a child under 13, contact us. Federal Trade Commission"
+      },
+      "hipaa": {
+        "title": "Health Information (HIPAA)",
+        "desc": "If our services involve handling protected health information (PHI) as a covered entity or business associate, we will implement required HIPAA safeguards and sign Business Associate Agreements where appropriate. If you believe PHI was shared inadvertently via our public-facing site or support channels, contact us immediately. HIPAA rules govern covered entities and business associates with specific notice and security obligations. HHS.gov"
+      }
+    },
+
+    "intlTransferTitle": "10. International Transfers",
+    "intlTransferDesc": "If personal information is transferred outside your country, we’ll protect it using contractual safeguards, security practices, or other legal mechanisms.",
+
+    "tpLinksTitle": "11. Third-Party Links & Integrations",
+    "tpLinksDesc": "We may link to third-party sites (payment providers, analytics, social networks). This policy does not cover those services. Review third-party privacy notices before providing personal data.",
+
+    "lawEnforceTitle": "12. Law Enforcement & Legal Requests",
+    "lawEnforceDesc": "We may disclose personal information to comply with laws, court orders, or valid legal processes, and to protect the rights, property, or safety of ITSupport.net.in, our users, or the public.",
+
+    "changesTitle": "13. Changes to This Privacy Policy",
+    "changesDesc": "We may update this policy to reflect changes in law, our practices, or services. We will post the revised policy with an updated effective date and, where required, notify users of material changes.",
+
+    "howToContactTitle": "14. How to Contact Us / Exercise Rights",
+    "howToContactSubTitle": "To exercise your privacy rights, or for questions, requests, or complaints, contact:",
+    "howToContactContactInfo": "ITSupport.net.in Email: assist@itsupport.net.in Postal address: Phone: ",
+    "howToContactDesc": "For California CCPA/CPRA requests, please include “CCPA Request” in the subject line and provide enough information to verify your identity (name, email address associated with the account, and description of the request). We will respond as required by law."
+  },
+  "TermsPage": {
+    "pageHeading": "Terms of Service — ITSupport.net.in",
+    "effectiveDateTitle": "Effective Date:",
+    "effectiveDate": "August 27, 2025",
+
+    "acceptanceTerm": {
+      "title": "Acceptance of Terms",
+      "para": "By accessing or using our website (<at>https://www.itsupport.net.in</at>) and related services, you agree to comply with and be bound by these Terms of Service (“Terms”). If you do not agree, please do not use our services."
+    },
+
+    "scope": {
+      "title": "Scope of Services",
+      "para": "ITSupport.net.in provides tech support services—including Wi-Fi, antivirus, remote IT support, network management, eCommerce support, and related assistance. We may update, modify, or discontinue services at any time without notice."
+    },
+
+    "conduct": {
+      "title": "User Conduct",
+      "subTitle": "You agree not to misuse our services by:",
+      "points": [
+        "Engaging in illegal or harmful activities or misrepresenting your identity.",
+        "Attempting unauthorized access, reverse engineering, or introducing malware.",
+        "Using our services for unsolicited advertising, spamming, or phishing. Violations may result in suspension or termination of access."
+      ]
+    },
+
+    "ip": {
+      "title": "Intellectual Property",
+      "para": "All website content—including logos, graphics, designs, text, and software—is owned by ITSupport.net.in or its licensors. You may not copy, reproduce, distribute, or create derivative works without express written permission."
+    },
+
+    "warranty": {
+      "title": "Disclaimer of Warranties",
+      "para": "SERVICES ARE PROVIDED “AS-IS” WITHOUT WARRANTIES. WE DISCLAIM ALL WARRANTIES—EXPRESS, IMPLIED, STATUTORY—INCLUDING MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT."
+    },
+    
+    "limit": {
+      "title": "Limitation of Liability",
+      "para": "TO THE MAXIMUM EXTENT PERMITTED BY LAW, ITSupport.net.in SHALL NOT BE LIABLE FOR INDIRECT, INCIDENTAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. OUR AGGREGATE LIABILITY IS LIMITED TO FEES PAID BY YOU IN THE LAST 12 MONTHS."
+    },
+
+    "fee": {
+      "title": "Pricing and Fees",
+      "para": "We will provide upfront pricing for our services. Where applicable, all mandatory fees will be clearly disclosed to comply with the FTC’s guidance against deceptive pricing. (ftc.gov)."
+    },
+
+    "modification": {
+      "title": "Modifications to the Terms",
+      "para": "We may modify these Terms at any time. If material changes occur, we'll notify you by posting the updated Terms with a new “Effective Date.” Continuing to use our services after the update means you accept the new Terms"
+    },
+
+    "privacy": {
+      "title": "Privacy Policy",
+      "para": "Your information is governed by our <a>Privacy Policy</a>. By using our services, you acknowledge that you have reviewed it."
+    },
+
+    "law": {
+      "title": "Governing Law & Dispute Resolution",
+      "para": "These Terms are governed by the laws of the State of [Your State], USA, without regard to conflict of laws principles. Any disputes will be resolved in courts located in [Your County], [Your State]."
+    },
+
+    "termination": {
+      "title": "Termination",
+      "para": "We may suspend or terminate your access for breach of these Terms or any applicable laws. Provisions that, by their nature, survive termination (e.g., Sections 3–7) will continue in effect."
+    },
+
+    "agreement": {
+      "title": "Entire Agreement",
+      "para": "These Terms, plus the Privacy Policy and any additional legal notices, form the entire agreement between you and ITSupport.net.in regarding your use of the Services."
+    },
+
+    "contact": {
+      "title": "Contact Information",
+      "subTitle": "If you have questions or concerns about these Terms, contact us at:",
+      "contact": {
+        "name": "ITSupport.net.in",
+        "email": {
+          "title": "Email",
+          "value": "assist@itsupport.net.in"
+        },
+        "address": {
+          "title": "Address",
+          "value": ""
+        },
+        "phone": {
+          "title": "Phone",
+          "value": ""
+        }
+      },
+
+      "compliance": {
+        "title": "Compliance Highlights:",
+        "points": [
+          "Includes upfront pricing disclosures to comply with FTC rules on deceptive practices. (turn0search16)",
+          "Includes user conduct restrictions to guard against misuse in line with FTC Section 5 standards. (turn0search14)",
+          "Provides modifications clause to alert users of changes—consistent with FTC guidance on lawful updates. (turn0search0)",
+          "Uses a limitation of liability and disclaimer to reduce risk exposure—common best practice."
+        ]
+      }
+    },
+    
+    "links": {
+      "Privacy Policy": "/privacy"
+    }
+
   }
 }

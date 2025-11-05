@@ -3,6 +3,7 @@ export const servicesMenuItemEs = [
     label: "Soporte de copia de seguridad de datos",
     desc: "Proteja los datos críticos de su empresa con soluciones de respaldo seguras. Ofrecemos servicios automatizados de copia de seguridad y recuperación que garantizan que su información esté segura, recuperable y cumpla con los estándares de la industria.",
     href: "/services/soporte-remoto-de-ti",
+    theme: {},
     icon: (
       <svg
         stroke="currentColor"
@@ -22,6 +23,7 @@ export const servicesMenuItemEs = [
     label: "Servicios de soporte antivirus",
     desc: "Asegure una conectividad Wi-Fi sin interrupciones para sus oficinas, almacenes o campus educativos. Nuestro equipo se encarga de la configuración, optimización, seguridad y solución de problemas de redes inalámbricas.",
     href: "/services/soporte-presencial",
+    theme: {},
     icon: (
       <svg
         stroke="currentColor"
@@ -41,6 +43,7 @@ export const servicesMenuItemEs = [
     label: "Servicios de soporte para impresoras",
     desc: "Resuelva eficientemente todos los problemas relacionados con impresoras. Desde la configuración e instalación de controladores hasta la solución de problemas de impresoras en red o inalámbricas, nuestro soporte garantiza que sus operaciones de impresión no interrumpan el flujo de trabajo.",
     href: "/services/mesa-de-ayuda-24-7",
+    theme: {},
     icon: (
       <svg
         stroke="currentColor"
@@ -60,6 +63,7 @@ export const servicesMenuItemEs = [
     label: "Servicios de soporte de red",
     desc: "Mantenga una red robusta y confiable con nuestro soporte experto en LAN, WAN y VPN. Solucionamos problemas de conectividad, optimizamos el rendimiento de la red y ofrecemos monitoreo proactivo para prevenir tiempos de inactividad.",
     href: "/services/soporte-de-red-wifi",
+    theme: {},
     icon: (
       <svg
         stroke="currentColor"
@@ -79,6 +83,7 @@ export const servicesMenuItemEs = [
     label: "Servicios de soporte en la nube",
     desc: "Gestione sin problemas su infraestructura en la nube con nuestros servicios de soporte. Desde la migración hasta el mantenimiento en plataformas como AWS, Azure y Google Cloud, garantizamos el mejor rendimiento y seguridad.",
     href: "/services/servicios-de-soporte-de-antivirus",
+    theme: {},
     icon: (
       <svg
         stroke="currentColor"
@@ -98,6 +103,7 @@ export const servicesMenuItemEs = [
     label: "Servicios de soporte para comercio electrónico",
     desc: "Para negocios en línea, el tiempo de actividad es crítico. Brindamos soporte de comercio electrónico, asegurando que su tienda, pasarelas de pago y sistemas funcionen perfectamente, mejorando la experiencia del cliente y los ingresos.",
     href: "/services/servicios-de-soporte-para-reparaci%C3%B3n-de-hardware",
+    theme: {},
     icon: (
       <svg
         stroke="currentColor"
@@ -117,6 +123,7 @@ export const servicesMenuItemEs = [
     label: "Servicios de soporte de reparación de hardware",
     desc: "Nuestros técnicos expertos atienden PCs, laptops, servidores y periféricos. Ofrecemos diagnóstico, reparación y mantenimiento para prolongar la vida útil del hardware y evitar interrupciones operativas.",
     href: "/services/servicios-gestionados-de-ti",
+    theme: {},
     icon: (
       <svg
         stroke="currentColor"
@@ -136,6 +143,7 @@ export const servicesMenuItemEs = [
     label: "Soporte de alojamiento web y dominio",
     desc: "Le ayudamos con el alojamiento de sitios web, gestión de dominios y configuraciones técnicas, asegurando que su presencia en línea sea confiable, segura y rápida.",
     href: "/services/soporte-para-la-configuraci%C3%B3n-de-correo-electr%C3%B3nico",
+    theme: {},
     icon: (
       <svg
         stroke="currentColor"
@@ -155,6 +163,7 @@ export const servicesMenuItemEs = [
     label: "Soporte para configuración de correo electrónico",
     desc: "La comunicación por correo electrónico es vital para cualquier organización. Ofrecemos configuración, migración y solución de problemas de correo en plataformas como Microsoft 365, Gmail y Outlook.",
     href: "/services/servicios-de-soporte-para-comercio-electr%C3%B3nico",
+    theme: {},
     icon: (
       <svg
         stroke="currentColor"
@@ -174,6 +183,7 @@ export const servicesMenuItemEs = [
     label: "Soporte de red Wi-Fi",
     desc: "Asegure conectividad Wi-Fi sin interrupciones en oficinas, almacenes o campus educativos. Nuestro equipo se encarga de la configuración, optimización, seguridad y solución de problemas de redes inalámbricas.",
     href: "/services/servicios-de-soporte-de-impresoras",
+    theme: {},
     icon: (
       <svg
         stroke="currentColor"
@@ -195,6 +205,7 @@ export const industriesMenuItemEs = [
   {
     label: "Salud",
     href: "/industries/healthcare",
+    theme: {},
     icon: (
       <svg
         stroke="currentColor"
@@ -213,6 +224,7 @@ export const industriesMenuItemEs = [
   {
     label: "Finanzas y Banca",
     href: "/industries/finance-banking",
+    theme: {},
     icon: (
       <svg
         stroke="currentColor"
@@ -231,6 +243,7 @@ export const industriesMenuItemEs = [
   {
     label: "Retail y Comercio Electrónico",
     href: "/industries/retail-ecommerce",
+    theme: {},
     icon: (
       <svg
         stroke="currentColor"
@@ -249,6 +262,7 @@ export const industriesMenuItemEs = [
   {
     label: "Manufactura",
     href: "/industries/manufacturing",
+    theme: {},
     icon: (
       <svg
         stroke="currentColor"
@@ -267,6 +281,7 @@ export const industriesMenuItemEs = [
   {
     label: "Educación",
     href: "/industries/education",
+    theme: {},
     icon: (
       <svg
         stroke="currentColor"
@@ -285,6 +300,7 @@ export const industriesMenuItemEs = [
   {
     label: "Servicios Profesionales",
     href: "/industries/professional",
+    theme: {},
     icon: (
       <svg
         stroke="currentColor"
@@ -303,6 +319,7 @@ export const industriesMenuItemEs = [
   {
     label: "Viajes y Hospitalidad",
     href: "/industries/travel-hospitality",
+    theme: {},
     icon: (
       <svg
         stroke="currentColor"
@@ -321,6 +338,7 @@ export const industriesMenuItemEs = [
   {
     label: "Construcción",
     href: "/industries/construction",
+    theme: {},
     icon: (
       <svg
         stroke="currentColor"
@@ -339,6 +357,7 @@ export const industriesMenuItemEs = [
   {
     label: "Logística",
     href: "/industries/logistics",
+    theme: {},
     icon: (
       <svg
         stroke="currentColor"
@@ -360,6 +379,7 @@ export const locationsMenuItemEs = [
   {
     label: "Estados Unidos",
     href: "/locations/us",
+    theme: {},
     icon: (
       <svg
         stroke="currentColor"
@@ -378,6 +398,7 @@ export const locationsMenuItemEs = [
   {
     label: "Reino Unido",
     href: "/locations/uk",
+    theme: {},
     icon: (
       <svg
         stroke="currentColor"
@@ -396,6 +417,7 @@ export const locationsMenuItemEs = [
   {
     label: "India",
     href: "/locations/in",
+    theme: {},
     icon: (
       <svg
         stroke="currentColor"
@@ -414,6 +436,7 @@ export const locationsMenuItemEs = [
   {
     label: "Australia",
     href: "/locations/au",
+    theme: {},
     icon: (
       <svg
         stroke="currentColor"
@@ -432,6 +455,7 @@ export const locationsMenuItemEs = [
   {
     label: "Alemania",
     href: "/locations/de",
+    theme: {},
     icon: (
       <svg
         stroke="currentColor"
@@ -450,6 +474,7 @@ export const locationsMenuItemEs = [
   {
     label: "Francia",
     href: "/locations/fr",
+    theme: {},
     icon: (
       <svg
         stroke="currentColor"
@@ -468,6 +493,7 @@ export const locationsMenuItemEs = [
   {
     label: "Canadá",
     href: "/locations/ca",
+    theme: {},
     icon: (
       <svg
         stroke="currentColor"
@@ -489,6 +515,7 @@ export const insightsMenuItemEs = [
   {
     label: "Blog",
     href: "/insights/blog",
+    theme: {},
     icon: (
       <svg
         stroke="currentColor"
@@ -507,6 +534,7 @@ export const insightsMenuItemEs = [
   {
     label: "Casos de Estudio",
     href: "/insights/case-studies",
+    theme: {},
     icon: (
       <svg
         stroke="currentColor"
@@ -525,6 +553,7 @@ export const insightsMenuItemEs = [
   {
     label: "Noticias",
     href: "/insights/news",
+    theme: {},
     icon: (
       <svg
         stroke="currentColor"

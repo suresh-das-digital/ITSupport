@@ -7,6 +7,7 @@ const withBundleAnalyzer = bundleAnalyzer({
 });
 
 const nextConfig: NextConfig = {
+  output: 'standalone',
   i18n: {
     locales: ["en", "es"],
     defaultLocale: "en",
@@ -21,6 +22,11 @@ const nextConfig: NextConfig = {
         as: "*.js",
       },
     },
+  },
+  images: {
+    remotePatterns: [{
+      hostname: 'images.unsplash.com',
+    }],
   },
   webpack: (config) => {
     // Add rule for SVG files

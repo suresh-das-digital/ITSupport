@@ -3,13 +3,18 @@ export const servicesMenuItem = [
     label: "Data backup support",
     desc: "Protect your critical business data with secure backup solutions. We provide automated backup services and recovery solutions that ensure your information is safe, retrievable, and compliant with industry standards.",
     href: "/services/best-data-backup-and-recovery-services",
+    theme: {
+      '--color': "var(--color-pink-500)",
+      // '--color': 'oklch(70.7% 0.165 254.624)',
+    },
     icon: (
       <svg
         stroke="currentColor"
         fill="currentColor"
         strokeWidth="0"
         viewBox="0 0 448 512"
-        className="inline mr-2 text-blue-500"
+        className="inline mr-2"
+        style={{color: 'var(--color)'}}
         height="1em"
         width="1em"
         xmlns="http://www.w3.org/2000/svg"
@@ -22,13 +27,17 @@ export const servicesMenuItem = [
     label: "Antivirus support services",
     desc: "Ensure seamless Wi-Fi connectivity for your offices, warehouses, or educational campuses. Our team handles setup, optimization, security, and troubleshooting of wireless networks.",
     href: "/services/antivirus-support-services",
+    theme: {
+      '--color': 'oklch(72.3% 0.219 149.579)'
+    },
     icon: (
       <svg
         stroke="currentColor"
         fill="currentColor"
         strokeWidth="0"
         viewBox="0 0 512 512"
-        className="inline mr-2 text-green-500"
+        className="inline mr-2"
+        style={{color: 'var(--color)'}}
         height="1em"
         width="1em"
         xmlns="http://www.w3.org/2000/svg"
@@ -41,13 +50,17 @@ export const servicesMenuItem = [
     label: "Printer support services",
     desc: "Resolve all printer-related issues efficiently. From setup and driver installation to troubleshooting networked or wireless printers, our support ensures your printing operations never disrupt workflow.",
     href: "/services/printer-support-services",
+    theme: {
+      '--color': 'oklch(55.1% 0.027 264.364)',
+    },
     icon: (
       <svg
         stroke="currentColor"
         fill="currentColor"
         strokeWidth="0"
         viewBox="0 0 512 512"
-        className="inline mr-2 text-gray-500"
+        className="inline mr-2"
+        style={{color: 'var(--color)'}}
         height="1em"
         width="1em"
         xmlns="http://www.w3.org/2000/svg"
@@ -60,13 +73,17 @@ export const servicesMenuItem = [
     label: "Network support services",
     desc: "Maintain a robust and reliable network with our expert LAN, WAN, and VPN support. We troubleshoot connectivity issues, optimize network performance, and provide proactive monitoring to prevent downtime.",
     href: "/services/networking-support-services",
+    theme: {
+      '--color': '#61CE70'
+    },
     icon: (
       <svg
         stroke="currentColor"
         fill="currentColor"
         strokeWidth="0"
         viewBox="0 0 640 512"
-        className="inline mr-2 text-[#61CE70]"
+        className="inline mr-2"
+        style={{color: 'var(--color)'}}
         height="1em"
         width="1em"
         xmlns="http://www.w3.org/2000/svg"
@@ -79,13 +96,17 @@ export const servicesMenuItem = [
     label: "Cloud support services",
     desc: "Seamlessly manage your cloud infrastructure with our cloud support services. From migration to maintenance on platforms like AWS, Azure, and Google Cloud, we ensure optimal performance and security.",
     href: "/services/professional-cloud-support-services",
+    theme: {
+      '--color': "oklch(68.5% 0.169 237.323)"
+    },
     icon: (
       <svg
         stroke="currentColor"
         fill="currentColor"
         strokeWidth="0"
         viewBox="0 0 640 512"
-        className="inline mr-2 text-sky-500"
+        className="inline mr-2"
+        style={{color: 'var(--color)'}}
         height="1em"
         width="1em"
         xmlns="http://www.w3.org/2000/svg"
@@ -98,13 +119,17 @@ export const servicesMenuItem = [
     label: "E-Commerce Support Services",
     desc: "For online businesses, uptime is critical. We provide e-commerce support, ensuring your store, payment gateways, and backend systems function flawlessly, enhancing customer experience and revenue.",
     href: "/services/e-commerce-support-services",
+    theme: {
+      '--color': 'oklch(65.6% 0.241 354.308)'
+    },
     icon: (
       <svg
         stroke="currentColor"
         fill="currentColor"
         strokeWidth="0"
         viewBox="0 0 576 512"
-        className="inline mr-2 text-pink-500"
+        className="inline mr-2"
+        style={{color: 'var(--color)'}}
         height="1em"
         width="1em"
         xmlns="http://www.w3.org/2000/svg"
@@ -117,13 +142,17 @@ export const servicesMenuItem = [
     label: "Hardware Repair Support Services",
     desc: "Our skilled technicians handle PCs, laptops, servers, and peripherals. We offer diagnostics, repair, and maintenance services to extend hardware lifespan and prevent operational disruptions.",
     href: "/services/hardware-repair-support-services",
+    theme: {
+      '--color': 'oklch(63.7% 0.237 25.331)'
+    },
     icon: (
       <svg
         stroke="currentColor"
         fill="currentColor"
         strokeWidth="0"
         viewBox="0 0 512 512"
-        className="inline mr-2 text-red-500"
+        className="inline mr-2"
+        style={{color: 'var(--color)'}}
         height="1em"
         width="1em"
         xmlns="http://www.w3.org/2000/svg"
@@ -136,13 +165,17 @@ export const servicesMenuItem = [
     label: "Web hosting & domain support",
     desc: "We assist with website hosting, domain management, and technical configurations, ensuring your online presence is reliable, secure, and fast.",
     href: "/services/website-hosting-domain-support-services",
+    theme: {
+      '--color': 'oklch(58.5% 0.233 277.117)'
+    },
     icon: (
       <svg
         stroke="currentColor"
         fill="currentColor"
         strokeWidth="0"
         viewBox="0 0 496 512"
-        className="inline mr-2 text-indigo-500"
+        className="inline mr-2"
+        style={{color: 'var(--color)'}}
         height="1em"
         width="1em"
         xmlns="http://www.w3.org/2000/svg"
@@ -155,13 +188,17 @@ export const servicesMenuItem = [
     label: "Support for email setup",
     desc: "Efficient email communication is vital for any organization. We offer email configuration, migration, and troubleshooting for platforms such as Microsoft 365, Gmail, and Outlook.",
     href: "/services/email-setup-support",
+    theme: {
+      '--color': 'oklch(70.5% 0.213 47.604)'
+    },
     icon: (
       <svg
         stroke="currentColor"
         fill="currentColor"
         strokeWidth="0"
         viewBox="0 0 512 512"
-        className="inline mr-2 text-orange-500"
+        className="inline mr-2"
+        style={{color: 'var(--color)'}}
         height="1em"
         width="1em"
         xmlns="http://www.w3.org/2000/svg"
@@ -174,13 +211,17 @@ export const servicesMenuItem = [
     label: "Wi-Fi network support",
     desc: "Ensure seamless Wi-Fi connectivity for your offices, warehouses, or educational campuses. Our team handles setup, optimization, security, and troubleshooting of wireless networks.",
     href: "/services/wifi-network-support",
+    theme: {
+      '--color': 'oklch(70.4% 0.14 182.503)'
+    },
     icon: (
       <svg
         stroke="currentColor"
         fill="currentColor"
         strokeWidth="0"
         viewBox="0 0 640 512"
-        className="inline mr-2 text-teal-500"
+        className="inline mr-2"
+        style={{color: 'var(--color)'}}
         height="1em"
         width="1em"
         xmlns="http://www.w3.org/2000/svg"
@@ -196,6 +237,7 @@ export const industriesMenuItem = [
     label: "Healthcare",
     href: "/industries/healthcare",
     desc: "Support for medical software, patient management systems, secure data handling, and HIPAA-compliant solutions.",
+    theme: {},
     icon: (
       <svg
         stroke="currentColor"
@@ -215,6 +257,7 @@ export const industriesMenuItem = [
     label: "Finance & Banking",
     href: "/industries/finance-banking",
     desc: "Secure financial transactions, network monitoring, cybersecurity, and compliance support.",
+    theme: {},
     icon: (
       <svg
         stroke="currentColor"
@@ -234,6 +277,7 @@ export const industriesMenuItem = [
     label: "Retail and E-commerce",
     href: "/industries/retail-ecommerce",
     desc: "Seamless online operations, payment gateway support, and network reliability.",
+    theme: {},
     icon: (
       <svg
         stroke="currentColor"
@@ -253,6 +297,7 @@ export const industriesMenuItem = [
     label: "Manufacturing",
     href: "/industries/manufacturing",
     desc: "Automation, hardware monitoring, and network reliability for factories and production lines.",
+    theme: {},
     icon: (
       <svg
         stroke="currentColor"
@@ -272,6 +317,7 @@ export const industriesMenuItem = [
     label: "Education",
     href: "/industries/education",
     desc: "IT support for schools, colleges, and online learning platforms.",
+    theme: {},
     icon: (
       <svg
         stroke="currentColor"
@@ -291,6 +337,7 @@ export const industriesMenuItem = [
     label: "Professional Services",
     href: "/industries/professional",
     desc: "Technical support for law firms, consulting agencies, and corporate offices.",
+    theme: {},
     icon: (
       <svg
         stroke="currentColor"
@@ -310,6 +357,7 @@ export const industriesMenuItem = [
     label: "Travel & Hospitality",
     href: "/industries/travel-hospitality",
     desc: "System management, booking platform support, and network solutions for hotels and travel companies.",
+    theme: {},
     icon: (
       <svg
         stroke="currentColor"
@@ -329,6 +377,7 @@ export const industriesMenuItem = [
     label: "Construction",
     href: "/industries/construction",
     desc: "Field support, project management tools, and secure data communication.",
+    theme: {},
     icon: (
       <svg
         stroke="currentColor"
@@ -348,6 +397,7 @@ export const industriesMenuItem = [
     label: "Logistics",
     href: "/industries/logistics",
     desc: "Real-time tracking systems, connectivity, and IT support for supply chain management.",
+    theme: {},
     icon: (
       <svg
         stroke="currentColor"
@@ -369,6 +419,7 @@ export const locationsMenuItem = [
   {
     label: "United States",
     href: "/locations/us",
+    theme: {},
     icon: (
       <svg
         stroke="currentColor"
@@ -387,6 +438,7 @@ export const locationsMenuItem = [
   {
     label: "United Kingdom",
     href: "/locations/uk",
+    theme: {},
     icon: (
       <svg
         stroke="currentColor"
@@ -405,6 +457,7 @@ export const locationsMenuItem = [
   {
     label: "India",
     href: "/locations/in",
+    theme: {},
     icon: (
       <svg
         stroke="currentColor"
@@ -423,6 +476,7 @@ export const locationsMenuItem = [
   {
     label: "Australia",
     href: "/locations/au",
+    theme: {},
     icon: (
       <svg
         stroke="currentColor"
@@ -441,6 +495,7 @@ export const locationsMenuItem = [
   {
     label: "Germany",
     href: "/locations/de",
+    theme: {},
     icon: (
       <svg
         stroke="currentColor"
@@ -459,6 +514,7 @@ export const locationsMenuItem = [
   {
     label: "France",
     href: "/locations/fr",
+    theme: {},
     icon: (
       <svg
         stroke="currentColor"
@@ -477,6 +533,7 @@ export const locationsMenuItem = [
   {
     label: "Canada",
     href: "/locations/ca",
+    theme: {},
     icon: (
       <svg
         stroke="currentColor"
@@ -498,6 +555,7 @@ export const insightsMenuItem = [
   {
     label: "Blog",
     href: "/insights/blog",
+    theme: {},
     icon: (
       <svg
         stroke="currentColor"
@@ -516,6 +574,7 @@ export const insightsMenuItem = [
   {
     label: "Case Studies",
     href: "/insights/case-studies",
+    theme: {},
     icon: (
       <svg
         stroke="currentColor"
@@ -534,6 +593,7 @@ export const insightsMenuItem = [
   {
     label: "News",
     href: "/insights/news",
+    theme: {},
     icon: (
       <svg
         stroke="currentColor"

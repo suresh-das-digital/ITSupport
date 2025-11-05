@@ -8,6 +8,9 @@
     "start": "next start"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/icons-material": "^7.3.3",
     "@next/bundle-analyzer": "^15.5.3",
     "aos": "^2.3.4",
     "clsx": "^2.1.1",
@@ -22,8 +25,8 @@
     "@svgr/webpack": "^8.1.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
+    "@types/react": "^19.1.14",
+    "@types/react-dom": "^19.1.9",
     "tailwindcss": "^4",
     "typescript": "^5"
   },

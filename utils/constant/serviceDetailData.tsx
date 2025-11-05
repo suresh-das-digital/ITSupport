@@ -51,6 +51,8 @@ export interface IssueCategory {
   issues?: SpecificIssue[];
 }
 
+export type IssueCategoryType = IssueCategory;
+
 export interface Service {
   slug?: string;
   title?: string;
