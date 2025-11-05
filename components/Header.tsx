@@ -30,7 +30,7 @@ export default function Header() {
         isTop ? "bg-transparent" : "bg-white shadow-md"
       }`}
       >
-      <div className="w-full max-w-[1920px] px-4 sm:px-6 md:px-6 lg:px-6 xl:px-40">
+      <div className="w-full max-w-[1488px] px-4 sm:px-6 md:px-6 lg:px-6 xl:px-34 2xl:px-0">
         <div className="flex h-16 md:h-20 justify-between items-center">
           <div className="flex items-center w-60 px-0">
             <Link href="/">

@@ -22,6 +22,7 @@ import OurCommitment from "@/components/OurCommitment";
 import ITSupportInsights from "@/components/ITSupportInsights";
 import FAQs from "@/components/FAQ/FAQs";
 import ScrollToTop from "@/components/ScrollToTop";
+import FaqSection from "./services/[slug]/newcompoennts/FaqSection";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -48,7 +49,8 @@ export default function Home() {
       <WhyChoose cards={WHY_CHOOSE_CARDS} title="Why Choose" />
       <OurCommitment />
       <ITSupportInsights />
-      <FAQs data={FAQsData} />
+      {/* <FAQs data={FAQsData} /> */}
+      <FaqSection faqs={FAQsData} />
 
       <ScrollToTop />
     </>
