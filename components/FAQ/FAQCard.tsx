@@ -14,7 +14,7 @@ export interface FAQCardProps {
 const FAQCard: React.FC<FAQCardProps> = ({
   label,
   desc,
-  expanded = true,
+  expanded = false,
   onToggle,
   descHTMLString = false,
 }) => {
@@ -40,8 +40,8 @@ const FAQCard: React.FC<FAQCardProps> = ({
       <p
         className={
           isExpand
-            ? "faq-answer mx-4 bg-white rounded-lg  text-[#4a5a6a] leading-relaxed shadow-sm transition-all duration-300 ease-in-out opacity-100 mb-4 p-6 max-h-[500px] pointer-events-auto"
-            : "faq-answer mx-4 bg-white rounded-lg  text-[#4a5a6a] leading-relaxed shadow-sm transition-all duration-300 ease-in-out opacity-0 h-0 pointer-events-none"
+            ? "faq-answer mx-4 bg-white rounded-lg  text-[#4a5a6a] leading-relaxed shadow-sm transition-all duration-50 ease-in-out opacity-100 mb-4 px-6 py-6 max-h-[500px] pointer-events-auto"
+            : "faq-answer mx-4 bg-white rounded-lg  text-[#4a5a6a] leading-relaxed shadow-sm transition-all duration-50 ease-in-out opacity-0 px-6 py-0 h-0 pointer-events-none"
         }
         style={{ overflow: "hidden" }}
       >

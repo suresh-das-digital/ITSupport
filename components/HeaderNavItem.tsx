@@ -6,12 +6,12 @@ import Link from "next/link";
 import { ReactNode, useState } from "react";
 
 interface HeaderNavItemProps {
-  navItems?: Array<{
+  navItems?: {
     label: string;
     href: string;
-    submenu?: Array<{ label: string; href: string; icon?: React.ReactNode }>;
+    submenu?: Array<{ label: string; href: string; theme: any; icon?: React.ReactNode }>;
     icon?: React.ReactNode;
-  }>;
+  }[];
   contactLabel?: string;
   contactHref?: string;
 }
@@ -33,13 +33,15 @@ export default function HeaderNavItem({
     sub: {
       label: string;
       href: string;
+      theme: any,
       icon?: React.ReactNode;
     }
   ) => {
     return (
       <Link
         href={sub.href}
-        className="flex items-center gap-3 px-4 py-2 border-b hover:text-[#61CE70] transition cursor-pointer"
+        style={sub.theme}
+        className="flex items-center gap-3 px-4 py-2 border-b hover:text-[var(--color)] transition cursor-pointer"
         key={`submenu-${sub.href}`}
       >
         <span>
@@ -66,22 +68,22 @@ export default function HeaderNavItem({
   };
 
   return (
-    <div className="flex items-center space-x-2 justify-center">
+    <div className="flex h-full items-center space-x-2 justify-center">
       {navItems.map((item, index) =>
         item.submenu?.length ? (
           <div
-            className="relative group"
+            className="relative group items-center flex h-full"
             key={`navItems-${item.href}`}
             onMouseEnter={() => setOpenIndex(index)}
             onMouseLeave={() => setOpenIndex(null)}
           >
             <Link
-              className="flex items-center px-2 py-2 text-blue-700 hover:text-[#61CE70] font-semibold transition-all duration-300 ease-in-out hover:scale-110 hover:opacity-90"
+              className="flex items-center px-2 py-2 text-blue-700 hover:text-[#61CE70] font-semibold transition-all duration-75 ease-in-out"
               href={item.href}
             >
               {item.label}
               <svg
-                className="ml-2 h-4 w-4 transform transition-transform duration-300 rotate-0"
+                className="ml-2 h-4 w-4 transform transition-transform duration-75 rotate-0"
                 fill="none"
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -95,20 +97,20 @@ export default function HeaderNavItem({
 
             <div
               className={
-                openIndex === index
-                  ? `absolute left-0 top-full z-40 w-max min-w-[350px] transition-all duration-1000 ease-in-out opacity-100 visible translate-y-0 pointer-events-auto`
-                  : `absolute left-0 top-full z-40 w-max min-w-[350px] transition-all duration-1000 ease-in-out opacity-0 invisible -translate-y-2 pointer-events-none`
+                (openIndex === index)
+                  ? `absolute left-0 top-full z-40 w-max min-w-[350px] transition-all duration-75 ease-in-out opacity-100 visible translate-y-0 pointer-events-auto`
+                  : `absolute left-0 top-full z-40 w-max min-w-[350px] transition-all duration-75 ease-in-out opacity-0 invisible -translate-y-0 pointer-events-none`
               }
               style={{
                 transitionProperty: "opacity, transform, visibility",
               }}
             >
               <div
-                className={`absolute left-0 mt-2 shadow-lg bg-[#f4f7fa] z-50 transition-all duration-200 ${
-                  openIndex === index ? "block" : "hidden"
+                className={`absolute left-0 mt-0 shadow-lg bg-[#f4f7fa] z-50 transition-all duration-74 ${
+                  (openIndex === index) ? "block" : "hidden"
                 }`}
               >
-                <div className="absolute -top-5 left-8 md:left-12 z-49">
+                {/* <div className="absolute -top-5 left-8 md:left-12 z-49">
                   <svg
                     width="40"
                     height="20"
@@ -117,7 +119,7 @@ export default function HeaderNavItem({
                   >
                     <polygon points="20,0 40,20 0,20" fill="#f4f7fa"></polygon>
                   </svg>
-                </div>
+                </div> */}
 
                 {item.submenu &&
                   item.submenu.map((sub) => getSubMenuItem(item, sub))}
@@ -126,7 +128,7 @@ export default function HeaderNavItem({
           </div>
         ) : (
           <Link
-            className="px-2 py-2 text-blue-700 hover:text-[#61CE70] font-semibold transform transition-all duration-300 ease-in-out hover:scale-110 hover:opacity-90"
+            className="px-2 py-2 text-blue-700 hover:text-[#61CE70] font-semibold transform transition-all duration-75 ease-in-out hover:scale-110 hover:opacity-90"
             key={`navItems-${item.href}`}
             href={item.href}
           >

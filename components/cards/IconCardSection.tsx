@@ -25,7 +25,7 @@ export default function IconCardSection({
 }: IconCardSectionProps) {
   return (
     <section
-      className={`py-16 px-4 sm:px-6 ${isColor ? "bg-gray-50" : "bg-white"}`}
+      className={`py-16 cursor-default px-4 sm:px-6 ${isColor ? "bg-gray-50" : "bg-white"}`}
     >
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
@@ -33,7 +33,7 @@ export default function IconCardSection({
           {titleLinkText && (
             <a
               href={titleLinkHref}
-              className="text-[#61CE70] hover:text-[#4CAF50] transition-colors duration-300"
+              className="text-[#61CE70] hover:text-[#4CAF50] transition-colors duration-75"
             >
               {" "}
               {titleLinkText}
@@ -52,10 +52,10 @@ export default function IconCardSection({
               className="text-center group"
               style={{ opacity: 1, transform: "scale(0.8)" }}
             >
-              <div className="w-16 h-16 bg-[#61CE70] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-500 group-hover:scale-110 transition-all duration-300">
+              <div className="w-16 h-16 bg-[#61CE70] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-500 group-hover:scale-110 transition-all duration-75">
                 {card.svg}
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-[#61CE70] transition-colors duration-300">
+              <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-[#61CE70] transition-colors duration-75">
                 {card.title}
               </h3>
               <p className="text-gray-700">{card.desc}</p>

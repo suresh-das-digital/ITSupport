@@ -11,6 +11,11 @@ import Typography from "@/components/ui/Typography";
 import ServiceWhyChoose from "../services/_component/ServiceWhyChoose";
 import FAQs from "@/components/FAQ/FAQs";
 import { whyChooseDataDetailEs } from "../services/_component/ServiceWhyChooseConstant";
+import { getMetaData, getStaticParams } from "@/lib/seo";
+
+export const generateStaticParams = getStaticParams('serviciosdeti')
+export const generateMetadata = getMetaData('serviciosdeti');
+
 
 export default function ServiciosDeTiPage() {
   const t = useTranslations("Services");

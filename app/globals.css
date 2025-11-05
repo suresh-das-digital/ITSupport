@@ -32,3 +32,97 @@ body {
   line-height: 1.6;
 }
 
+@keyframes updown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.animate-updown {
+  animation: updown 3.5s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 50px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate-updown2 {
+  animation: updown2 2.5s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+@keyframes updown2 {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.animate-reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  animation-fill-mode: forwards;
+  animation-name: fadeSlideUp;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-out;
+  will-change: transform, opacity;
+}
+
+@keyframes ripple {
+  from {
+    opacity: 1;
+    transform: scale3d(0.75, 0.75, 1);
+  }
+  via{
+    opacity: 0.4;
+    transform: scale3d(0.75, 0.75, 1);
+  }
+  to {
+    opacity: 0;
+    transform: scale3d(1.5, 1.5, 1);
+  }
+}
+
+
+
+.ripple-container::before,
+.ripple-container::after {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.489);
+  opacity: 0;
+  animation-name: ripple;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(.65, 0, .34, 1);
+  z-index: 0; /* keep behind content */
+}
+
+.ripple-container::before {
+  animation-duration: 2s;
+  animation-delay: 0s;
+}
+
+.ripple-container::after {
+  animation-duration: 2s;
+  animation-delay: 0.5s;
+}

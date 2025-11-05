@@ -15,6 +15,10 @@ import {
 import ServiceOffer from "./_component/ServiceOffer";
 import HeroSection from "@/components/HeroSection";
 import { whyChooseDataDetail } from "./_component/ServiceWhyChooseConstant";
+import { getMetaData, getStaticParams } from "@/lib/seo";
+
+export const generateStaticParams = getStaticParams('services', ['/'])
+export const generateMetadata = getMetaData('services');
 
 export default function Services() {
   const locale = useLocale();
@@ -96,6 +100,7 @@ export default function Services() {
                   label={core.label}
                   desc={core.desc}
                   icon={core.icon}
+                  theme={core.theme}
                   href={core.href}
                 />
               ))}

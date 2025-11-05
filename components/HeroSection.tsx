@@ -1,6 +1,8 @@
 import React from "react";
 import parse from "html-react-parser";
 import Typography from "./ui/Typography";
+import { Breadcrumbs } from "./ui/Breadcrumbs";
+import Image from "next/image";
 
 interface HeroSectionProps {
   heroTitle: string;
@@ -11,6 +13,68 @@ interface HeroSectionProps {
   rightSideIcons?: any[];
 }
 
+function HeroImage({imageSrc}: {imageSrc: string}) {
+  return (<>
+    <div className="relative w-full">
+      <div className="relative">
+        <Image
+          alt="Real Estate"
+          loading="lazy"
+          width={100}
+          height={100}
+          decoding="async"
+          data-nimg="1"
+          className="parallex w-full h-full"
+          style={{ color: "transparent" }}
+          src={imageSrc}
+        />
+      </div>
+    </div>
+  </>)
+}
+
+
+function HeroButtons({buttonTexts}: any) {
+  return (<>
+    {<div className="flex justify-start w-full align-center flex-wrap gap-4 items-center">
+      {buttonTexts.map((ctm: any, index: any) => (
+        <a
+          className="p-2 inline-block bg-gradient-to-r from-[#61CE70] via-blue-500 to-[#61CE70] text-white rounded-full font-extrabold shadow-xl hover:from-blue-500 hover:to-[#61CE70] hover:scale-105 transition-all duration-300 text-lg sm:text-xl tracking-wide group "
+          href={ctm.href || "#"}
+          key={`ctm-buttons-${ctm.label}-${index}-${ctm.href}`}
+        >
+          <Typography
+            variant="p"
+            className="inline-flex items-center gap-2 text-white"
+          >
+            {ctm.label}
+          </Typography>
+        </a>
+      ))}
+    </div>}
+  </>)
+}
+
+function HeroTexts({title, intro}: {title: any, intro: any}) {
+  return (<>
+    <div style={{'backdropFilter': 'blur(20px)'}} className="max-w-fit flex-2 p-2 rounded-xl shadow-[0_0_10px_2px_#0000002a]">
+      <Typography
+        className="leading-tight w-full text-left font-bold text-white"
+        variant="h1"
+      >
+        {parse(title)}
+      </Typography>
+
+      <Typography
+        className="mt-6 md:mb-4 leading-tight w-full text-left font-bold text-white"
+        variant="h3"
+      >
+        {parse(intro)}
+      </Typography>
+    </div>
+  </>)
+}
+
 const HeroSection: React.FC<HeroSectionProps> = ({
   heroTitle,
   heroIntro,
@@ -19,9 +83,9 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   imageSrc,
   rightSideIcons = [],
 }) => {
-  return (
+  return (<>
     <section
-      className="flex md:flex-row flex-col h-auto py-5 px-4 align-center shadow-md rounded-lg mb-6"
+      className="flex md:flex-row flex-col h-auto py-5 px-4 align-center shadow-md rounded-lg rounded-bl-none"
       style={{
         alignItems: "center",
         background:
@@ -32,22 +96,24 @@ const HeroSection: React.FC<HeroSectionProps> = ({
         <div className="flex flex-col md:flex-row gap-8 w-full">
           {/* Left side text */}
           <div
-            className="flex flex-col justify-center items-center h-full w-full md:w-1/2 relative"
+            className="flex flex-col justify-between items-center h-full w-full md:w-1/2 relative"
             style={{ opacity: 1, transform: "none", height: "inherit" }}
           >
-            <Typography
-              className="leading-tight w-full text-left font-bold text-white"
-              variant="h1"
-            >
-              {parse(heroTitle)}
-            </Typography>
+            <div>
+              <Typography
+                className="leading-tight w-full text-left font-bold text-white"
+                variant="h1"
+              >
+                {parse(heroTitle)}
+              </Typography>
 
-            <Typography
-              className="mt-6 md:mb-4 leading-tight w-full text-left font-bold text-white"
-              variant="h2"
-            >
-              {parse(heroIntro)}
-            </Typography>
+              <Typography
+                className="mt-6 md:mb-4 leading-tight w-full text-left font-bold text-white"
+                variant="h2"
+              >
+                {parse(heroIntro)}
+              </Typography>
+            </div>
 
             {/* Button */}
             {buttonTexts.length > 0 && (
@@ -69,36 +135,6 @@ const HeroSection: React.FC<HeroSectionProps> = ({
               </div>
             )}
 
-            {/* Breadcrumb */}
-            {breadcrumbs.length > 0 && (
-              <div className="delay-1000 animate-fill-forwards w-full mt-6 md:absolute bottom-0 font-bold text-white">
-                <div className="flex items-center gap-2 text-xs">
-                  {breadcrumbs.map((breadcrumb, index) => (
-                    <>
-                      {Boolean(index) && (
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          className="lucide lucide-arrow-right w-4 h-4"
-                          aria-hidden="true"
-                        >
-                          <path d="M5 12h14" />
-                          <path d="m12 5 7 7-7 7" />
-                        </svg>
-                      )}
-                      <span className="capitalize">{parse(breadcrumb.home)}</span>
-                    </>
-                  ))}
-                </div>
-              </div>
-            )}
           </div>
 
           {/* Right side image */}
@@ -162,6 +198,44 @@ const HeroSection: React.FC<HeroSectionProps> = ({
         </div>
       </div>
     </section>
+      {/* Breadcrumb */}
+      {breadcrumbs.length > 0 && (
+        <div
+          className="my-0 rounded-lg rounded-tl-none delay-1000 animate-fill-forwards w-full p-2 bottom-0 font-bold text-white"
+          style={{
+            alignItems: "center",
+            background:
+              "linear-gradient(135deg, #001731 0%, #00426F88 50%, #0D76B100 100%)",
+          }}
+          >
+          <div className="flex items-center gap-2 text-xs">
+            {breadcrumbs.map((breadcrumb, index) => (
+              <React.Fragment key={index}>
+                {Boolean(index) && (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="lucide lucide-arrow-right w-4 h-4"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h14" />
+                    <path d="m12 5 7 7-7 7" />
+                  </svg>
+                )}
+                <span className="capitalize">{parse(breadcrumb.home)}</span>
+              </React.Fragment>
+            ))}
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 

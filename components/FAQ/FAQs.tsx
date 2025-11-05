@@ -22,8 +22,8 @@ export default function FAQs({
   const t = useTranslations("FAQs");
 
   return (
-    <section className="py-16 px-4 sm:px-6 bg-white">
-      <div className="max-w-4xl mx-auto" style={{ opacity: 1 }}>
+    <section className="py-16 px-0 sm:px-0 bg-white">
+      <div className="max-w-full mx-auto" style={{ opacity: 1 }}>
         <h2
           className="text-3xl sm:text-4xl font-bold text-center mb-12"
           style={{ opacity: 1, transform: "none" }}

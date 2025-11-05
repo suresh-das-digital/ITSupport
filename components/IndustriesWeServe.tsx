@@ -9,9 +9,9 @@ export default function IndustriesWeServe() {
     { 
       title: t("healthcare.title"), 
       desc: t("healthcare.desc"), 
-      className: "bg-gradient-to-br from-blue-50 to-blue-100 border-blue-500" 
+      className: "bg-gradient-to-br from-blue-50 to-blue-100 border-blue-500"
     },
-    { 
+    {
       title: t("finance.title"), 
       desc: t("finance.desc"), 
       className: "bg-gradient-to-br from-green-50 to-green-100 border-green-500" 

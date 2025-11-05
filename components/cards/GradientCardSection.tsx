@@ -29,16 +29,16 @@ export default function GradientCardSection({ title, intro, footerIntro, cards }
           {cards.map((card, index) => (
             <div
               key={index}
-              className={`${card.className} rounded-lg p-6 border-l-4 hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer group`}
+              className={`${card.className} rounded-lg p-6 border-l-4 hover:shadow-xl transition-all duration-50 hover:scale-105 cursor-pointer group`}
             >
-              <span className="cursor-pointer">
-                <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-green-600 transition-colors duration-300">
+              <div className="cursor-pointer">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-green-600 transition-colors duration-50">
                   {card.title}
                 </h3>
-                <p className="text-gray-700 group-hover:text-gray-700 transition-colors duration-300">
+                <p className="text-gray-700 group-hover:text-gray-700 transition-colors duration-50">
                   {card.desc}
                 </p>
-              </span>
+              </div>
             </div>
           ))}
         </div>

@@ -17,11 +17,11 @@ export default function Footer() {
     locale === "es" ? footerServicesLinksEs : footerServicesLinks;
 
   return (
-    <footer className="flex flex-col items-center justify-center w-full md:justify-around bg-gray-900 text-white sm:px-6 md:px-40 lg:px-40 xl:px-40">
-      <div className="py-12">
-        <div className="grid grid-cols-1 md:grid-cols-6 gap-8">
-          <div className="md:col-span-1 flex flex-col items-center md:items-start">
-            <div className="text-center md:text-left mb-6">
+    <footer className="flex flex-col lg:items-center justify-center w-[100%] bg-gray-900 text-white">
+      <div className="py-12 px-4 sm:px-6 md:px-6 lg:px-6 xl:px-40 max-w-[1920px]">
+        <div className="grid grid-cols-1 lg:grid-cols-6 gap-5">
+          <div className="lg:col-span-1 flex flex-col md:items-start">
+            <div className="text-left mb-6">
               <Link className="inline-block" href="/">
                 <Image
                   alt="it-support-logo"
@@ -31,7 +31,7 @@ export default function Footer() {
                   decoding="async"
                   data-nimg="1"
                   className="w-full h-full"
-                  src="/_next/image?url=%2Fit-support-logo.webp&amp;w=640&amp;q=75"
+                  src="/it-support-logo.webp"
                 />
               </Link>
               <p className="text-gray-400 mt-4 text-sm leading-relaxed">

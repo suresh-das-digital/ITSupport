@@ -9,6 +9,12 @@ import IndustriesWhyChoose, {
 import IndustriesWeServe from "@/components/IndustriesWeServe";
 import HeroSection from "@/components/HeroSection";
 import ServiceWhyChoose from "../services/_component/ServiceWhyChoose";
+
+// export const metadata = {
+
+// }
+
+
 export default function Industries() {
   const locale = useLocale();
   const t = useTranslations("IndustriesPage");

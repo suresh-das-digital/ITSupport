@@ -6,13 +6,13 @@ export default function OurGlobalPresence() {
    const t = useTranslations("GlobalPresence");
 
   const cards = [
-    { title: t("us.title"), desc: t("us.desc") },
-    { title: t("uk.title"), desc: t("uk.desc") },
-    { title: t("in.title"), desc: t("in.desc") },
-    { title: t("au.title"), desc: t("au.desc") },
-    { title: t("de.title"), desc: t("de.desc") },
-    { title: t("fr.title"), desc: t("fr.desc") },
-    { title: t("ca.title"), desc: t("ca.desc") },
+    { title: t("us.title"), desc: t("us.desc"), flag: '🇺🇸' },
+    { title: t("uk.title"), desc: t("uk.desc"), flag: '🇬🇧' },
+    { title: t("in.title"), desc: t("in.desc"), flag: '🇮🇳' },
+    { title: t("au.title"), desc: t("au.desc"), flag: '🇦🇺' },
+    { title: t("de.title"), desc: t("de.desc"), flag: '🇩🇪' },
+    { title: t("fr.title"), desc: t("fr.desc"), flag: '🇫🇷' },
+    { title: t("ca.title"), desc: t("ca.desc"), flag: '🇨🇦' },
   ];
 
   return (

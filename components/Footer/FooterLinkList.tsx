@@ -4,6 +4,7 @@ import React from "react";
 export interface FooterLink {
   label: string;
   href: string;
+  theme?: any,
   icon?: React.ReactNode;
 }
 
@@ -19,7 +20,7 @@ const FooterLinkList: React.FC<FooterLinkListProps> = ({
   titleHref,
 }) => (
   <div className="md:col-span-1">
-    <h3 className="text-lg font-semibold text-sky-400 mb-4 text-center md:text-left">
+    <h3 className="text-lg font-semibold text-sky-400 mb-4 text-left">
       {titleHref ? (
         <Link
           href={titleHref}
@@ -36,7 +37,8 @@ const FooterLinkList: React.FC<FooterLinkListProps> = ({
         <li key={`FooterLinkList-link.href-${link.href}`}>
           <Link
             href={link.href}
-            className="cursor-pointer flex items-center px-5 md:px-0 text-gray-300 hover:text-sky-400 transition-colors text-sm"
+            style={link.theme}
+            className="cursor-pointer flex items-center px-5 md:px-0 text-gray-300 hover:text-[var(--color)] transition-colors text-sm"
           >
             {link.icon && link.icon}
             {link.label}

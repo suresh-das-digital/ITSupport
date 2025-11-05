@@ -1,5 +1,6 @@
 import Typography from "@/components/ui/Typography";
 import FeatureCard from "../[slug]/_components/FeatureCard";
+import Image from "next/image";
 
 interface ServiceProvider {
   imageAlt: string;
@@ -27,31 +28,36 @@ export default function ServiceOffer({
 }: ServiceOfferProps) {
   return (
     <section
-      className="flex md:flex-row flex-col h-auto py-8 px-5 align-center bg-white shadow-md rounded-lg mb-6 justify-center"
+      className="bg-white flex md:flex-row flex-col h-auto py-4 sm:px-16 px-2 align-center shadow-md rounded-lg mb-6 justify-center"
       style={{ alignItems: "center" }}
     >
-      <div className="w-full px-4 text-center">
-        <Typography variant="h3" className="font-bold text-gray-900 mb-4">
-          {serviceProvider.title}{" "}
-          <span className="text-[#61CE70]">{serviceProvider.highlight}</span>
-        </Typography>
-        <p className="text-lg text-gray-600 leading-relaxed mb-4">
-          {serviceProvider.subtitle}
-        </p>
-        <div className="items-center w-full flex justify-center">
-          <div className="rounded-2xl overflow-hidden shadow-2xl">
-            <img
+      <div className="flex relative flex-col px-6 text-start w-full my-6">
+        <div className="relative flex justify-between lg:flex-row flex-col-reverse w-full lg:items-start items-center">
+          <div className="flex-1 mr-4">
+            <Typography variant="h3" className="font-bold text-gray-900 mb-4">
+              {serviceProvider.title}{" "}
+              <span className="text-[#61CE70]">{serviceProvider.highlight}</span>
+            </Typography>
+            <p className="text-lg text-justify text-gray-600 leading-relaxed mb-0">
+              {serviceProvider.subtitle}
+            </p>
+          </div>
+          <div className="flex-1 lg:ml-4 max-h-[400px] overflow-hidden rounded-lg">
+            <Image
+              width={720}
+              height={600}
               src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1600&q=80"
               alt="Ensuring Reliable Email Operations: Common Challenges We Expertly Handle"
               title="Ensuring Reliable Email Operations: Common Challenges We Expertly Handle"
-              className="w-full h-auto max-h-[500px] object-cover rounded-2xl"
+              className="w-full h-full max-h-[600px] object-contain"
               loading="lazy"
             />
           </div>
         </div>
-        <p className="text-lg text-gray-600 leading-relaxed mt-6">
+        <p className="text-gray-600 leading-relaxed mt-6 text-left">
           {serviceProvider.description}
         </p>
+
 
         {Boolean(heroServices?.length) && (
           <div>

@@ -44,6 +44,7 @@ export default function OurCoreServices() {
               label={core.label}
               desc={core.desc}
               icon={core.icon}
+              theme={core.theme}
               href={core.href}
             />
           ))}

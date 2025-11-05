@@ -32,7 +32,7 @@ export default function ITSupportInsights() {
                   sizes="100vw"
                   height={192}
                   width={384}
-                  src="/_next/image?url=%2Fassets%2Fserviceshero.png&amp;w=3840&amp;q=75"
+                  src="/assets/it-small.jpg"
                   style={{
                     position: "absolute",
                     height: "100%",
