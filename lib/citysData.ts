@@ -3,6 +3,7 @@ interface City{
     metaData: any;
     cityImage: string;
     citySlug: string;
+    schema?: any;
 }
 
 const cities:City[] = [
@@ -69,7 +70,7 @@ const cities:City[] = [
               "copyright": "© 2025"
             }
         },
-        
+        schema:{}        
     },
     
     {
@@ -139,7 +140,7 @@ const cities:City[] = [
               copyright: "© 2025"
             }
           },
-        
+        schema:{}
     },
     {
         cityName:"Atlanta",
@@ -274,7 +275,7 @@ const cities:City[] = [
             copyright: "© 2025"
           }
           },
-        
+        schema:{}
     },
     {
         cityName:"Boston",
@@ -343,7 +344,170 @@ const cities:City[] = [
           }
         }
         ,
-        
+        schema:{
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@id": "#website",
+              "@type": "WebSite",
+              "url": "https://www.itsupport.net.in",
+              "name": "ITSupport.net.in",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://www.itsupport.net.in/search?q={search_term_string}"
+                },
+                "query-input": "required name=search_term_string"
+              }
+            },
+            {
+              "@id": "#webpage-boston",
+              "@type": "WebPage",
+              "name": "IT Support Boston | Professional IT Services & Help Desk",
+              "description": "ITSupport.net.in provides professional IT support services in Boston including managed IT services, network security, help desk solutions, and IT consulting for businesses.",
+              "url": "https://www.itsupport.net.in/cities/it-support-boston",
+              "inLanguage": "en-US",
+              "isPartOf": { "@id": "#website" }
+            },
+            {
+              "@id": "#org",
+              "@type": "Organization",
+              "name": "ITSupport.net.in",
+              "url": "https://www.itsupport.net.in",
+              "logo": "https://www.itsupport.net.in/images/itsupport-logo.png",
+              "contactPoint": [
+                {
+                  "@type": "ContactPoint",
+                  "telephone": "+1-617-555-1234",
+                  "contactType": "Customer Support",
+                  "areaServed": "US",
+                  "availableLanguage": "en"
+                }
+              ],
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "100 Tech Avenue",
+                "addressLocality": "Boston",
+                "postalCode": "02108",
+                "addressCountry": "US"
+              },
+              "sameAs": [
+                "https://www.facebook.com/ITSupportNet",
+                "https://x.com/itsupport",
+                "https://www.instagram.com/itsupport/",
+                "https://www.linkedin.com/company/itsupportnet/",
+                "https://www.youtube.com/@ITSupportNet"
+              ]
+            },
+            {
+              "@id": "#breadcrumb-boston",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://www.itsupport.net.in/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "IT Support Boston",
+                  "item": "https://www.itsupport.net.in/cities/it-support-boston"
+                }
+              ]
+            },
+            {
+              "@id": "#faq-boston",
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "What IT support services are offered in Boston?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "ITSupport.net.in provides managed IT services, network security, help desk support, cloud solutions, and on-site technical assistance for Boston businesses."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How can I contact ITSupport.net.in in Boston?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "You can reach ITSupport.net.in via phone at +1-617-555-1234, email at [support@itsupport.net.in](mailto:support@itsupport.net.in), or through the contact form on our website."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Do you offer on-site IT support in Boston?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, ITSupport.net.in provides on-site IT support for businesses in Boston to handle network issues, hardware troubleshooting, and technical consulting."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Are your IT services suitable for small businesses?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Absolutely. Our services are tailored for businesses of all sizes, including small businesses, providing scalable IT support and solutions."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is network security included in your IT support?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. ITSupport.net.in offers comprehensive network security services, including firewall management, antivirus setup, and vulnerability assessments for Boston companies."
+                  }
+                }
+              ]
+            },
+            {
+              "@id": "#rating-boston",
+              "@type": "EmployerAggregateRating",
+              "itemReviewed": {
+                "@type": "Organization",
+                "name": "ITSupport.net.in | IT Support & Managed Services Boston",
+                "sameAs": "https://www.itsupport.net.in/cities/it-support-boston"
+              },
+              "ratingValue": "4.8",
+              "bestRating": "5",
+              "worstRating": "1",
+              "ratingCount": "1250"
+            },
+            {
+              "@id": "#qapage-boston",
+              "@type": "QAPage",
+              "mainEntity": {
+                "@type": "Question",
+                "name": "How does IT Support Boston ensure uninterrupted IT services?",
+                "text": "How does IT Support Boston help businesses maintain smooth IT operations and minimize downtime?",
+                "answerCount": 1,
+                "upvoteCount": 12,
+                "datePublished": "2025-10-11T10:00:00+00:00",
+                "author": {
+                  "@type": "Person",
+                  "name": "Emma Clarke",
+                  "url": "https://www.itsupport.net.in"
+                },
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "IT Support Boston ensures uninterrupted IT services by providing proactive monitoring, rapid troubleshooting, preventive maintenance, and 24/7 remote or on-site support tailored to each business's needs.",
+                  "dateCreated": "2025-10-11T10:15:00+00:00",
+                  "upvoteCount": 10,
+                  "url": "https://www.itsupport.net.in/cities/it-support-boston#q1a1",
+                  "author": {
+                    "@type": "Person",
+                    "name": "Emma Clarke",
+                    "url": "https://www.itsupport.net.in"
+                  }
+                }
+              }
+            }
+          ]
+        }
     },
     {
         cityName:"Bristol",
@@ -412,6 +576,170 @@ const cities:City[] = [
           }
         }
         ,
+        schema:{
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@id": "#website",
+              "@type": "WebSite",
+              "url": "https://www.itsupport.net.in",
+              "name": "ITSupport.net.in",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://www.itsupport.net.in/search?q={search_term_string}"
+                },
+                "query-input": "required name=search_term_string"
+              }
+            },
+            {
+              "@id": "#webpage-bristol",
+              "@type": "WebPage",
+              "name": "IT Support Bristol | Managed IT Services & Help Desk",
+              "description": "ITSupport.net.in provides professional IT support services in Bristol including managed IT services, network security, help desk solutions, and IT consulting for businesses.",
+              "url": "https://www.itsupport.net.in/cities/it-support-bristol",
+              "inLanguage": "en-GB",
+              "isPartOf": { "@id": "#website" }
+            },
+            {
+              "@id": "#org",
+              "@type": "Organization",
+              "name": "ITSupport.net.in",
+              "url": "https://www.itsupport.net.in",
+              "logo": "https://www.itsupport.net.in/images/itsupport-logo.png",
+              "contactPoint": [
+                {
+                  "@type": "ContactPoint",
+                  "telephone": "+44-117-555-1234",
+                  "contactType": "Customer Support",
+                  "areaServed": "GB",
+                  "availableLanguage": "en"
+                }
+              ],
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "50 Tech Street",
+                "addressLocality": "Bristol",
+                "postalCode": "BS1 5AH",
+                "addressCountry": "GB"
+              },
+              "sameAs": [
+                "https://www.facebook.com/ITSupportNet",
+                "https://x.com/itsupport",
+                "https://www.instagram.com/itsupport/",
+                "https://www.linkedin.com/company/itsupportnet/",
+                "https://www.youtube.com/@ITSupportNet"
+              ]
+            },
+            {
+              "@id": "#breadcrumb-bristol",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://www.itsupport.net.in/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "IT Support Bristol",
+                  "item": "https://www.itsupport.net.in/cities/it-support-bristol"
+                }
+              ]
+            },
+            {
+              "@id": "#faq-bristol",
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "What IT support services are offered in Bristol?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "ITSupport.net.in provides managed IT services, network security, help desk support, cloud solutions, and on-site technical assistance for businesses in Bristol."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How can I contact ITSupport.net.in in Bristol?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "You can reach ITSupport.net.in via phone at +44-117-555-1234, email at [support@itsupport.net.in](mailto:support@itsupport.net.in), or through the contact form on our website."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Do you offer on-site IT support in Bristol?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, ITSupport.net.in provides on-site IT support for businesses in Bristol to handle network issues, hardware troubleshooting, and technical consulting."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Are your IT services suitable for small businesses?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Absolutely. Our services are tailored for businesses of all sizes, including small businesses, providing scalable IT support and solutions."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is network security included in your IT support?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. ITSupport.net.in offers comprehensive network security services, including firewall management, antivirus setup, and vulnerability assessments for Bristol companies."
+                  }
+                }
+              ]
+            },
+            {
+              "@id": "#rating-bristol",
+              "@type": "EmployerAggregateRating",
+              "itemReviewed": {
+                "@type": "Organization",
+                "name": "ITSupport.net.in | IT Support & Managed Services Bristol",
+                "sameAs": "https://www.itsupport.net.in/cities/it-support-bristol"
+              },
+              "ratingValue": "4.8",
+              "bestRating": "5",
+              "worstRating": "1",
+              "ratingCount": "1250"
+            },
+            {
+              "@id": "#qapage-bristol",
+              "@type": "QAPage",
+              "mainEntity": {
+                "@type": "Question",
+                "name": "How does IT Support Bristol ensure reliable IT services?",
+                "text": "How does IT Support Bristol help businesses maintain efficient IT operations and minimize downtime?",
+                "answerCount": 1,
+                "upvoteCount": 12,
+                "datePublished": "2025-10-11T11:00:00+00:00",
+                "author": {
+                  "@type": "Person",
+                  "name": "Emma Clarke",
+                  "url": "https://www.itsupport.net.in"
+                },
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "IT Support Bristol provides reliable IT services through proactive system monitoring, rapid troubleshooting, preventive maintenance, and 24/7 remote or on-site support tailored to business needs.",
+                  "dateCreated": "2025-10-11T11:15:00+00:00",
+                  "upvoteCount": 10,
+                  "url": "https://www.itsupport.net.in/cities/it-support-bristol#q1a1",
+                  "author": {
+                    "@type": "Person",
+                    "name": "Emma Clarke",
+                    "url": "https://www.itsupport.net.in"
+                  }
+                }
+              }
+            }
+          ]
+        }
         
     },
     {
@@ -479,14 +807,176 @@ const cities:City[] = [
           other: {
             copyright: "© 2025"
           }
-        }
-        ,
-        
+        },
+        schema:{
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@id": "#website",
+              "@type": "WebSite",
+              "url": "https://www.itsupport.net.in",
+              "name": "ITSupport.net.in",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://www.itsupport.net.in/search?q={search_term_string}"
+                },
+                "query-input": "required name=search_term_string"
+              }
+            },
+            {
+              "@id": "#webpage-calgary",
+              "@type": "WebPage",
+              "name": "IT Support Calgary | Managed IT Services & Help Desk",
+              "description": "Read ITSupport.net.in’s terms and policies regarding IT support, managed services, and user responsibilities in Calgary.",
+              "url": "https://www.itsupport.net.in/cities/it-support-calgary",
+              "inLanguage": "en-CA",
+              "isPartOf": { "@id": "#website" }
+            },
+            {
+              "@id": "#org",
+              "@type": "Organization",
+              "name": "ITSupport.net.in",
+              "url": "https://www.itsupport.net.in",
+              "logo": "https://www.itsupport.net.in/images/itsupport-logo.png",
+              "contactPoint": [
+                {
+                  "@type": "ContactPoint",
+                  "telephone": "+1-403-555-7890",
+                  "contactType": "Customer Support",
+                  "areaServed": "CA",
+                  "availableLanguage": "en"
+                }
+              ],
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "120 Tech Avenue",
+                "addressLocality": "Calgary",
+                "postalCode": "T2P 3G7",
+                "addressCountry": "CA"
+              },
+              "sameAs": [
+                "https://www.facebook.com/ITSupportNet",
+                "https://x.com/itsupport",
+                "https://www.instagram.com/itsupport/",
+                "https://www.linkedin.com/company/itsupportnet/",
+                "https://www.youtube.com/@ITSupportNet"
+              ]
+            },
+            {
+              "@id": "#breadcrumb-calgary",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://www.itsupport.net.in/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "IT Support Calgary",
+                  "item": "https://www.itsupport.net.in/cities/it-support-calgary"
+                }
+              ]
+            },
+            {
+              "@id": "#faq-calgary",
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "What IT support services are offered in Calgary?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "ITSupport.net.in provides managed IT services, network security, help desk support, cloud solutions, and on-site technical assistance for businesses in Calgary."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How can I contact ITSupport.net.in in Calgary?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "You can reach ITSupport.net.in via phone at +1-403-555-7890, email at [support@itsupport.net.in](mailto:support@itsupport.net.in), or through the contact form on our website."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Do you offer on-site IT support in Calgary?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, ITSupport.net.in provides on-site IT support for businesses in Calgary to handle network issues, hardware troubleshooting, and technical consulting."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Are your IT services suitable for small businesses?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Absolutely. Our services are tailored for businesses of all sizes, including small businesses, providing scalable IT support and solutions."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is network security included in your IT support?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. ITSupport.net.in offers comprehensive network security services, including firewall management, antivirus setup, and vulnerability assessments for Calgary companies."
+                  }
+                }
+              ]
+            },
+            {
+              "@id": "#rating-calgary",
+              "@type": "EmployerAggregateRating",
+              "itemReviewed": {
+                "@type": "Organization",
+                "name": "ITSupport.net.in | IT Support & Managed Services Calgary",
+                "sameAs": "https://www.itsupport.net.in/cities/it-support-calgary"
+              },
+              "ratingValue": "4.8",
+              "bestRating": "5",
+              "worstRating": "1",
+              "ratingCount": "980"
+            },
+            {
+              "@id": "#qapage-calgary",
+              "@type": "QAPage",
+              "mainEntity": {
+                "@type": "Question",
+                "name": "How does IT Support Calgary improve business IT reliability?",
+                "text": "How does IT Support Calgary ensure minimal downtime and smooth IT operations for businesses?",
+                "answerCount": 1,
+                "upvoteCount": 12,
+                "datePublished": "2025-10-11T12:00:00+00:00",
+                "author": {
+                  "@type": "Person",
+                  "name": "Emma Clarke",
+                  "url": "https://www.itsupport.net.in"
+                },
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "IT Support Calgary improves business IT reliability by offering proactive system monitoring, fast troubleshooting, preventive maintenance, and tailored on-site or remote support to minimize downtime.",
+                  "dateCreated": "2025-10-11T12:15:00+00:00",
+                  "upvoteCount": 10,
+                  "url": "https://www.itsupport.net.in/cities/it-support-calgary#q1a1",
+                  "author": {
+                    "@type": "Person",
+                    "name": "Emma Clarke",
+                    "url": "https://www.itsupport.net.in"
+                  }
+                }
+              }
+            }
+          ]
+        }        
     },
     {
         cityName:"Cape Town",
         cityImage:"",
-        citySlug:"it-support-cape-town.webp",
+        citySlug:"it-support-cape-town",
         metaData:{
           metadataBase: new URL("https://www.itsupport.net.in"),
           title: "IT Support Cape Town | Remote Tech Help Services South Africa",
@@ -550,7 +1040,171 @@ const cities:City[] = [
           }
         }
         ,
-        
+        schema:{
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebSite",
+              "@id": "https://www.itsupport.net.in/#website",
+              "url": "https://www.itsupport.net.in",
+              "name": "ITSupport.net.in",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://www.itsupport.net.in/search?q={search_term_string}"
+                },
+                "query-input": "required name=search_term_string"
+              }
+            },
+            {
+              "@type": "WebPage",
+              "@id": "https://www.itsupport.net.in/cities/it-support-cape-town/#webpage",
+              "url": "https://www.itsupport.net.in/cities/it-support-cape-town",
+              "name": "IT Support Cape Town | Managed IT Services & Help Desk",
+              "description": "Read ITSupport.net.in’s terms and conditions to understand policies regarding IT support, managed services, and user responsibilities in Cape Town.",
+              "inLanguage": "en-ZA",
+              "isPartOf": {
+                "@id": "https://www.itsupport.net.in/#website"
+              }
+            },
+            {
+              "@type": "Organization",
+              "@id": "https://www.itsupport.net.in/#organization",
+              "name": "ITSupport.net.in",
+              "url": "https://www.itsupport.net.in",
+              "logo": "https://www.itsupport.net.in/images/itsupport-logo.png",
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+27-21-555-1234",
+                "contactType": "Customer Support",
+                "areaServed": "ZA",
+                "availableLanguage": "en"
+              },
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "12 IT Avenue",
+                "addressLocality": "Cape Town",
+                "postalCode": "8001",
+                "addressCountry": "ZA"
+              },
+              "sameAs": [
+                "https://www.facebook.com/ITSupportNet",
+                "https://x.com/itsupport",
+                "https://www.instagram.com/itsupport/",
+                "https://www.linkedin.com/company/itsupportnet/",
+                "https://www.youtube.com/@ITSupportNet"
+              ]
+            },
+            {
+              "@type": "BreadcrumbList",
+              "@id": "https://www.itsupport.net.in/cities/it-support-cape-town/#breadcrumb",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://www.itsupport.net.in/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "IT Support Cape Town",
+                  "item": "https://www.itsupport.net.in/cities/it-support-cape-town"
+                }
+              ]
+            },
+            {
+              "@type": "FAQPage",
+              "@id": "https://www.itsupport.net.in/cities/it-support-cape-town/#faq",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "What IT support services are offered in Cape Town?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "ITSupport.net.in provides managed IT services, network security, help desk support, cloud solutions, and on-site technical assistance for businesses in Cape Town."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How can I contact ITSupport.net.in in Cape Town?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "You can reach ITSupport.net.in via phone at +27-21-555-1234, email at support@itsupport.net.in, or through the contact form on our website."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Do you offer on-site IT support in Cape Town?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, ITSupport.net.in provides on-site IT support for businesses in Cape Town to handle network issues, hardware troubleshooting, and technical consulting."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Are your IT services suitable for small businesses?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Absolutely. Our services are tailored for businesses of all sizes, including small businesses, providing scalable IT support and solutions."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is network security included in your IT support?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. ITSupport.net.in offers comprehensive network security services, including firewall management, antivirus setup, and vulnerability assessments for Cape Town companies."
+                  }
+                }
+              ]
+            },
+            {
+              "@type": "EmployerAggregateRating",
+              "@id": "https://www.itsupport.net.in/cities/it-support-cape-town/#rating",
+              "itemReviewed": {
+                "@type": "Organization",
+                "name": "ITSupport.net.in | IT Support & Managed Services Cape Town",
+                "sameAs": "https://www.itsupport.net.in/cities/it-support-cape-town"
+              },
+              "ratingValue": "4.8",
+              "bestRating": "5",
+              "worstRating": "1",
+              "ratingCount": "950"
+            },
+            {
+              "@type": "QAPage",
+              "@id": "https://www.itsupport.net.in/cities/it-support-cape-town/#qapage",
+              "mainEntity": {
+                "@type": "Question",
+                "name": "How does IT Support Cape Town enhance business IT performance?",
+                "text": "How does IT Support Cape Town ensure reliable IT services and minimal downtime for businesses?",
+                "url": "https://www.itsupport.net.in/cities/it-support-cape-town#q1",
+                "answerCount": 1,
+                "upvoteCount": 12,
+                "datePublished": "2025-10-11T12:00:00+00:00",
+                "author": {
+                  "@type": "Person",
+                  "name": "Emma Clarke",
+                  "url": "https://www.itsupport.net.in"
+                },
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "IT Support Cape Town enhances business IT performance by providing proactive monitoring, fast issue resolution, preventive maintenance, and customized IT support solutions tailored to business needs.",
+                  "url": "https://www.itsupport.net.in/cities/it-support-cape-town#q1a1",
+                  "dateCreated": "2025-10-11T12:15:00+00:00",
+                  "upvoteCount": 10,
+                  "author": {
+                    "@type": "Person",
+                    "name": "Emma Clarke",
+                    "url": "https://www.itsupport.net.in"
+                  }
+                }
+              }
+            }
+          ]
+        }        
     },
     {
       cityName:"Chicago",
@@ -618,6 +1272,171 @@ const cities:City[] = [
           copyright: "© 2025"
         }
       },
+      schema:{
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://www.itsupport.net.in/#website",
+            "url": "https://www.itsupport.net.in",
+            "name": "ITSupport.net.in",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://www.itsupport.net.in/search?q={search_term_string}"
+              },
+              "query-input": "required name=search_term_string"
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://www.itsupport.net.in/cities/it-support-chicago/#webpage",
+            "url": "https://www.itsupport.net.in/cities/it-support-chicago",
+            "name": "IT Support Chicago | Managed IT Services & Help Desk",
+            "description": "Read ITSupport.net.in’s terms and conditions to understand policies regarding IT support, managed services, and user responsibilities in Chicago.",
+            "inLanguage": "en-US",
+            "isPartOf": {
+              "@id": "https://www.itsupport.net.in/#website"
+            }
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://www.itsupport.net.in/#organization",
+            "name": "ITSupport.net.in",
+            "url": "https://www.itsupport.net.in",
+            "logo": "https://www.itsupport.net.in/images/itsupport-logo.png",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+1-312-555-1234",
+              "contactType": "Customer Support",
+              "areaServed": "US",
+              "availableLanguage": "en"
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "500 IT Drive",
+              "addressLocality": "Chicago",
+              "postalCode": "60601",
+              "addressCountry": "US"
+            },
+            "sameAs": [
+              "https://www.facebook.com/ITSupportNet",
+              "https://x.com/itsupport",
+              "https://www.instagram.com/itsupport/",
+              "https://www.linkedin.com/company/itsupportnet/",
+              "https://www.youtube.com/@ITSupportNet"
+            ]
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.itsupport.net.in/cities/it-support-chicago/#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.itsupport.net.in/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "IT Support Chicago",
+                "item": "https://www.itsupport.net.in/cities/it-support-chicago"
+              }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://www.itsupport.net.in/cities/it-support-chicago/#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What IT support services are offered in Chicago?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "ITSupport.net.in provides managed IT services, network security, help desk support, cloud solutions, and on-site technical assistance for businesses in Chicago."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How can I contact ITSupport.net.in in Chicago?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "You can reach ITSupport.net.in via phone at +1-312-555-1234, email at support@itsupport.net.in, or through the contact form on our website."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do you offer on-site IT support in Chicago?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, ITSupport.net.in provides on-site IT support for businesses in Chicago to handle network issues, hardware troubleshooting, and technical consulting."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Are your IT services suitable for small businesses?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Absolutely. Our services are tailored for businesses of all sizes, including small businesses, providing scalable IT support and solutions."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is network security included in your IT support?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. ITSupport.net.in offers comprehensive network security services, including firewall management, antivirus setup, and vulnerability assessments for Chicago companies."
+                }
+              }
+            ]
+          },
+          {
+            "@type": "EmployerAggregateRating",
+            "@id": "https://www.itsupport.net.in/cities/it-support-chicago/#rating",
+            "itemReviewed": {
+              "@type": "Organization",
+              "name": "ITSupport.net.in | IT Support & Managed Services Chicago",
+              "sameAs": "https://www.itsupport.net.in/cities/it-support-chicago"
+            },
+            "ratingValue": "4.8",
+            "bestRating": "5",
+            "worstRating": "1",
+            "ratingCount": "950"
+          },
+          {
+            "@type": "QAPage",
+            "@id": "https://www.itsupport.net.in/cities/it-support-chicago/#qapage",
+            "mainEntity": {
+              "@type": "Question",
+              "name": "How does IT Support Chicago improve business IT operations?",
+              "text": "How does IT Support Chicago ensure reliable IT services, security, and minimal downtime for businesses?",
+              "url": "https://www.itsupport.net.in/cities/it-support-chicago#q1",
+              "answerCount": 1,
+              "upvoteCount": 12,
+              "datePublished": "2025-10-11T12:00:00+00:00",
+              "author": {
+                "@type": "Person",
+                "name": "Emma Clarke",
+                "url": "https://www.itsupport.net.in"
+              },
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "IT Support Chicago improves business IT operations by providing proactive monitoring, rapid issue resolution, network and security management, and customized IT solutions to ensure optimal performance and minimal downtime.",
+                "url": "https://www.itsupport.net.in/cities/it-support-chicago#q1a1",
+                "dateCreated": "2025-10-11T12:15:00+00:00",
+                "upvoteCount": 10,
+                "author": {
+                  "@type": "Person",
+                  "name": "Emma Clarke",
+                  "url": "https://www.itsupport.net.in"
+                }
+              }
+            }
+          }
+        ]
+      }
       
   },
   {
@@ -687,7 +1506,171 @@ const cities:City[] = [
       }
     }
     ,
-    
+    schema:{
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://www.itsupport.net.in/#website",
+          "url": "https://www.itsupport.net.in",
+          "name": "ITSupport.net.in",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://www.itsupport.net.in/search?q={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.itsupport.net.in/cities/it-support-dallas/#webpage",
+          "url": "https://www.itsupport.net.in/cities/it-support-dallas",
+          "name": "IT Support Dallas | Managed IT Services & Help Desk",
+          "description": "Read ITSupport.net.in’s terms and conditions to understand policies regarding IT support, managed services, and user responsibilities in Dallas.",
+          "inLanguage": "en-US",
+          "isPartOf": {
+            "@id": "https://www.itsupport.net.in/#website"
+          }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://www.itsupport.net.in/#organization",
+          "name": "ITSupport.net.in",
+          "url": "https://www.itsupport.net.in",
+          "logo": "https://www.itsupport.net.in/images/itsupport-logo.png",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+1-214-555-1234",
+            "contactType": "Customer Support",
+            "areaServed": "US",
+            "availableLanguage": "en"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "700 Tech Drive",
+            "addressLocality": "Dallas",
+            "postalCode": "75201",
+            "addressCountry": "US"
+          },
+          "sameAs": [
+            "https://www.facebook.com/ITSupportNet",
+            "https://x.com/itsupport",
+            "https://www.instagram.com/itsupport/",
+            "https://www.linkedin.com/company/itsupportnet/",
+            "https://www.youtube.com/@ITSupportNet"
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.itsupport.net.in/cities/it-support-dallas/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.itsupport.net.in/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "IT Support Dallas",
+              "item": "https://www.itsupport.net.in/cities/it-support-dallas"
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://www.itsupport.net.in/cities/it-support-dallas/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What IT support services are offered in Dallas?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "ITSupport.net.in provides managed IT services, network security, help desk support, cloud solutions, and on-site technical assistance for businesses in Dallas."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How can I contact ITSupport.net.in in Dallas?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "You can reach ITSupport.net.in via phone at +1-214-555-1234, email at support@itsupport.net.in, or through the contact form on our website."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you offer on-site IT support in Dallas?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, ITSupport.net.in provides on-site IT support for businesses in Dallas to handle network issues, hardware troubleshooting, and technical consulting."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Are your IT services suitable for small businesses?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Absolutely. Our services are tailored for businesses of all sizes, including small businesses, providing scalable IT support and solutions."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is network security included in your IT support?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. ITSupport.net.in offers comprehensive network security services, including firewall management, antivirus setup, and vulnerability assessments for Dallas companies."
+              }
+            }
+          ]
+        },
+        {
+          "@type": "EmployerAggregateRating",
+          "@id": "https://www.itsupport.net.in/cities/it-support-dallas/#rating",
+          "itemReviewed": {
+            "@type": "Organization",
+            "name": "ITSupport.net.in | IT Support & Managed Services Dallas",
+            "sameAs": "https://www.itsupport.net.in/cities/it-support-dallas"
+          },
+          "ratingValue": "4.8",
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "940"
+        },
+        {
+          "@type": "QAPage",
+          "@id": "https://www.itsupport.net.in/cities/it-support-dallas/#qapage",
+          "mainEntity": {
+            "@type": "Question",
+            "name": "How does IT Support Dallas enhance business IT performance?",
+            "text": "How does IT Support Dallas ensure reliable IT services, security, and minimal downtime for businesses?",
+            "url": "https://www.itsupport.net.in/cities/it-support-dallas#q1",
+            "answerCount": 1,
+            "upvoteCount": 12,
+            "datePublished": "2025-10-11T12:00:00+00:00",
+            "author": {
+              "@type": "Person",
+              "name": "Emma Clarke",
+              "url": "https://www.itsupport.net.in"
+            },
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "IT Support Dallas enhances business IT performance by offering proactive system monitoring, rapid issue resolution, network and security management, and tailored IT solutions to ensure optimal uptime and efficiency.",
+              "url": "https://www.itsupport.net.in/cities/it-support-dallas#q1a1",
+              "dateCreated": "2025-10-11T12:15:00+00:00",
+              "upvoteCount": 10,
+              "author": {
+                "@type": "Person",
+                "name": "Emma Clarke",
+                "url": "https://www.itsupport.net.in"
+              }
+            }
+          }
+        }
+      ]
+    }    
 },
 {
   cityName:"Dubai",
@@ -755,6 +1738,171 @@ const cities:City[] = [
       copyright: "© 2025"
     }
   },
+  schema:{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.itsupport.net.in/#website",
+        "url": "https://www.itsupport.net.in",
+        "name": "ITSupport.net.in",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://www.itsupport.net.in/search?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.itsupport.net.in/cities/it-support-dubai/#webpage",
+        "url": "https://www.itsupport.net.in/cities/it-support-dubai",
+        "name": "IT Support Dubai | Managed IT Services & Help Desk",
+        "description": "Read ITSupport.net.in’s terms and conditions to understand policies regarding IT support, managed services, and user responsibilities in Dubai.",
+        "inLanguage": "en-AE",
+        "isPartOf": {
+          "@id": "https://www.itsupport.net.in/#website"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.itsupport.net.in/#organization",
+        "name": "ITSupport.net.in",
+        "url": "https://www.itsupport.net.in",
+        "logo": "https://www.itsupport.net.in/images/itsupport-logo.png",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+971-4-555-1234",
+          "contactType": "Customer Support",
+          "areaServed": "AE",
+          "availableLanguage": "en"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Dubai Internet City, Building 5",
+          "addressLocality": "Dubai",
+          "postalCode": "00000",
+          "addressCountry": "AE"
+        },
+        "sameAs": [
+          "https://www.facebook.com/ITSupportNet",
+          "https://x.com/itsupport",
+          "https://www.instagram.com/itsupport/",
+          "https://www.linkedin.com/company/itsupportnet/",
+          "https://www.youtube.com/@ITSupportNet"
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.itsupport.net.in/cities/it-support-dubai/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.itsupport.net.in/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "IT Support Dubai",
+            "item": "https://www.itsupport.net.in/cities/it-support-dubai"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.itsupport.net.in/cities/it-support-dubai/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What IT support services are offered in Dubai?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "ITSupport.net.in provides managed IT services, network security, help desk support, cloud solutions, and on-site technical assistance for businesses in Dubai."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How can I contact ITSupport.net.in in Dubai?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can reach ITSupport.net.in via phone at +971-4-555-1234, email at support@itsupport.net.in, or through the contact form on our website."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you offer on-site IT support in Dubai?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, ITSupport.net.in provides on-site IT support for businesses in Dubai to handle network issues, hardware troubleshooting, and technical consulting."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are your IT services suitable for small businesses?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolutely. Our services are tailored for businesses of all sizes, including small businesses, providing scalable IT support and solutions."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is network security included in your IT support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. ITSupport.net.in offers comprehensive network security services, including firewall management, antivirus setup, and vulnerability assessments for Dubai companies."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "EmployerAggregateRating",
+        "@id": "https://www.itsupport.net.in/cities/it-support-dubai/#rating",
+        "itemReviewed": {
+          "@type": "Organization",
+          "name": "ITSupport.net.in | IT Support & Managed Services Dubai",
+          "sameAs": "https://www.itsupport.net.in/cities/it-support-dubai"
+        },
+        "ratingValue": "4.8",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "870"
+      },
+      {
+        "@type": "QAPage",
+        "@id": "https://www.itsupport.net.in/cities/it-support-dubai/#qapage",
+        "mainEntity": {
+          "@type": "Question",
+          "name": "How does IT Support Dubai ensure reliable IT services?",
+          "text": "How does IT Support Dubai provide businesses with secure, efficient, and responsive IT support?",
+          "url": "https://www.itsupport.net.in/cities/it-support-dubai#q1",
+          "answerCount": 1,
+          "upvoteCount": 12,
+          "datePublished": "2025-10-11T12:00:00+04:00",
+          "author": {
+            "@type": "Person",
+            "name": "Emma Clarke",
+            "url": "https://www.itsupport.net.in"
+          },
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "IT Support Dubai ensures reliable IT services through proactive monitoring, fast troubleshooting, cloud and network management, and tailored IT solutions that enhance business performance and minimize downtime.",
+            "url": "https://www.itsupport.net.in/cities/it-support-dubai#q1a1",
+            "dateCreated": "2025-10-11T12:15:00+04:00",
+            "upvoteCount": 10,
+            "author": {
+              "@type": "Person",
+              "name": "Emma Clarke",
+              "url": "https://www.itsupport.net.in"
+            }
+          }
+        }
+      }
+    ]
+  }
   
 },
 {
@@ -823,12 +1971,177 @@ const cities:City[] = [
       copyright: "© 2025"
     }
   },
+  schema:{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.itsupport.net.in/#website",
+        "url": "https://www.itsupport.net.in",
+        "name": "ITSupport.net.in",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://www.itsupport.net.in/search?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.itsupport.net.in/cities/it-support-edinburgh/#webpage",
+        "url": "https://www.itsupport.net.in/cities/it-support-edinburgh",
+        "name": "IT Support Edinburgh | Managed IT Services & Help Desk",
+        "description": "Read ITSupport.net.in’s terms and conditions to understand policies regarding IT support, managed services, and user responsibilities in Edinburgh.",
+        "inLanguage": "en-GB",
+        "isPartOf": {
+          "@id": "https://www.itsupport.net.in/#website"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.itsupport.net.in/#organization",
+        "name": "ITSupport.net.in",
+        "url": "https://www.itsupport.net.in",
+        "logo": "https://www.itsupport.net.in/images/itsupport-logo.png",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+44-131-555-1234",
+          "contactType": "Customer Support",
+          "areaServed": "GB",
+          "availableLanguage": "en"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "1 Princes Street",
+          "addressLocality": "Edinburgh",
+          "postalCode": "EH2 2EQ",
+          "addressCountry": "GB"
+        },
+        "sameAs": [
+          "https://www.facebook.com/ITSupportNet",
+          "https://x.com/itsupport",
+          "https://www.instagram.com/itsupport/",
+          "https://www.linkedin.com/company/itsupportnet/",
+          "https://www.youtube.com/@ITSupportNet"
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.itsupport.net.in/cities/it-support-edinburgh/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.itsupport.net.in/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "IT Support Edinburgh",
+            "item": "https://www.itsupport.net.in/cities/it-support-edinburgh"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.itsupport.net.in/cities/it-support-edinburgh/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What IT support services are offered in Edinburgh?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "ITSupport.net.in provides managed IT services, network security, help desk support, cloud solutions, and on-site technical assistance for businesses in Edinburgh."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How can I contact ITSupport.net.in in Edinburgh?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can reach ITSupport.net.in via phone at +44-131-555-1234, email at support@itsupport.net.in, or through the contact form on our website."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you offer on-site IT support in Edinburgh?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, ITSupport.net.in provides on-site IT support for businesses in Edinburgh to handle network issues, hardware troubleshooting, and technical consulting."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are your IT services suitable for small businesses?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolutely. Our services are tailored for businesses of all sizes, including small businesses, providing scalable IT support and solutions."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is network security included in your IT support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. ITSupport.net.in offers comprehensive network security services, including firewall management, antivirus setup, and vulnerability assessments for Edinburgh companies."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "EmployerAggregateRating",
+        "@id": "https://www.itsupport.net.in/cities/it-support-edinburgh/#rating",
+        "itemReviewed": {
+          "@type": "Organization",
+          "name": "ITSupport.net.in | IT Support & Managed Services Edinburgh",
+          "sameAs": "https://www.itsupport.net.in/cities/it-support-edinburgh"
+        },
+        "ratingValue": "4.8",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "860"
+      },
+      {
+        "@type": "QAPage",
+        "@id": "https://www.itsupport.net.in/cities/it-support-edinburgh/#qapage",
+        "mainEntity": {
+          "@type": "Question",
+          "name": "How does IT Support Edinburgh provide reliable IT solutions?",
+          "text": "How does IT Support Edinburgh ensure businesses receive secure, efficient, and responsive IT support?",
+          "url": "https://www.itsupport.net.in/cities/it-support-edinburgh#q1",
+          "answerCount": 1,
+          "upvoteCount": 12,
+          "datePublished": "2025-10-11T12:00:00+01:00",
+          "author": {
+            "@type": "Person",
+            "name": "Emma Clarke",
+            "url": "https://www.itsupport.net.in"
+          },
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "IT Support Edinburgh provides reliable IT solutions through proactive monitoring, fast troubleshooting, network and cloud management, and customized IT services to optimize business performance and minimize downtime.",
+            "url": "https://www.itsupport.net.in/cities/it-support-edinburgh#q1a1",
+            "dateCreated": "2025-10-11T12:15:00+01:00",
+            "upvoteCount": 10,
+            "author": {
+              "@type": "Person",
+              "name": "Emma Clarke",
+              "url": "https://www.itsupport.net.in"
+            }
+          }
+        }
+      }
+    ]
+  }
   
 },
 {
   cityName:"Glasgow",
   cityImage:"",
-  citySlug:"t-support-glasgow",
+  citySlug:"it-support-glasgow",
   metaData:{
     metadataBase: new URL("https://www.itsupport.net.in"),
     title: "IT Support Glasgow | Remote Tech Help Services UK",
@@ -891,6 +2204,171 @@ const cities:City[] = [
       copyright: "© 2025"
     }
   },
+  schema:{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.itsupport.net.in/#website",
+        "url": "https://www.itsupport.net.in",
+        "name": "ITSupport.net.in",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://www.itsupport.net.in/search?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.itsupport.net.in/cities/it-support-glasgow/#webpage",
+        "url": "https://www.itsupport.net.in/cities/it-support-glasgow",
+        "name": "IT Support Glasgow | Managed IT Services & Help Desk",
+        "description": "Read ITSupport.net.in’s terms and conditions to understand policies regarding IT support, managed services, and user responsibilities in Glasgow.",
+        "inLanguage": "en-GB",
+        "isPartOf": {
+          "@id": "https://www.itsupport.net.in/#website"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.itsupport.net.in/#organization",
+        "name": "ITSupport.net.in",
+        "url": "https://www.itsupport.net.in",
+        "logo": "https://www.itsupport.net.in/images/itsupport-logo.png",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+44-141-555-1234",
+          "contactType": "Customer Support",
+          "areaServed": "GB",
+          "availableLanguage": "en"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "123 Buchanan Street",
+          "addressLocality": "Glasgow",
+          "postalCode": "G1 2JZ",
+          "addressCountry": "GB"
+        },
+        "sameAs": [
+          "https://www.facebook.com/ITSupportNet",
+          "https://x.com/itsupport",
+          "https://www.instagram.com/itsupport/",
+          "https://www.linkedin.com/company/itsupportnet/",
+          "https://www.youtube.com/@ITSupportNet"
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.itsupport.net.in/cities/it-support-glasgow/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.itsupport.net.in/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "IT Support Glasgow",
+            "item": "https://www.itsupport.net.in/cities/it-support-glasgow"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.itsupport.net.in/cities/it-support-glasgow/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What IT support services are offered in Glasgow?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "ITSupport.net.in provides managed IT services, network security, help desk support, cloud solutions, and on-site technical assistance for businesses in Glasgow."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How can I contact ITSupport.net.in in Glasgow?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can reach ITSupport.net.in via phone at +44-141-555-1234, email at support@itsupport.net.in, or through the contact form on our website."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you offer on-site IT support in Glasgow?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, ITSupport.net.in provides on-site IT support for businesses in Glasgow to handle network issues, hardware troubleshooting, and technical consulting."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are your IT services suitable for small businesses?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolutely. Our services are tailored for businesses of all sizes, including small businesses, providing scalable IT support and solutions."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is network security included in your IT support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. ITSupport.net.in offers comprehensive network security services, including firewall management, antivirus setup, and vulnerability assessments for Glasgow companies."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "EmployerAggregateRating",
+        "@id": "https://www.itsupport.net.in/cities/it-support-glasgow/#rating",
+        "itemReviewed": {
+          "@type": "Organization",
+          "name": "ITSupport.net.in | IT Support & Managed Services Glasgow",
+          "sameAs": "https://www.itsupport.net.in/cities/it-support-glasgow"
+        },
+        "ratingValue": "4.8",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "860"
+      },
+      {
+        "@type": "QAPage",
+        "@id": "https://www.itsupport.net.in/cities/it-support-glasgow/#qapage",
+        "mainEntity": {
+          "@type": "Question",
+          "name": "How does IT Support Glasgow provide reliable IT services?",
+          "text": "How does IT Support Glasgow ensure businesses receive secure, efficient, and responsive IT support?",
+          "url": "https://www.itsupport.net.in/cities/it-support-glasgow#q1",
+          "answerCount": 1,
+          "upvoteCount": 12,
+          "datePublished": "2025-10-11T12:30:00+01:00",
+          "author": {
+            "@type": "Person",
+            "name": "Emma Clarke",
+            "url": "https://www.itsupport.net.in"
+          },
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "IT Support Glasgow ensures reliable IT services by offering proactive monitoring, fast troubleshooting, network and cloud management, and customized IT solutions that minimize downtime and optimize business performance.",
+            "url": "https://www.itsupport.net.in/cities/it-support-glasgow#q1a1",
+            "dateCreated": "2025-10-11T12:45:00+01:00",
+            "upvoteCount": 10,
+            "author": {
+              "@type": "Person",
+              "name": "Emma Clarke",
+              "url": "https://www.itsupport.net.in"
+            }
+          }
+        }
+      }
+    ]
+  }
   
 },
 {
@@ -959,7 +2437,171 @@ const cities:City[] = [
       copyright: "© 2025"
     }
   },
-  
+  schema:{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.itsupport.net.in/#website",
+        "url": "https://www.itsupport.net.in",
+        "name": "ITSupport.net.in",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://www.itsupport.net.in/search?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.itsupport.net.in/cities/it-support-houston/#webpage",
+        "url": "https://www.itsupport.net.in/cities/it-support-houston",
+        "name": "IT Support Houston | Managed IT Services & Help Desk",
+        "description": "Read ITSupport.net.in’s terms and conditions to understand policies regarding IT support, managed services, and user responsibilities in Houston.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://www.itsupport.net.in/#website"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.itsupport.net.in/#organization",
+        "name": "ITSupport.net.in",
+        "url": "https://www.itsupport.net.in",
+        "logo": "https://www.itsupport.net.in/images/itsupport-logo.png",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+1-713-555-5678",
+          "contactType": "Customer Support",
+          "areaServed": "US",
+          "availableLanguage": "en"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "500 Main Street",
+          "addressLocality": "Houston",
+          "postalCode": "77002",
+          "addressCountry": "US"
+        },
+        "sameAs": [
+          "https://www.facebook.com/ITSupportNet",
+          "https://x.com/itsupport",
+          "https://www.instagram.com/itsupport/",
+          "https://www.linkedin.com/company/itsupportnet/",
+          "https://www.youtube.com/@ITSupportNet"
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.itsupport.net.in/cities/it-support-houston/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.itsupport.net.in/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "IT Support Houston",
+            "item": "https://www.itsupport.net.in/cities/it-support-houston"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.itsupport.net.in/cities/it-support-houston/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What IT support services are offered in Houston?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "ITSupport.net.in provides managed IT services, network security, help desk support, cloud solutions, and on-site technical assistance for businesses in Houston."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How can I contact ITSupport.net.in in Houston?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can reach ITSupport.net.in via phone at +1-713-555-5678, email at support@itsupport.net.in, or through the contact form on our website."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you offer on-site IT support in Houston?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, ITSupport.net.in provides on-site IT support for businesses in Houston to handle network issues, hardware troubleshooting, and technical consulting."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are your IT services suitable for small businesses?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolutely. Our services are tailored for businesses of all sizes, including small businesses, providing scalable IT support and solutions."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is network security included in your IT support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. ITSupport.net.in offers comprehensive network security services, including firewall management, antivirus setup, and vulnerability assessments for Houston companies."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "EmployerAggregateRating",
+        "@id": "https://www.itsupport.net.in/cities/it-support-houston/#rating",
+        "itemReviewed": {
+          "@type": "Organization",
+          "name": "ITSupport.net.in | IT Support & Managed Services Houston",
+          "sameAs": "https://www.itsupport.net.in/cities/it-support-houston"
+        },
+        "ratingValue": "4.8",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "860"
+      },
+      {
+        "@type": "QAPage",
+        "@id": "https://www.itsupport.net.in/cities/it-support-houston/#qapage",
+        "mainEntity": {
+          "@type": "Question",
+          "name": "How does IT Support Houston ensure reliable IT services?",
+          "text": "How does IT Support Houston make sure businesses get efficient, secure, and responsive IT support?",
+          "url": "https://www.itsupport.net.in/cities/it-support-houston#q1",
+          "answerCount": 1,
+          "upvoteCount": 12,
+          "datePublished": "2025-10-11T13:00:00-05:00",
+          "author": {
+            "@type": "Person",
+            "name": "Michael Turner",
+            "url": "https://www.itsupport.net.in"
+          },
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "IT Support Houston ensures reliable IT services by providing proactive monitoring, fast troubleshooting, network and cloud management, and customized IT solutions to minimize downtime and optimize business performance.",
+            "url": "https://www.itsupport.net.in/cities/it-support-houston#q1a1",
+            "dateCreated": "2025-10-11T13:15:00-05:00",
+            "upvoteCount": 10,
+            "author": {
+              "@type": "Person",
+              "name": "Michael Turner",
+              "url": "https://www.itsupport.net.in"
+            }
+          }
+        }
+      }
+    ]
+  }  
 },
 {
   cityName:"Johannesburg",
@@ -1027,7 +2669,171 @@ const cities:City[] = [
       copyright: "© 2025"
     }
   },
-  
+  schema:{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.itsupport.net.in/#website",
+        "url": "https://www.itsupport.net.in",
+        "name": "ITSupport.net.in",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://www.itsupport.net.in/search?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.itsupport.net.in/cities/it-support-johannesburg/#webpage",
+        "url": "https://www.itsupport.net.in/cities/it-support-johannesburg",
+        "name": "IT Support Johannesburg | Managed IT Services & Help Desk",
+        "description": "Read ITSupport.net.in’s terms and conditions to understand policies regarding IT support, managed services, and user responsibilities in Johannesburg.",
+        "inLanguage": "en-ZA",
+        "isPartOf": {
+          "@id": "https://www.itsupport.net.in/#website"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.itsupport.net.in/#organization",
+        "name": "ITSupport.net.in",
+        "url": "https://www.itsupport.net.in",
+        "logo": "https://www.itsupport.net.in/images/itsupport-logo.png",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+27-11-555-7890",
+          "contactType": "Customer Support",
+          "areaServed": "ZA",
+          "availableLanguage": "en"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "100 Main Road",
+          "addressLocality": "Johannesburg",
+          "postalCode": "2000",
+          "addressCountry": "ZA"
+        },
+        "sameAs": [
+          "https://www.facebook.com/ITSupportNet",
+          "https://x.com/itsupport",
+          "https://www.instagram.com/itsupport/",
+          "https://www.linkedin.com/company/itsupportnet/",
+          "https://www.youtube.com/@ITSupportNet"
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.itsupport.net.in/cities/it-support-johannesburg/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.itsupport.net.in/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "IT Support Johannesburg",
+            "item": "https://www.itsupport.net.in/cities/it-support-johannesburg"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.itsupport.net.in/cities/it-support-johannesburg/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What IT support services are offered in Johannesburg?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "ITSupport.net.in provides managed IT services, network security, help desk support, cloud solutions, and on-site technical assistance for businesses in Johannesburg."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How can I contact ITSupport.net.in in Johannesburg?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can reach ITSupport.net.in via phone at +27-11-555-7890, email at support@itsupport.net.in, or through the contact form on our website."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you offer on-site IT support in Johannesburg?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, ITSupport.net.in provides on-site IT support for businesses in Johannesburg to handle network issues, hardware troubleshooting, and technical consulting."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are your IT services suitable for small businesses?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolutely. Our services are tailored for businesses of all sizes, including small businesses, providing scalable IT support and solutions."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is network security included in your IT support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. ITSupport.net.in offers comprehensive network security services, including firewall management, antivirus setup, and vulnerability assessments for Johannesburg companies."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "EmployerAggregateRating",
+        "@id": "https://www.itsupport.net.in/cities/it-support-johannesburg/#rating",
+        "itemReviewed": {
+          "@type": "Organization",
+          "name": "ITSupport.net.in | IT Support & Managed Services Johannesburg",
+          "sameAs": "https://www.itsupport.net.in/cities/it-support-johannesburg"
+        },
+        "ratingValue": "4.8",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "720"
+      },
+      {
+        "@type": "QAPage",
+        "@id": "https://www.itsupport.net.in/cities/it-support-johannesburg/#qapage",
+        "mainEntity": {
+          "@type": "Question",
+          "name": "How does IT Support Johannesburg ensure reliable IT services?",
+          "text": "How does IT Support Johannesburg make sure businesses get efficient, secure, and responsive IT support?",
+          "url": "https://www.itsupport.net.in/cities/it-support-johannesburg#q1",
+          "answerCount": 1,
+          "upvoteCount": 12,
+          "datePublished": "2025-10-11T15:00:00+02:00",
+          "author": {
+            "@type": "Person",
+            "name": "Thabo Mokoena",
+            "url": "https://www.itsupport.net.in"
+          },
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "IT Support Johannesburg ensures reliable IT services by providing proactive monitoring, fast troubleshooting, network and cloud management, and customized IT solutions to minimize downtime and optimize business performance.",
+            "url": "https://www.itsupport.net.in/cities/it-support-johannesburg#q1a1",
+            "dateCreated": "2025-10-11T15:15:00+02:00",
+            "upvoteCount": 10,
+            "author": {
+              "@type": "Person",
+              "name": "Thabo Mokoena",
+              "url": "https://www.itsupport.net.in"
+            }
+          }
+        }
+      }
+    ]
+  }  
 },
 {
   cityName:"Lagos",
@@ -1095,7 +2901,171 @@ const cities:City[] = [
       copyright: "© 2025"
     }
   },
-  
+  schema:{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.itsupport.net.in/#website",
+        "url": "https://www.itsupport.net.in",
+        "name": "ITSupport.net.in",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://www.itsupport.net.in/search?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.itsupport.net.in/cities/it-support-lagos/#webpage",
+        "url": "https://www.itsupport.net.in/cities/it-support-lagos",
+        "name": "IT Support Lagos | Managed IT Services & Help Desk",
+        "description": "Read ITSupport.net.in’s terms and conditions to understand policies regarding IT support, managed services, and user responsibilities in Lagos.",
+        "inLanguage": "en-NG",
+        "isPartOf": {
+          "@id": "https://www.itsupport.net.in/#website"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.itsupport.net.in/#organization",
+        "name": "ITSupport.net.in",
+        "url": "https://www.itsupport.net.in",
+        "logo": "https://www.itsupport.net.in/images/itsupport-logo.png",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+234-809-123-4567",
+          "contactType": "Customer Support",
+          "areaServed": "NG",
+          "availableLanguage": "en"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "12 Marina Road",
+          "addressLocality": "Lagos",
+          "postalCode": "100001",
+          "addressCountry": "NG"
+        },
+        "sameAs": [
+          "https://www.facebook.com/ITSupportNet",
+          "https://x.com/itsupport",
+          "https://www.instagram.com/itsupport/",
+          "https://www.linkedin.com/company/itsupportnet/",
+          "https://www.youtube.com/@ITSupportNet"
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.itsupport.net.in/cities/it-support-lagos/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.itsupport.net.in/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "IT Support Lagos",
+            "item": "https://www.itsupport.net.in/cities/it-support-lagos"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.itsupport.net.in/cities/it-support-lagos/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What IT support services are offered in Lagos?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "ITSupport.net.in provides managed IT services, network security, help desk support, cloud solutions, and on-site technical assistance for businesses in Lagos."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How can I contact ITSupport.net.in in Lagos?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can reach ITSupport.net.in via phone at +234-809-123-4567, email at support@itsupport.net.in, or through the contact form on our website."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you offer on-site IT support in Lagos?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, ITSupport.net.in provides on-site IT support for businesses in Lagos to handle network issues, hardware troubleshooting, and technical consulting."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are your IT services suitable for small businesses?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolutely. Our services are tailored for businesses of all sizes, including small businesses, providing scalable IT support and solutions."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is network security included in your IT support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. ITSupport.net.in offers comprehensive network security services, including firewall management, antivirus setup, and vulnerability assessments for Lagos companies."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "EmployerAggregateRating",
+        "@id": "https://www.itsupport.net.in/cities/it-support-lagos/#rating",
+        "itemReviewed": {
+          "@type": "Organization",
+          "name": "ITSupport.net.in | IT Support & Managed Services Lagos",
+          "sameAs": "https://www.itsupport.net.in/cities/it-support-lagos"
+        },
+        "ratingValue": "4.8",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "680"
+      },
+      {
+        "@type": "QAPage",
+        "@id": "https://www.itsupport.net.in/cities/it-support-lagos/#qapage",
+        "mainEntity": {
+          "@type": "Question",
+          "name": "How does IT Support Lagos ensure reliable IT services?",
+          "text": "How does IT Support Lagos make sure businesses receive efficient, secure, and responsive IT support?",
+          "url": "https://www.itsupport.net.in/cities/it-support-lagos#q1",
+          "answerCount": 1,
+          "upvoteCount": 12,
+          "datePublished": "2025-10-11T16:00:00+01:00",
+          "author": {
+            "@type": "Person",
+            "name": "Olusegun Adeyemi",
+            "url": "https://www.itsupport.net.in"
+          },
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "IT Support Lagos ensures reliable IT services by providing proactive monitoring, rapid troubleshooting, managed network and cloud solutions, and customized IT support to minimize downtime and optimize business performance.",
+            "url": "https://www.itsupport.net.in/cities/it-support-lagos#q1a1",
+            "dateCreated": "2025-10-11T16:15:00+01:00",
+            "upvoteCount": 10,
+            "author": {
+              "@type": "Person",
+              "name": "Olusegun Adeyemi",
+              "url": "https://www.itsupport.net.in"
+            }
+          }
+        }
+      }
+    ]
+  }  
 },
 {
   cityName:"Leeds",
@@ -1163,7 +3133,386 @@ const cities:City[] = [
       copyright: "© 2025"
     }
   },
-  
+  schema:{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.itsupport.net.in/#website",
+        "url": "https://www.itsupport.net.in",
+        "name": "ITSupport.net.in",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://www.itsupport.net.in/search?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.itsupport.net.in/cities/it-support-leeds/#webpage",
+        "url": "https://www.itsupport.net.in/cities/it-support-leeds",
+        "name": "IT Support Leeds | Managed IT Services & Help Desk",
+        "description": "Read ITSupport.net.in’s terms and conditions to understand policies regarding IT support, managed services, and user responsibilities in Leeds.",
+        "inLanguage": "en-GB",
+        "isPartOf": {
+          "@id": "https://www.itsupport.net.in/#website"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.itsupport.net.in/#organization",
+        "name": "ITSupport.net.in",
+        "url": "https://www.itsupport.net.in",
+        "logo": "https://www.itsupport.net.in/images/itsupport-logo.png",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+44-113-123-4567",
+          "contactType": "Customer Support",
+          "areaServed": "GB",
+          "availableLanguage": "en"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "15 City Square",
+          "addressLocality": "Leeds",
+          "postalCode": "LS1 2AB",
+          "addressCountry": "GB"
+        },
+        "sameAs": [
+          "https://www.facebook.com/ITSupportNet",
+          "https://x.com/itsupport",
+          "https://www.instagram.com/itsupport/",
+          "https://www.linkedin.com/company/itsupportnet/",
+          "https://www.youtube.com/@ITSupportNet"
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.itsupport.net.in/cities/it-support-leeds/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.itsupport.net.in/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "IT Support Leeds",
+            "item": "https://www.itsupport.net.in/cities/it-support-leeds"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.itsupport.net.in/cities/it-support-leeds/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What IT support services are offered in Leeds?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "ITSupport.net.in provides managed IT services, network security, help desk support, cloud solutions, and on-site technical assistance for businesses in Leeds."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How can I contact ITSupport.net.in in Leeds?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can reach ITSupport.net.in via phone at +44-113-123-4567, email at support@itsupport.net.in, or through the contact form on our website."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you offer on-site IT support in Leeds?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, ITSupport.net.in provides on-site IT support for businesses in Leeds to handle network issues, hardware troubleshooting, and technical consulting."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are your IT services suitable for small businesses?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolutely. Our services are tailored for businesses of all sizes, including small businesses, providing scalable IT support and solutions."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is network security included in your IT support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. ITSupport.net.in offers comprehensive network security services, including firewall management, antivirus setup, and vulnerability assessments for Leeds companies."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "EmployerAggregateRating",
+        "@id": "https://www.itsupport.net.in/cities/it-support-leeds/#rating",
+        "itemReviewed": {
+          "@type": "Organization",
+          "name": "ITSupport.net.in | IT Support & Managed Services Leeds",
+          "sameAs": "https://www.itsupport.net.in/cities/it-support-leeds"
+        },
+        "ratingValue": "4.8",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "520"
+      },
+      {
+        "@type": "QAPage",
+        "@id": "https://www.itsupport.net.in/cities/it-support-leeds/#qapage",
+        "mainEntity": {
+          "@type": "Question",
+          "name": "How does IT Support Leeds ensure reliable IT services?",
+          "text": "How does IT Support Leeds make sure businesses receive efficient, secure, and responsive IT support?",
+          "url": "https://www.itsupport.net.in/cities/it-support-leeds#q1",
+          "answerCount": 1,
+          "upvoteCount": 12,
+          "datePublished": "2025-10-11T16:30:00+01:00",
+          "author": {
+            "@type": "Person",
+            "name": "James Thompson",
+            "url": "https://www.itsupport.net.in"
+          },
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "IT Support Leeds provides reliable IT services through proactive system monitoring, fast troubleshooting, managed network and cloud solutions, and tailored IT support to minimize downtime and enhance business productivity.",
+            "url": "https://www.itsupport.net.in/cities/it-support-leeds#q1a1",
+            "dateCreated": "2025-10-11T16:45:00+01:00",
+            "upvoteCount": 10,
+            "author": {
+              "@type": "Person",
+              "name": "James Thompson",
+              "url": "https://www.itsupport.net.in"
+            }
+          }
+        }
+      }
+    ]
+  }  
+},
+{
+  cityName:"Liverpool",
+  cityImage:"",
+  citySlug:"it-support-liverpool",
+  metaData:{
+    title: "IT Support Liverpool | Managed IT Services & Help Desk",
+    description:
+      "Read the terms and conditions of using ITSupport.net.in for IT services in Liverpool. Learn about managed IT services, help desk solutions, and user responsibilities.",
+    keywords:
+      "ITSupport.net.in terms, IT services policy Liverpool, user agreement, terms and conditions, managed IT support Liverpool",
+    openGraph: {
+      title: "IT Support Liverpool | Managed IT Services & Help Desk",
+      description:
+        "Understand the user terms of ITSupport.net.in Liverpool. We provide managed IT services, help desk solutions, and on-site IT support. Review our terms for safe and informed use.",
+      url: "https://www.itsupport.net.in/cities/it-support-liverpool/",
+      siteName: "ITSupport.net.in",
+      images: [
+        {
+          url: "https://www.itsupport.net.in/images/it-support-liverpool.jpg",
+          alt: "IT Support Services Liverpool",
+          type: "images/jpeg",
+          width: 1200,
+          height: 630,
+        },
+      ],
+      type: "website",
+      updatedTime: "2025-10-11T00:00:00+00:00",
+      locale: "en_US",
+      alternateLocale: "en_IN",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "IT Support Liverpool | Managed IT Services & Help Desk",
+      description:
+        "Review the terms and usage policy for ITSupport.net.in Liverpool. We provide IT support services including managed IT, help desk, and on-site IT solutions.",
+      image: "https://www.itsupport.net.in/images/it-support-liverpool.jpg",
+      imageAlt: "IT Support Services Liverpool",
+      imageType: "images/jpeg",
+      url: "https://www.itsupport.net.in/cities/it-support-liverpool/",
+      creator: "@itsupport",
+    },
+    themeColor: "#1b6af2",
+    authors: [{ name: "ITSupport.net.in" }],
+    copyright: "© 2025",
+    robots: "index, follow",
+    alternates: {
+      canonical: "https://www.itsupport.net.in/cities/it-support-liverpool/",
+    },
+  },
+  schema:{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.itsupport.net.in/#website",
+        "url": "https://www.itsupport.net.in",
+        "name": "ITSupport.net.in",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://www.itsupport.net.in/search?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.itsupport.net.in/cities/it-support-liverpool/#webpage",
+        "url": "https://www.itsupport.net.in/cities/it-support-liverpool",
+        "name": "IT Support Liverpool | Managed IT Services & Help Desk",
+        "description": "Read ITSupport.net.in’s terms and conditions to understand policies regarding IT support, managed services, and user responsibilities in Liverpool.",
+        "inLanguage": "en-GB",
+        "isPartOf": {
+          "@id": "https://www.itsupport.net.in/#website"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.itsupport.net.in/#organization",
+        "name": "ITSupport.net.in",
+        "url": "https://www.itsupport.net.in",
+        "logo": "https://www.itsupport.net.in/images/itsupport-logo.png",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+44-151-123-4567",
+          "contactType": "Customer Support",
+          "areaServed": "GB",
+          "availableLanguage": "en"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "10 Church Street",
+          "addressLocality": "Liverpool",
+          "postalCode": "L1 3AB",
+          "addressCountry": "GB"
+        },
+        "sameAs": [
+          "https://www.facebook.com/ITSupportNet",
+          "https://x.com/itsupport",
+          "https://www.instagram.com/itsupport/",
+          "https://www.linkedin.com/company/itsupportnet/",
+          "https://www.youtube.com/@ITSupportNet"
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.itsupport.net.in/cities/it-support-liverpool/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.itsupport.net.in/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "IT Support Liverpool",
+            "item": "https://www.itsupport.net.in/cities/it-support-liverpool"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.itsupport.net.in/cities/it-support-liverpool/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What IT support services are offered in Liverpool?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "ITSupport.net.in provides managed IT services, network security, help desk support, cloud solutions, and on-site technical assistance for businesses in Liverpool."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How can I contact ITSupport.net.in in Liverpool?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can reach ITSupport.net.in via phone at +44-151-123-4567, email at support@itsupport.net.in, or through the contact form on our website."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you offer on-site IT support in Liverpool?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, ITSupport.net.in provides on-site IT support for businesses in Liverpool to handle network issues, hardware troubleshooting, and technical consulting."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are your IT services suitable for small businesses?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolutely. Our services are tailored for businesses of all sizes, including small businesses, providing scalable IT support and solutions."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is network security included in your IT support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. ITSupport.net.in offers comprehensive network security services, including firewall management, antivirus setup, and vulnerability assessments for Liverpool companies."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "EmployerAggregateRating",
+        "@id": "https://www.itsupport.net.in/cities/it-support-liverpool/#rating",
+        "itemReviewed": {
+          "@type": "Organization",
+          "name": "ITSupport.net.in | IT Support & Managed Services Liverpool",
+          "sameAs": "https://www.itsupport.net.in/cities/it-support-liverpool"
+        },
+        "ratingValue": "4.8",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "510"
+      },
+      {
+        "@type": "QAPage",
+        "@id": "https://www.itsupport.net.in/cities/it-support-liverpool/#qapage",
+        "mainEntity": {
+          "@type": "Question",
+          "name": "How does IT Support Liverpool provide reliable IT services?",
+          "text": "How does IT Support Liverpool ensure businesses receive fast, secure, and efficient IT support?",
+          "url": "https://www.itsupport.net.in/cities/it-support-liverpool#q1",
+          "answerCount": 1,
+          "upvoteCount": 12,
+          "datePublished": "2025-10-11T17:00:00+01:00",
+          "author": {
+            "@type": "Person",
+            "name": "James Thompson",
+            "url": "https://www.itsupport.net.in"
+          },
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "IT Support Liverpool ensures reliable IT services by offering proactive monitoring, rapid troubleshooting, managed network and cloud solutions, and customized IT support plans to minimize downtime and enhance business efficiency.",
+            "url": "https://www.itsupport.net.in/cities/it-support-liverpool#q1a1",
+            "dateCreated": "2025-10-11T17:15:00+01:00",
+            "upvoteCount": 10,
+            "author": {
+              "@type": "Person",
+              "name": "James Thompson",
+              "url": "https://www.itsupport.net.in"
+            }
+          }
+        }
+      }
+    ]
+  }  
 },
 {
   cityName:"London",
@@ -1231,6 +3580,171 @@ const cities:City[] = [
       copyright: "© 2025"
     }
   },
+  schema:{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.itsupport.net.in/#website",
+        "url": "https://www.itsupport.net.in",
+        "name": "ITSupport.net.in",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://www.itsupport.net.in/search?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.itsupport.net.in/cities/it-support-london/#webpage",
+        "url": "https://www.itsupport.net.in/cities/it-support-london",
+        "name": "IT Support London | Managed IT Services & Help Desk",
+        "description": "Read ITSupport.net.in’s terms and conditions to understand policies regarding IT support, managed services, and user responsibilities in London.",
+        "inLanguage": "en-GB",
+        "isPartOf": {
+          "@id": "https://www.itsupport.net.in/#website"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.itsupport.net.in/#organization",
+        "name": "ITSupport.net.in",
+        "url": "https://www.itsupport.net.in",
+        "logo": "https://www.itsupport.net.in/images/itsupport-logo.png",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+44-20-1234-5678",
+          "contactType": "Customer Support",
+          "areaServed": "GB",
+          "availableLanguage": "en"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "50 Queen Street",
+          "addressLocality": "London",
+          "postalCode": "EC4R 1EE",
+          "addressCountry": "GB"
+        },
+        "sameAs": [
+          "https://www.facebook.com/ITSupportNet",
+          "https://x.com/itsupport",
+          "https://www.instagram.com/itsupport/",
+          "https://www.linkedin.com/company/itsupportnet/",
+          "https://www.youtube.com/@ITSupportNet"
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.itsupport.net.in/cities/it-support-london/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.itsupport.net.in/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "IT Support London",
+            "item": "https://www.itsupport.net.in/cities/it-support-london"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.itsupport.net.in/cities/it-support-london/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What IT support services are offered in London?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "ITSupport.net.in provides managed IT services, network security, help desk support, cloud solutions, and on-site technical assistance for businesses in London."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How can I contact ITSupport.net.in in London?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can reach ITSupport.net.in via phone at +44-20-1234-5678, email at support@itsupport.net.in, or through the contact form on our website."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you offer on-site IT support in London?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, ITSupport.net.in provides on-site IT support for businesses in London to handle network issues, hardware troubleshooting, and technical consulting."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are your IT services suitable for small businesses?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolutely. Our services are tailored for businesses of all sizes, including small businesses, providing scalable IT support and solutions."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is network security included in your IT support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. ITSupport.net.in offers comprehensive network security services, including firewall management, antivirus setup, and vulnerability assessments for London companies."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "EmployerAggregateRating",
+        "@id": "https://www.itsupport.net.in/cities/it-support-london/#rating",
+        "itemReviewed": {
+          "@type": "Organization",
+          "name": "ITSupport.net.in | IT Support & Managed Services London",
+          "sameAs": "https://www.itsupport.net.in/cities/it-support-london"
+        },
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "625"
+      },
+      {
+        "@type": "QAPage",
+        "@id": "https://www.itsupport.net.in/cities/it-support-london/#qapage",
+        "mainEntity": {
+          "@type": "Question",
+          "name": "How does IT Support London ensure reliable IT services?",
+          "text": "How does IT Support London provide businesses with fast, secure, and efficient IT support?",
+          "url": "https://www.itsupport.net.in/cities/it-support-london#q1",
+          "answerCount": 1,
+          "upvoteCount": 12,
+          "datePublished": "2025-10-11T17:30:00+01:00",
+          "author": {
+            "@type": "Person",
+            "name": "James Thompson",
+            "url": "https://www.itsupport.net.in"
+          },
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "IT Support London ensures reliable IT services by offering proactive monitoring, rapid troubleshooting, managed network and cloud solutions, and customized IT support plans to minimize downtime and maximize business efficiency.",
+            "url": "https://www.itsupport.net.in/cities/it-support-london#q1a1",
+            "dateCreated": "2025-10-11T17:45:00+01:00",
+            "upvoteCount": 10,
+            "author": {
+              "@type": "Person",
+              "name": "James Thompson",
+              "url": "https://www.itsupport.net.in"
+            }
+          }
+        }
+      }
+    ]
+  }
   
 },
 {
@@ -1299,6 +3813,171 @@ const cities:City[] = [
       copyright: "© 2025"
     }
   },
+  schema:{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.itsupport.net.in/#website",
+        "url": "https://www.itsupport.net.in",
+        "name": "ITSupport.net.in",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://www.itsupport.net.in/search?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.itsupport.net.in/cities/it-support-los-angeles/#webpage",
+        "url": "https://www.itsupport.net.in/cities/it-support-los-angeles",
+        "name": "IT Support Los Angeles | Managed IT Services & Help Desk",
+        "description": "Read ITSupport.net.in’s terms and conditions to understand policies regarding IT support, managed services, and user responsibilities in Los Angeles.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://www.itsupport.net.in/#website"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.itsupport.net.in/#organization",
+        "name": "ITSupport.net.in",
+        "url": "https://www.itsupport.net.in",
+        "logo": "https://www.itsupport.net.in/images/itsupport-logo.png",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+1-310-123-4567",
+          "contactType": "Customer Support",
+          "areaServed": "US",
+          "availableLanguage": "en"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "123 Sunset Blvd",
+          "addressLocality": "Los Angeles",
+          "postalCode": "90026",
+          "addressCountry": "US"
+        },
+        "sameAs": [
+          "https://www.facebook.com/ITSupportNet",
+          "https://x.com/itsupport",
+          "https://www.instagram.com/itsupport/",
+          "https://www.linkedin.com/company/itsupportnet/",
+          "https://www.youtube.com/@ITSupportNet"
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.itsupport.net.in/cities/it-support-los-angeles/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.itsupport.net.in/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "IT Support Los Angeles",
+            "item": "https://www.itsupport.net.in/cities/it-support-los-angeles"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.itsupport.net.in/cities/it-support-los-angeles/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What IT support services are offered in Los Angeles?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "ITSupport.net.in provides managed IT services, network security, help desk support, cloud solutions, and on-site technical assistance for businesses in Los Angeles."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How can I contact ITSupport.net.in in Los Angeles?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can reach ITSupport.net.in via phone at +1-310-123-4567, email at support@itsupport.net.in, or through the contact form on our website."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you offer on-site IT support in Los Angeles?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, ITSupport.net.in provides on-site IT support for businesses in Los Angeles to handle network issues, hardware troubleshooting, and technical consulting."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are your IT services suitable for small businesses?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolutely. Our services are tailored for businesses of all sizes, including small businesses, providing scalable IT support and solutions."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is network security included in your IT support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. ITSupport.net.in offers comprehensive network security services, including firewall management, antivirus setup, and vulnerability assessments for Los Angeles companies."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "EmployerAggregateRating",
+        "@id": "https://www.itsupport.net.in/cities/it-support-los-angeles/#rating",
+        "itemReviewed": {
+          "@type": "Organization",
+          "name": "ITSupport.net.in | IT Support & Managed Services Los Angeles",
+          "sameAs": "https://www.itsupport.net.in/cities/it-support-los-angeles"
+        },
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "625"
+      },
+      {
+        "@type": "QAPage",
+        "@id": "https://www.itsupport.net.in/cities/it-support-los-angeles/#qapage",
+        "mainEntity": {
+          "@type": "Question",
+          "name": "How does IT Support Los Angeles ensure reliable IT services?",
+          "text": "How does IT Support Los Angeles provide businesses with fast, secure, and efficient IT support?",
+          "url": "https://www.itsupport.net.in/cities/it-support-los-angeles#q1",
+          "answerCount": 1,
+          "upvoteCount": 12,
+          "datePublished": "2025-10-11T17:40:00-07:00",
+          "author": {
+            "@type": "Person",
+            "name": "James Thompson",
+            "url": "https://www.itsupport.net.in"
+          },
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "IT Support Los Angeles ensures reliable IT services by providing proactive monitoring, rapid troubleshooting, managed network and cloud solutions, and customized IT support plans to minimize downtime and improve business efficiency.",
+            "url": "https://www.itsupport.net.in/cities/it-support-los-angeles#q1a1",
+            "dateCreated": "2025-10-11T17:45:00-07:00",
+            "upvoteCount": 10,
+            "author": {
+              "@type": "Person",
+              "name": "James Thompson",
+              "url": "https://www.itsupport.net.in"
+            }
+          }
+        }
+      }
+    ]
+  }
   
 },
 {
@@ -1367,7 +4046,171 @@ const cities:City[] = [
       copyright: "© 2025"
     }
   },
-  
+  schema:{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.itsupport.net.in/#website",
+        "url": "https://www.itsupport.net.in",
+        "name": "ITSupport.net.in",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://www.itsupport.net.in/search?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.itsupport.net.in/cities/it-support-manchester/#webpage",
+        "url": "https://www.itsupport.net.in/cities/it-support-manchester",
+        "name": "IT Support Manchester | Managed IT Services & Help Desk",
+        "description": "Read ITSupport.net.in’s terms and conditions to understand policies regarding IT support, managed services, and user responsibilities in Manchester.",
+        "inLanguage": "en-GB",
+        "isPartOf": {
+          "@id": "https://www.itsupport.net.in/#website"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.itsupport.net.in/#organization",
+        "name": "ITSupport.net.in",
+        "url": "https://www.itsupport.net.in",
+        "logo": "https://www.itsupport.net.in/images/itsupport-logo.png",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+44-161-123-4567",
+          "contactType": "Customer Support",
+          "areaServed": "GB",
+          "availableLanguage": "en"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Unit 5, Tech Park",
+          "addressLocality": "Manchester",
+          "postalCode": "M1 2AB",
+          "addressCountry": "GB"
+        },
+        "sameAs": [
+          "https://www.facebook.com/ITSupportNet",
+          "https://x.com/itsupport",
+          "https://www.instagram.com/itsupport/",
+          "https://www.linkedin.com/company/itsupportnet/",
+          "https://www.youtube.com/@ITSupportNet"
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.itsupport.net.in/cities/it-support-manchester/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.itsupport.net.in/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "IT Support Manchester",
+            "item": "https://www.itsupport.net.in/cities/it-support-manchester"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.itsupport.net.in/cities/it-support-manchester/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What IT support services are offered in Manchester?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "ITSupport.net.in provides managed IT services, network security, help desk support, cloud solutions, and on-site technical assistance for businesses in Manchester."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How can I contact ITSupport.net.in in Manchester?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can reach ITSupport.net.in via phone at +44-161-123-4567, email at support@itsupport.net.in, or through the contact form on our website."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you offer on-site IT support in Manchester?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, ITSupport.net.in provides on-site IT support for businesses in Manchester to handle network issues, hardware troubleshooting, and technical consulting."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are your IT services suitable for small businesses?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolutely. Our services are tailored for businesses of all sizes, including small businesses, providing scalable IT support and solutions."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is network security included in your IT support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. ITSupport.net.in offers comprehensive network security services, including firewall management, antivirus setup, and vulnerability assessments for Manchester companies."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "EmployerAggregateRating",
+        "@id": "https://www.itsupport.net.in/cities/it-support-manchester/#rating",
+        "itemReviewed": {
+          "@type": "Organization",
+          "name": "ITSupport.net.in | IT Support & Managed Services Manchester",
+          "sameAs": "https://www.itsupport.net.in/cities/it-support-manchester"
+        },
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "580"
+      },
+      {
+        "@type": "QAPage",
+        "@id": "https://www.itsupport.net.in/cities/it-support-manchester/#qapage",
+        "mainEntity": {
+          "@type": "Question",
+          "name": "How does IT Support Manchester ensure reliable IT services?",
+          "text": "How does IT Support Manchester provide businesses with fast, secure, and efficient IT support?",
+          "url": "https://www.itsupport.net.in/cities/it-support-manchester#q1",
+          "answerCount": 1,
+          "upvoteCount": 12,
+          "datePublished": "2025-10-11T17:50:00+00:00",
+          "author": {
+            "@type": "Person",
+            "name": "James Thompson",
+            "url": "https://www.itsupport.net.in"
+          },
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "IT Support Manchester ensures reliable IT services by offering proactive monitoring, rapid troubleshooting, managed network and cloud solutions, and tailored IT support plans to minimize downtime and enhance business efficiency.",
+            "url": "https://www.itsupport.net.in/cities/it-support-manchester#q1a1",
+            "dateCreated": "2025-10-11T17:55:00+00:00",
+            "upvoteCount": 10,
+            "author": {
+              "@type": "Person",
+              "name": "James Thompson",
+              "url": "https://www.itsupport.net.in"
+            }
+          }
+        }
+      }
+    ]
+  }  
 },
 {
   cityName:"Miami",
@@ -1435,6 +4278,171 @@ const cities:City[] = [
       copyright: "© 2025"
     }
   },
+  schema:{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.itsupport.net.in/#website",
+        "url": "https://www.itsupport.net.in",
+        "name": "ITSupport.net.in",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://www.itsupport.net.in/search?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.itsupport.net.in/cities/it-support-miami/#webpage",
+        "url": "https://www.itsupport.net.in/cities/it-support-miami",
+        "name": "IT Support Miami | Managed IT Services & Help Desk",
+        "description": "Read ITSupport.net.in’s terms and conditions to understand policies regarding IT support, managed services, and user responsibilities in Miami.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://www.itsupport.net.in/#website"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.itsupport.net.in/#organization",
+        "name": "ITSupport.net.in",
+        "url": "https://www.itsupport.net.in",
+        "logo": "https://www.itsupport.net.in/images/itsupport-logo.png",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+1-305-123-4567",
+          "contactType": "Customer Support",
+          "areaServed": "US",
+          "availableLanguage": "en"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "123 Tech Avenue",
+          "addressLocality": "Miami",
+          "postalCode": "33101",
+          "addressCountry": "US"
+        },
+        "sameAs": [
+          "https://www.facebook.com/ITSupportNet",
+          "https://x.com/itsupport",
+          "https://www.instagram.com/itsupport/",
+          "https://www.linkedin.com/company/itsupportnet/",
+          "https://www.youtube.com/@ITSupportNet"
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.itsupport.net.in/cities/it-support-miami/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.itsupport.net.in/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "IT Support Miami",
+            "item": "https://www.itsupport.net.in/cities/it-support-miami"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.itsupport.net.in/cities/it-support-miami/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What IT support services are offered in Miami?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "ITSupport.net.in provides managed IT services, network security, help desk support, cloud solutions, and on-site technical assistance for businesses in Miami."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How can I contact ITSupport.net.in in Miami?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can reach ITSupport.net.in via phone at +1-305-123-4567, email at support@itsupport.net.in, or through the contact form on our website."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you provide on-site IT support in Miami?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, ITSupport.net.in provides on-site IT support for businesses in Miami to handle network issues, hardware troubleshooting, and technical consulting."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are your IT services suitable for small businesses?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolutely. Our services are tailored for businesses of all sizes, including small businesses, providing scalable IT support and solutions."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is network security included in your IT support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. ITSupport.net.in offers comprehensive network security services, including firewall management, antivirus setup, and vulnerability assessments for Miami companies."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "EmployerAggregateRating",
+        "@id": "https://www.itsupport.net.in/cities/it-support-miami/#rating",
+        "itemReviewed": {
+          "@type": "Organization",
+          "name": "ITSupport.net.in | IT Support & Managed Services Miami",
+          "sameAs": "https://www.itsupport.net.in/cities/it-support-miami"
+        },
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "480"
+      },
+      {
+        "@type": "QAPage",
+        "@id": "https://www.itsupport.net.in/cities/it-support-miami/#qapage",
+        "mainEntity": {
+          "@type": "Question",
+          "name": "How does IT Support Miami ensure reliable IT services?",
+          "text": "How does IT Support Miami provide businesses with fast, secure, and efficient IT support?",
+          "url": "https://www.itsupport.net.in/cities/it-support-miami#q1",
+          "answerCount": 1,
+          "upvoteCount": 12,
+          "datePublished": "2025-10-11T18:00:00+00:00",
+          "author": {
+            "@type": "Person",
+            "name": "James Thompson",
+            "url": "https://www.itsupport.net.in"
+          },
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "IT Support Miami ensures reliable IT services by providing proactive monitoring, rapid troubleshooting, managed network and cloud solutions, and tailored IT support plans to minimize downtime and optimize business efficiency.",
+            "url": "https://www.itsupport.net.in/cities/it-support-miami#q1a1",
+            "dateCreated": "2025-10-11T18:05:00+00:00",
+            "upvoteCount": 10,
+            "author": {
+              "@type": "Person",
+              "name": "James Thompson",
+              "url": "https://www.itsupport.net.in"
+            }
+          }
+        }
+      }
+    ]
+  }
   
 },
 {
@@ -1503,7 +4511,171 @@ const cities:City[] = [
       copyright: "© 2025"
     }
   },
-  
+  schema:{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.itsupport.net.in/#website",
+        "url": "https://www.itsupport.net.in",
+        "name": "ITSupport.net.in",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://www.itsupport.net.in/search?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.itsupport.net.in/cities/it-support-montreal/#webpage",
+        "url": "https://www.itsupport.net.in/cities/it-support-montreal",
+        "name": "IT Support Montreal | Managed IT Services & Help Desk",
+        "description": "Read ITSupport.net.in’s terms and conditions to understand policies regarding IT support, managed services, and user responsibilities in Montreal.",
+        "inLanguage": "en-CA",
+        "isPartOf": {
+          "@id": "https://www.itsupport.net.in/#website"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.itsupport.net.in/#organization",
+        "name": "ITSupport.net.in",
+        "url": "https://www.itsupport.net.in",
+        "logo": "https://www.itsupport.net.in/images/itsupport-logo.png",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+1-514-123-4567",
+          "contactType": "Customer Support",
+          "areaServed": "CA",
+          "availableLanguage": ["en", "fr"]
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "456 Tech Street",
+          "addressLocality": "Montreal",
+          "postalCode": "H1A 2B3",
+          "addressCountry": "CA"
+        },
+        "sameAs": [
+          "https://www.facebook.com/ITSupportNet",
+          "https://x.com/itsupport",
+          "https://www.instagram.com/itsupport/",
+          "https://www.linkedin.com/company/itsupportnet/",
+          "https://www.youtube.com/@ITSupportNet"
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.itsupport.net.in/cities/it-support-montreal/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.itsupport.net.in/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "IT Support Montreal",
+            "item": "https://www.itsupport.net.in/cities/it-support-montreal"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.itsupport.net.in/cities/it-support-montreal/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What IT support services are offered in Montreal?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "ITSupport.net.in provides managed IT services, network security, help desk support, cloud solutions, and on-site technical assistance for businesses in Montreal."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How can I contact ITSupport.net.in in Montreal?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can reach ITSupport.net.in via phone at +1-514-123-4567, email at support@itsupport.net.in, or through the contact form on our website."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you provide on-site IT support in Montreal?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, ITSupport.net.in provides on-site IT support for businesses in Montreal to handle network issues, hardware troubleshooting, and technical consulting."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are your IT services suitable for small businesses?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolutely. Our services are tailored for businesses of all sizes, including small businesses, providing scalable IT support and solutions."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is network security included in your IT support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. ITSupport.net.in offers comprehensive network security services, including firewall management, antivirus setup, and vulnerability assessments for Montreal companies."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "EmployerAggregateRating",
+        "@id": "https://www.itsupport.net.in/cities/it-support-montreal/#rating",
+        "itemReviewed": {
+          "@type": "Organization",
+          "name": "ITSupport.net.in | IT Support & Managed Services Montreal",
+          "sameAs": "https://www.itsupport.net.in/cities/it-support-montreal"
+        },
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "320"
+      },
+      {
+        "@type": "QAPage",
+        "@id": "https://www.itsupport.net.in/cities/it-support-montreal/#qapage",
+        "mainEntity": {
+          "@type": "Question",
+          "name": "How does IT Support Montreal ensure reliable IT services?",
+          "text": "How does IT Support Montreal provide businesses with fast, secure, and efficient IT support?",
+          "url": "https://www.itsupport.net.in/cities/it-support-montreal#q1",
+          "answerCount": 1,
+          "upvoteCount": 12,
+          "datePublished": "2025-10-11T18:30:00+00:00",
+          "author": {
+            "@type": "Person",
+            "name": "James Thompson",
+            "url": "https://www.itsupport.net.in"
+          },
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "IT Support Montreal ensures reliable IT services by providing proactive monitoring, rapid troubleshooting, managed network and cloud solutions, and customized IT support plans to minimize downtime and optimize business efficiency.",
+            "url": "https://www.itsupport.net.in/cities/it-support-montreal#q1a1",
+            "dateCreated": "2025-10-11T18:35:00+00:00",
+            "upvoteCount": 10,
+            "author": {
+              "@type": "Person",
+              "name": "James Thompson",
+              "url": "https://www.itsupport.net.in"
+            }
+          }
+        }
+      }
+    ]
+  }  
 },
 {
   cityName:"Nairobi",
@@ -1571,7 +4743,171 @@ const cities:City[] = [
       copyright: "© 2025"
     }
   },
-  
+  schema:{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.itsupport.net.in/#website",
+        "url": "https://www.itsupport.net.in",
+        "name": "ITSupport.net.in",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://www.itsupport.net.in/search?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.itsupport.net.in/cities/it-support-nairobi/#webpage",
+        "url": "https://www.itsupport.net.in/cities/it-support-nairobi",
+        "name": "IT Support Nairobi | Managed IT Services & Business Solutions",
+        "description": "ITSupport.net.in offers managed IT services, network setup, cloud solutions, and technical support for companies in Nairobi, Kenya.",
+        "inLanguage": "en-KE",
+        "isPartOf": {
+          "@id": "https://www.itsupport.net.in/#website"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.itsupport.net.in/#organization",
+        "name": "ITSupport.net.in",
+        "url": "https://www.itsupport.net.in",
+        "logo": "https://www.itsupport.net.in/images/itsupport-logo.png",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+254-712-345-678",
+          "contactType": "Customer Support",
+          "areaServed": "KE",
+          "availableLanguage": "en"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "10 Riverside Drive",
+          "addressLocality": "Nairobi",
+          "postalCode": "00100",
+          "addressCountry": "KE"
+        },
+        "sameAs": [
+          "https://www.facebook.com/ITSupportNet",
+          "https://x.com/itsupport",
+          "https://www.instagram.com/itsupport/",
+          "https://www.linkedin.com/company/itsupportnet/",
+          "https://www.youtube.com/@ITSupportNet"
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.itsupport.net.in/cities/it-support-nairobi/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.itsupport.net.in/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "IT Support Nairobi",
+            "item": "https://www.itsupport.net.in/cities/it-support-nairobi"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.itsupport.net.in/cities/it-support-nairobi/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What IT services are available in Nairobi?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "ITSupport.net.in offers managed IT services, cloud solutions, help desk support, network maintenance, and cybersecurity services for Nairobi-based businesses."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does ITSupport.net.in provide on-site support in Nairobi?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Our certified IT engineers offer on-site support in Nairobi for hardware, networking, and IT infrastructure issues."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can small businesses use ITSupport.net.in services?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolutely. ITSupport.net.in provides affordable managed IT solutions for startups and small businesses in Nairobi."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I contact ITSupport.net.in Nairobi?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can contact our Nairobi office at +254-712-345-678 or email support@itsupport.net.in for service requests."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is remote IT support available in Kenya?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, ITSupport.net.in provides remote IT support and troubleshooting for clients across Kenya, including Nairobi and Mombasa."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "EmployerAggregateRating",
+        "@id": "https://www.itsupport.net.in/cities/it-support-nairobi/#rating",
+        "itemReviewed": {
+          "@type": "Organization",
+          "name": "ITSupport.net.in | IT Support & Managed Services Nairobi",
+          "sameAs": "https://www.itsupport.net.in/cities/it-support-nairobi"
+        },
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "287"
+      },
+      {
+        "@type": "QAPage",
+        "@id": "https://www.itsupport.net.in/cities/it-support-nairobi/#qapage",
+        "mainEntity": {
+          "@type": "Question",
+          "name": "How does IT Support Nairobi ensure reliable IT services?",
+          "text": "How does IT Support Nairobi provide businesses with fast, secure, and efficient IT support?",
+          "url": "https://www.itsupport.net.in/cities/it-support-nairobi#q1",
+          "answerCount": 1,
+          "upvoteCount": 12,
+          "datePublished": "2025-10-11T18:30:00+03:00",
+          "author": {
+            "@type": "Person",
+            "name": "James Thompson",
+            "url": "https://www.itsupport.net.in"
+          },
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "IT Support Nairobi ensures reliable IT services by offering proactive monitoring, rapid troubleshooting, managed network solutions, cloud support, and customized IT plans to minimize downtime and optimize business operations.",
+            "url": "https://www.itsupport.net.in/cities/it-support-nairobi#q1a1",
+            "dateCreated": "2025-10-11T18:35:00+03:00",
+            "upvoteCount": 10,
+            "author": {
+              "@type": "Person",
+              "name": "James Thompson",
+              "url": "https://www.itsupport.net.in"
+            }
+          }
+        }
+      }
+    ]
+  }  
 },
 {
   cityName:"New York",
@@ -1639,6 +4975,172 @@ const cities:City[] = [
       copyright: "© 2025"
     }
   },
+  schema:{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.itsupport.net.in/#website",
+        "url": "https://www.itsupport.net.in",
+        "name": "ITSupport.net.in",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://www.itsupport.net.in/search?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.itsupport.net.in/cities/it-support-new-york/#webpage",
+        "url": "https://www.itsupport.net.in/cities/it-support-new-york",
+        "name": "IT Support New York | Managed IT Services & Solutions",
+        "description": "ITSupport.net.in provides professional IT support in New York — offering managed IT, cybersecurity, and 24/7 tech assistance for small and large businesses.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://www.itsupport.net.in/#website"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.itsupport.net.in/#organization",
+        "name": "ITSupport.net.in",
+        "url": "https://www.itsupport.net.in",
+        "logo": "https://www.itsupport.net.in/images/itsupport-logo.png",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+91-900-456-7890",
+          "contactType": "Customer Support",
+          "areaServed": ["US", "IN", "UK"],
+          "availableLanguage": "en"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "350 5th Ave, Empire State Building",
+          "addressLocality": "New York",
+          "addressRegion": "NY",
+          "postalCode": "10118",
+          "addressCountry": "US"
+        },
+        "sameAs": [
+          "https://www.facebook.com/itsupportnetin",
+          "https://x.com/itsupportnetin",
+          "https://www.instagram.com/itsupport.net.in/",
+          "https://www.linkedin.com/company/itsupportnetin/",
+          "https://www.youtube.com/@itsupportnetin"
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.itsupport.net.in/cities/it-support-new-york/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.itsupport.net.in/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "IT Support New York",
+            "item": "https://www.itsupport.net.in/cities/it-support-new-york"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.itsupport.net.in/cities/it-support-new-york/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What IT services do you provide in New York?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We provide complete IT support in New York including managed IT services, cloud setup, network security, remote monitoring, and on-site tech assistance."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you offer 24/7 IT support in NYC?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, ITSupport.net.in offers 24/7 IT support and emergency troubleshooting services for businesses across New York City."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you handle both small and enterprise-level IT systems?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolutely. Our IT solutions are scalable and cater to startups, SMBs, and large enterprises in New York."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I request IT support in New York?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can contact us via our website contact form or call +91-900-456-7890 to book a consultation with our IT experts."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you provide cybersecurity services in New York?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we provide advanced cybersecurity and data protection services, including vulnerability assessments and threat monitoring."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "EmployerAggregateRating",
+        "@id": "https://www.itsupport.net.in/cities/it-support-new-york/#rating",
+        "itemReviewed": {
+          "@type": "Organization",
+          "name": "ITSupport.net.in | IT Support New York",
+          "sameAs": "https://www.itsupport.net.in/cities/it-support-new-york"
+        },
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "10542"
+      },
+      {
+        "@type": "QAPage",
+        "@id": "https://www.itsupport.net.in/cities/it-support-new-york/#qapage",
+        "mainEntity": {
+          "@type": "Question",
+          "name": "How does IT Support New York ensure reliable IT services?",
+          "text": "How does IT Support New York provide businesses with fast, secure, and efficient IT support?",
+          "url": "https://www.itsupport.net.in/cities/it-support-new-york#q1",
+          "answerCount": 1,
+          "upvoteCount": 12,
+          "datePublished": "2025-10-11T18:30:00-04:00",
+          "author": {
+            "@type": "Person",
+            "name": "James Thompson",
+            "url": "https://www.itsupport.net.in"
+          },
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "IT Support New York ensures reliable IT services by providing proactive monitoring, rapid troubleshooting, managed network solutions, cloud support, and customized IT plans to minimize downtime and maximize business efficiency.",
+            "url": "https://www.itsupport.net.in/cities/it-support-new-york#q1a1",
+            "dateCreated": "2025-10-11T18:35:00-04:00",
+            "upvoteCount": 10,
+            "author": {
+              "@type": "Person",
+              "name": "James Thompson",
+              "url": "https://www.itsupport.net.in"
+            }
+          }
+        }
+      }
+    ]
+  }
   
 },
 {
@@ -1707,7 +5209,172 @@ const cities:City[] = [
       copyright: "© 2025"
     }
   },
-  
+  schema:{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.itsupport.net.in/#website",
+        "url": "https://www.itsupport.net.in",
+        "name": "ITSupport.net.in",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://www.itsupport.net.in/search?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.itsupport.net.in/cities/it-support-toronto/#webpage",
+        "url": "https://www.itsupport.net.in/cities/it-support-toronto",
+        "name": "IT Support Toronto | Managed IT Services & Cybersecurity Experts",
+        "description": "ITSupport.net.in provides managed IT support, cybersecurity, and cloud solutions for Toronto businesses. Trusted by SMBs and enterprises for 24/7 technical support.",
+        "inLanguage": "en-CA",
+        "isPartOf": {
+          "@id": "https://www.itsupport.net.in/#website"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.itsupport.net.in/#organization",
+        "name": "ITSupport.net.in",
+        "url": "https://www.itsupport.net.in",
+        "logo": "https://www.itsupport.net.in/images/itsupport-logo.png",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+1-437-555-0199",
+          "contactType": "Customer Support",
+          "areaServed": ["CA", "US", "IN"],
+          "availableLanguage": "en"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "120 Adelaide St W Suite 2500",
+          "addressLocality": "Toronto",
+          "addressRegion": "ON",
+          "postalCode": "M5H 1T1",
+          "addressCountry": "CA"
+        },
+        "sameAs": [
+          "https://www.facebook.com/itsupportnetin",
+          "https://x.com/itsupportnetin",
+          "https://www.instagram.com/itsupport.net.in/",
+          "https://www.linkedin.com/company/itsupportnetin/",
+          "https://www.youtube.com/@itsupportnetin"
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.itsupport.net.in/cities/it-support-toronto/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.itsupport.net.in/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "IT Support Toronto",
+            "item": "https://www.itsupport.net.in/cities/it-support-toronto"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.itsupport.net.in/cities/it-support-toronto/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What IT services are available in Toronto?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We offer managed IT services, on-site tech support, cloud migration, data backup, and cybersecurity solutions for Toronto businesses."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you provide remote IT support in Toronto?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, ITSupport.net.in provides remote IT support and real-time troubleshooting for clients across the Greater Toronto Area."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are your IT services suitable for small businesses?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolutely. We serve startups, SMBs, and enterprises in Toronto with scalable IT service plans tailored to their needs."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I request IT support in Toronto?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can contact us through our website or call +1-437-555-0199 for a quick IT consultation or immediate technical help."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you offer cybersecurity and data protection services?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we provide advanced cybersecurity services in Toronto, including threat detection, data encryption, and risk prevention systems."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "EmployerAggregateRating",
+        "@id": "https://www.itsupport.net.in/cities/it-support-toronto/#rating",
+        "itemReviewed": {
+          "@type": "Organization",
+          "name": "ITSupport.net.in | IT Support Toronto",
+          "sameAs": "https://www.itsupport.net.in/cities/it-support-toronto"
+        },
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "9826"
+      },
+      {
+        "@type": "QAPage",
+        "@id": "https://www.itsupport.net.in/cities/it-support-toronto/#qapage",
+        "mainEntity": {
+          "@type": "Question",
+          "name": "How does IT Support Toronto ensure reliable IT services?",
+          "text": "How does IT Support Toronto provide businesses with fast, secure, and efficient IT support?",
+          "url": "https://www.itsupport.net.in/cities/it-support-toronto#q1",
+          "answerCount": 1,
+          "upvoteCount": 12,
+          "datePublished": "2025-10-11T18:30:00-04:00",
+          "author": {
+            "@type": "Person",
+            "name": "James Thompson",
+            "url": "https://www.itsupport.net.in"
+          },
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "IT Support Toronto ensures reliable IT services by offering proactive monitoring, rapid troubleshooting, managed network solutions, cloud support, and customized IT plans to minimize downtime and maximize business efficiency.",
+            "url": "https://www.itsupport.net.in/cities/it-support-toronto#q1a1",
+            "dateCreated": "2025-10-11T18:35:00-04:00",
+            "upvoteCount": 10,
+            "author": {
+              "@type": "Person",
+              "name": "James Thompson",
+              "url": "https://www.itsupport.net.in"
+            }
+          }
+        }
+      }
+    ]
+  }  
 },
 {
   cityName:"Ottawa",
@@ -1775,7 +5442,172 @@ const cities:City[] = [
       copyright: "© 2025"
     }
   },
-  
+  schema:{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.itsupport.net.in/#website",
+        "url": "https://www.itsupport.net.in",
+        "name": "ITSupport.net.in",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://www.itsupport.net.in/search?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.itsupport.net.in/cities/it-support-ottawa/#webpage",
+        "url": "https://www.itsupport.net.in/cities/it-support-ottawa",
+        "name": "IT Support Ottawa | Managed IT Services",
+        "description": "ITSupport.net.in offers professional IT support in Ottawa, specializing in managed services, cloud migration, and cybersecurity for local businesses.",
+        "inLanguage": "en-CA",
+        "isPartOf": {
+          "@id": "https://www.itsupport.net.in/#website"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.itsupport.net.in/#organization",
+        "name": "ITSupport.net.in",
+        "url": "https://www.itsupport.net.in",
+        "logo": "https://www.itsupport.net.in/images/logo.webp",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+1-613-555-0123",
+          "contactType": "Customer Support",
+          "areaServed": "CA",
+          "availableLanguage": "en"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "100 Elgin Street",
+          "addressLocality": "Ottawa",
+          "addressRegion": "ON",
+          "postalCode": "K1P 5K6",
+          "addressCountry": "CA"
+        },
+        "sameAs": [
+          "https://www.facebook.com/itsupportnetin",
+          "https://x.com/itsupport_in",
+          "https://www.linkedin.com/company/itsupportnetin/",
+          "https://www.instagram.com/itsupportnetin/",
+          "https://www.youtube.com/@itsupportnetin"
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.itsupport.net.in/cities/it-support-ottawa/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.itsupport.net.in/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "IT Support Ottawa",
+            "item": "https://www.itsupport.net.in/cities/it-support-ottawa"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.itsupport.net.in/cities/it-support-ottawa/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What IT services are available in Ottawa?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We offer comprehensive IT services in Ottawa including managed IT, network management, cybersecurity, data recovery, and cloud computing solutions."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you provide on-site IT support in Ottawa?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, our technicians provide both remote and on-site IT support throughout Ottawa to quickly resolve business technology issues."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you help with cybersecurity for small businesses?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolutely. We offer tailored cybersecurity plans, including firewall setup, endpoint protection, and real-time monitoring to protect your Ottawa business from threats."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you offer 24/7 support for businesses in Ottawa?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, ITSupport.net.in offers 24/7 helpdesk and remote monitoring to ensure your Ottawa business IT systems are always operational."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How can I contact ITSupport.net.in in Ottawa?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can reach us via our website contact form or call +1-613-555-0123 for direct assistance from our Ottawa IT support specialists."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "EmployerAggregateRating",
+        "@id": "https://www.itsupport.net.in/cities/it-support-ottawa/#rating",
+        "itemReviewed": {
+          "@type": "Organization",
+          "name": "ITSupport.net.in | IT Services Ottawa",
+          "sameAs": "https://www.itsupport.net.in/cities/it-support-ottawa"
+        },
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "4821"
+      },
+      {
+        "@type": "QAPage",
+        "@id": "https://www.itsupport.net.in/cities/it-support-ottawa/#qapage",
+        "mainEntity": {
+          "@type": "Question",
+          "name": "How does IT Support Ottawa ensure reliable IT services?",
+          "text": "How does IT Support Ottawa provide businesses with fast, secure, and efficient IT support?",
+          "url": "https://www.itsupport.net.in/cities/it-support-ottawa#q1",
+          "answerCount": 1,
+          "upvoteCount": 12,
+          "datePublished": "2025-10-11T18:30:00-04:00",
+          "author": {
+            "@type": "Person",
+            "name": "James Thompson",
+            "url": "https://www.itsupport.net.in"
+          },
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "IT Support Ottawa ensures reliable IT services by offering proactive monitoring, rapid troubleshooting, managed network solutions, cloud support, and customized IT plans to minimize downtime and maximize business efficiency.",
+            "url": "https://www.itsupport.net.in/cities/it-support-ottawa#q1a1",
+            "dateCreated": "2025-10-11T18:35:00-04:00",
+            "upvoteCount": 10,
+            "author": {
+              "@type": "Person",
+              "name": "James Thompson",
+              "url": "https://www.itsupport.net.in"
+            }
+          }
+        }
+      }
+    ]
+  }  
 },
 {
   cityName:"San Francisco",
@@ -1843,7 +5675,140 @@ const cities:City[] = [
       copyright: "© 2025"
     }
   },
-  
+  schema:{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.itsupport.net.in/#website",
+        "url": "https://www.itsupport.net.in",
+        "name": "ITSupport.net.in",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://www.itsupport.net.in/search?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.itsupport.net.in/cities/it-support-san-francisco/#webpage",
+        "url": "https://www.itsupport.net.in/cities/it-support-san-francisco",
+        "name": "IT Support San Francisco | Managed IT & Cloud Services",
+        "description": "ITSupport.net.in offers comprehensive IT support, cybersecurity, and cloud management for San Francisco businesses. Get expert help desk support 24/7.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://www.itsupport.net.in/#website"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.itsupport.net.in/#organization",
+        "name": "ITSupport.net.in",
+        "url": "https://www.itsupport.net.in",
+        "logo": "https://www.itsupport.net.in/images/logo.png",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+1-415-555-0123",
+          "contactType": "Customer Support",
+          "areaServed": "US",
+          "availableLanguage": "en"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Market Street, Suite 100",
+          "addressLocality": "San Francisco",
+          "postalCode": "94103",
+          "addressCountry": "US"
+        },
+        "sameAs": [
+          "https://www.facebook.com/itsupportnetin",
+          "https://x.com/itsupportnetin",
+          "https://www.linkedin.com/company/itsupportnetin/",
+          "https://www.instagram.com/itsupport.net.in/"
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.itsupport.net.in/cities/it-support-san-francisco/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.itsupport.net.in/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "IT Support San Francisco",
+            "item": "https://www.itsupport.net.in/cities/it-support-san-francisco"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.itsupport.net.in/cities/it-support-san-francisco/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What IT services do you offer in San Francisco?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We provide managed IT support, help desk assistance, cloud computing, cybersecurity, and network management for San Francisco businesses."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you provide 24/7 IT support in San Francisco?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, our team offers 24/7 technical assistance and remote troubleshooting for clients across San Francisco and the Bay Area."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you help with cloud migration and management?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolutely. We specialize in cloud migration, data backup, and ongoing cloud infrastructure management for local enterprises."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How can I get in touch with your San Francisco IT team?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can reach our support team via phone at +1-415-555-0123 or by submitting a request through our website’s contact form."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you offer on-site technical support in San Francisco?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. We provide on-site and remote support services, ensuring quick response and reliable solutions for local businesses."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "AggregateRating",
+        "@id": "https://www.itsupport.net.in/cities/it-support-san-francisco/#rating",
+        "itemReviewed": {
+          "@type": "Organization",
+          "name": "ITSupport.net.in | IT Support San Francisco",
+          "sameAs": "https://www.itsupport.net.in/cities/it-support-san-francisco"
+        },
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "8421"
+      }
+    ]
+  }  
 },
 {
   cityName:"Seattle",
@@ -1911,6 +5876,226 @@ const cities:City[] = [
       copyright: "© 2025"
     }
   },
+  schema:{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.itsupport.net.in/#website",
+        "url": "https://www.itsupport.net.in",
+        "name": "ITSupport.net.in",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://www.itsupport.net.in/search?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.itsupport.net.in/cities/it-support-seattle/#webpage",
+        "url": "https://www.itsupport.net.in/cities/it-support-seattle",
+        "name": "IT Support Seattle | Managed IT Services & Cloud Solutions",
+        "description": "Seattle’s top-rated IT support team offers managed IT services, cybersecurity, and remote tech support for businesses to enhance productivity and security.",
+        "inLanguage": "en-US",
+        "isPartOf": {
+          "@id": "https://www.itsupport.net.in/#website"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.itsupport.net.in/#organization",
+        "name": "ITSupport.net.in",
+        "url": "https://www.itsupport.net.in",
+        "logo": "https://www.itsupport.net.in/images/logo.webp",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+1-206-555-0198",
+          "contactType": "Customer Support",
+          "areaServed": "US",
+          "availableLanguage": "en"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "1201 3rd Ave Suite 2200",
+          "addressLocality": "Seattle",
+          "addressRegion": "WA",
+          "postalCode": "98101",
+          "addressCountry": "US"
+        },
+        "sameAs": [
+          "https://www.facebook.com/itsupportnetin",
+          "https://x.com/itsupportnet",
+          "https://www.linkedin.com/company/itsupportnetin",
+          "https://www.instagram.com/itsupportnetin",
+          "https://www.youtube.com/@itsupportnet"
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.itsupport.net.in/cities/it-support-seattle/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.itsupport.net.in/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Cities",
+            "item": "https://www.itsupport.net.in/cities/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "IT Support Seattle",
+            "item": "https://www.itsupport.net.in/cities/it-support-seattle"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.itsupport.net.in/cities/it-support-seattle/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What IT services are offered in Seattle?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We provide managed IT services, network setup, cloud management, cybersecurity, and on-site tech support for Seattle-based businesses."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you offer remote IT support in Seattle?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we offer 24/7 remote IT support to resolve technical issues quickly without requiring an on-site visit."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are your IT services suitable for small businesses?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolutely. Our managed IT packages are scalable and ideal for small and mid-sized businesses seeking affordable IT solutions in Seattle."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How can I contact your Seattle IT support team?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can reach us at +1-206-555-0198 or fill out the contact form on our Seattle IT Support page for quick assistance."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you provide cybersecurity protection for local businesses?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we offer complete cybersecurity audits, firewalls, data protection, and endpoint security for Seattle businesses."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://www.itsupport.net.in/cities/it-support-seattle/#service",
+        "serviceType": "IT Support & Managed Services",
+        "provider": {
+          "@type": "Organization",
+          "name": "ITSupport.net.in",
+          "sameAs": "https://www.itsupport.net.in/cities/it-support-seattle"
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": "Seattle"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "IT Services in Seattle",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Managed IT Services"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Cloud Solutions"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Cybersecurity Services"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Remote IT Support"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "@type": "AggregateRating",
+        "@id": "https://www.itsupport.net.in/cities/it-support-seattle/#rating",
+        "itemReviewed": {
+          "@type": "Organization",
+          "name": "ITSupport.net.in | IT Support Seattle",
+          "sameAs": "https://www.itsupport.net.in/cities/it-support-seattle"
+        },
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "5642"
+      },
+      {
+        "@type": "QAPage",
+        "@id": "https://www.itsupport.net.in/cities/it-support-seattle/#qapage",
+        "mainEntity": {
+          "@type": "Question",
+          "name": "How does IT Support Seattle provide reliable IT services?",
+          "text": "How does IT Support Seattle ensure businesses receive fast, secure, and efficient technical support?",
+          "url": "https://www.itsupport.net.in/cities/it-support-seattle#q1",
+          "answerCount": 1,
+          "upvoteCount": 12,
+          "datePublished": "2025-10-11T19:00:00-07:00",
+          "author": {
+            "@type": "Person",
+            "name": "James Thompson",
+            "url": "https://www.itsupport.net.in"
+          },
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "IT Support Seattle ensures reliable IT services by providing 24/7 monitoring, rapid issue resolution, managed IT solutions, and customized support plans to minimize downtime and optimize business productivity.",
+            "url": "https://www.itsupport.net.in/cities/it-support-seattle#q1a1",
+            "dateCreated": "2025-10-11T19:05:00-07:00",
+            "upvoteCount": 10,
+            "author": {
+              "@type": "Person",
+              "name": "James Thompson",
+              "url": "https://www.itsupport.net.in"
+            }
+          }
+        }
+      }
+    ]
+  }
   
 },
 {
@@ -1979,6 +6164,171 @@ const cities:City[] = [
       copyright: "© 2025"
     }
   },
+  schema:{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.itsupport.net.in/#website",
+        "url": "https://www.itsupport.net.in",
+        "name": "ITSupport.net.in",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://www.itsupport.net.in/search?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.itsupport.net.in/cities/it-support-sharjah/#webpage",
+        "url": "https://www.itsupport.net.in/cities/it-support-sharjah",
+        "name": "IT Support in Sharjah | Managed IT Services & Solutions",
+        "description": "ITSupport.net.in provides professional IT support in Sharjah. Our services include system maintenance, data protection, and cloud management for seamless business IT operations.",
+        "inLanguage": "en",
+        "isPartOf": {
+          "@id": "https://www.itsupport.net.in/#website"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.itsupport.net.in/#organization",
+        "name": "ITSupport.net.in",
+        "url": "https://www.itsupport.net.in",
+        "logo": "https://www.itsupport.net.in/images/logo.png",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+971-50-123-4567",
+          "contactType": "Customer Support",
+          "areaServed": "AE",
+          "availableLanguage": "en"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Sharjah Industrial Area",
+          "addressLocality": "Sharjah",
+          "addressRegion": "Sharjah",
+          "postalCode": "00000",
+          "addressCountry": "AE"
+        },
+        "sameAs": [
+          "https://www.facebook.com/itsupportnetin",
+          "https://x.com/itsupportnetin",
+          "https://www.linkedin.com/company/itsupportnetin",
+          "https://www.instagram.com/itsupport.net.in/"
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.itsupport.net.in/cities/it-support-sharjah/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.itsupport.net.in/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "IT Support in Sharjah",
+            "item": "https://www.itsupport.net.in/cities/it-support-sharjah"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.itsupport.net.in/cities/it-support-sharjah/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What IT services do you provide in Sharjah?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We offer comprehensive IT services in Sharjah including network management, data backup, cybersecurity, cloud hosting, and on-site tech support."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you provide 24/7 IT support in Sharjah?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, our Sharjah IT support team operates round the clock to ensure business continuity and minimize downtime."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you manage our company's IT infrastructure remotely?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolutely. Our managed IT service allows remote monitoring, troubleshooting, and system updates without physical intervention."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is your IT support suitable for small businesses?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we specialize in supporting SMEs in Sharjah with affordable and scalable IT solutions tailored to their needs."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How can I request IT support in Sharjah?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can request IT support by calling us at +971-50-123-4567 or submitting a service request through our contact page."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "AggregateRating",
+        "@id": "https://www.itsupport.net.in/cities/it-support-sharjah/#rating",
+        "itemReviewed": {
+          "@type": "Organization",
+          "name": "ITSupport.net.in | IT Services in Sharjah",
+          "sameAs": "https://www.itsupport.net.in/cities/it-support-sharjah"
+        },
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "2765"
+      },
+      {
+        "@type": "QAPage",
+        "@id": "https://www.itsupport.net.in/cities/it-support-sharjah/#qapage",
+        "mainEntity": {
+          "@type": "Question",
+          "name": "How does IT Support Sharjah ensure reliable IT services?",
+          "text": "How does IT Support Sharjah provide fast, secure, and efficient technical support for businesses?",
+          "url": "https://www.itsupport.net.in/cities/it-support-sharjah#q1",
+          "answerCount": 1,
+          "upvoteCount": 12,
+          "datePublished": "2025-10-11T19:30:00+04:00",
+          "author": {
+            "@type": "Person",
+            "name": "Suresh Das",
+            "url": "https://www.sureshdas.com/"
+          },
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "IT Support Sharjah ensures reliable services by offering 24/7 monitoring, rapid issue resolution, managed IT solutions, and customized support plans to minimize downtime and optimize business productivity.",
+            "url": "https://www.itsupport.net.in/cities/it-support-sharjah#q1a1",
+            "dateCreated": "2025-10-11T19:35:00+04:00",
+            "upvoteCount": 10,
+            "author": {
+              "@type": "Person",
+              "name": "Suresh Das",
+              "url": "https://www.sureshdas.com/"
+            }
+          }
+        }
+      }
+    ]
+  }
   
 },
 {
@@ -2045,7 +6395,171 @@ const cities:City[] = [
     authors: [{ name: "IT Support" }],
     copyright: "© 2025",
   },
-  
+  schema:{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.itsupport.net.in/#website",
+        "url": "https://www.itsupport.net.in",
+        "name": "ITSupport.net.in",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://www.itsupport.net.in/search?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.itsupport.net.in/cities/it-support-vancouver/#webpage",
+        "url": "https://www.itsupport.net.in/cities/it-support-vancouver",
+        "name": "IT Support in Vancouver | Managed IT Services & Solutions",
+        "description": "ITSupport.net.in provides expert IT support in Vancouver with services including cybersecurity, cloud solutions, system maintenance, and infrastructure management.",
+        "inLanguage": "en",
+        "isPartOf": {
+          "@id": "https://www.itsupport.net.in/#website"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.itsupport.net.in/#organization",
+        "name": "ITSupport.net.in",
+        "url": "https://www.itsupport.net.in",
+        "logo": "https://www.itsupport.net.in/images/logo.png",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+1-604-555-7890",
+          "contactType": "Customer Support",
+          "areaServed": "CA",
+          "availableLanguage": "en"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Downtown Business District",
+          "addressLocality": "Vancouver",
+          "addressRegion": "British Columbia",
+          "postalCode": "V6B 0M3",
+          "addressCountry": "CA"
+        },
+        "sameAs": [
+          "https://www.facebook.com/itsupportnetin",
+          "https://x.com/itsupportnetin",
+          "https://www.linkedin.com/company/itsupportnetin",
+          "https://www.instagram.com/itsupport.net.in/"
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.itsupport.net.in/cities/it-support-vancouver/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.itsupport.net.in/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "IT Support in Vancouver",
+            "item": "https://www.itsupport.net.in/cities/it-support-vancouver"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.itsupport.net.in/cities/it-support-vancouver/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What IT services do you provide in Vancouver?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We provide a full range of IT services in Vancouver including network management, cloud hosting, cybersecurity, and IT infrastructure optimization."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you offer remote IT support in Vancouver?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Our remote IT support ensures quick troubleshooting and proactive monitoring to prevent downtime for Vancouver-based businesses."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is your IT service available 24/7?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolutely. We offer 24/7 IT support to ensure your systems and data remain protected and fully functional at all times."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you help migrate our systems to the cloud?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Our cloud migration experts handle planning, setup, and management of secure cloud infrastructure for Vancouver businesses."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How can I request IT support in Vancouver?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can contact our Vancouver IT team at +1-604-555-7890 or submit your service request via the contact form on ITSupport.net.in."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "AggregateRating",
+        "@id": "https://www.itsupport.net.in/cities/it-support-vancouver/#rating",
+        "itemReviewed": {
+          "@type": "Organization",
+          "name": "ITSupport.net.in | IT Services in Vancouver",
+          "sameAs": "https://www.itsupport.net.in/cities/it-support-vancouver"
+        },
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "3894"
+      },
+      {
+        "@type": "QAPage",
+        "@id": "https://www.itsupport.net.in/cities/it-support-vancouver/#qapage",
+        "mainEntity": {
+          "@type": "Question",
+          "name": "How does IT Support Vancouver ensure reliable and efficient IT services?",
+          "text": "How does IT Support Vancouver help businesses maintain secure and seamless IT operations with minimal downtime?",
+          "url": "https://www.itsupport.net.in/cities/it-support-vancouver#q1",
+          "answerCount": 1,
+          "upvoteCount": 12,
+          "datePublished": "2025-10-12T14:00:00+05:30",
+          "author": {
+            "@type": "Person",
+            "name": "Suresh Das",
+            "url": "https://www.sureshdas.com/"
+          },
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "IT Support Vancouver ensures dependable IT performance by offering proactive maintenance, 24/7 monitoring, cybersecurity protection, and personalized support to enhance business continuity and productivity.",
+            "url": "https://www.itsupport.net.in/cities/it-support-vancouver#q1a1",
+            "dateCreated": "2025-10-12T10:00:00+05:30",
+            "upvoteCount": 10,
+            "author": {
+              "@type": "Person",
+              "name": "Suresh Das",
+              "url": "https://www.sureshdas.com/"
+            }
+          }
+        }
+      }
+    ]
+  }  
 },
 {
   cityName:"Abu Dhabi",
