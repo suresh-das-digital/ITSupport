@@ -6626,6 +6626,245 @@ const cities:City[] = [
     authors: [{ name: "IT Support" }],
     copyright: "© 2025",
   },
+  schema:{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.itsupport.net.in/#website",
+        "url": "https://www.itsupport.net.in/",
+        "name": "IT Support",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://www.itsupport.net.in/?s={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      },
+  
+      {
+        "@type": "WebPage",
+        "@id": "https://www.itsupport.net.in/services/remote-it-support-abu-dhabi/#webpage",
+        "url": "https://www.itsupport.net.in/services/remote-it-support-abu-dhabi",
+        "name": "Remote IT Support — Abu Dhabi | IT Support",
+        "description": "Remote IT support services for Abu Dhabi: 24/7 remote troubleshooting, network monitoring, antivirus, patch management, cloud support and business continuity.",
+        "inLanguage": "en-GB",
+        "isPartOf": {
+          "@id": "https://www.itsupport.net.in/#website"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "IT Support",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "image-url"
+          }
+        }
+      },
+  
+      {
+        "@type": "Product",
+        "@id": "https://www.itsupport.net.in/services/remote-it-support-abu-dhabi/#product",
+        "name": "Remote IT Support — Abu Dhabi",
+        "image": "image-url",
+        "description": "Professional remote IT support services for businesses in Abu Dhabi, including 24/7 monitoring, remote troubleshooting, network & cloud support, and data security.",
+        "brand": {
+          "@type": "Brand",
+          "name": "IT Support"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "300",
+          "reviewCount": "120"
+        },
+        "audience": {
+          "@type": "Audience",
+          "audienceType": "Small and Medium Businesses, Startups, Enterprises",
+          "description": "Designed for SMEs in Abu Dhabi that require reliable 24/7 remote IT support, cloud services, and proactive network monitoring."
+        }
+      },
+  
+      {
+        "@type": "Service",
+        "@id": "https://www.itsupport.net.in/services/remote-it-support-abu-dhabi/#service",
+        "serviceType": "Remote IT Support",
+        "provider": {
+          "@type": "Organization",
+          "name": "IT Support"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "United Arab Emirates"
+        },
+        "description": "Remote IT support including monitoring, cloud solutions, troubleshooting, and IT infrastructure management for Abu Dhabi businesses."
+      },
+  
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://www.itsupport.net.in/services/remote-it-support-abu-dhabi/#localbusiness",
+        "name": "IT Support",
+        "image": "image-url",
+        "url": "https://www.itsupport.net.in/services/remote-it-support-abu-dhabi",
+        "telephone": "+971-55-123-4567",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "123 High Street",
+          "addressLocality": "Abu Dhabi",
+          "postalCode": "00000",
+          "addressCountry": "AE"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "24.4539",
+          "longitude": "54.3773"
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "18:00"
+        },
+        "sameAs": [
+          "https://www.facebook.com/L4RGINDIA/",
+          "https://twitter.com/L4rgindia",
+          "https://www.instagram.com/l4rgllc/",
+          "https://www.youtube.com/c/L4RGINDIA",
+          "https://in.linkedin.com/company/l4rgindia",
+          "https://in.pinterest.com/L4RGINDIA/",
+          "https://l4rgcompany.quora.com/"
+        ]
+      },
+  
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.itsupport.net.in/services/remote-it-support-abu-dhabi/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.itsupport.net.in"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://www.itsupport.net.in/services"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Remote IT Support — Abu Dhabi",
+            "item": "https://www.itsupport.net.in/services/remote-it-support-abu-dhabi"
+          }
+        ]
+      },
+  
+      {
+        "@type": "Review",
+        "@id": "https://www.itsupport.net.in/services/remote-it-support-abu-dhabi/#review",
+        "name": "Remote IT Support — Abu Dhabi",
+        "url": "https://www.itsupport.net.in/services/remote-it-support-abu-dhabi",
+        "image": "image-url",
+        "author": {
+          "@type": "Person",
+          "name": "Ahmed Khan"
+        },
+        "reviewBody": "The IT Support team provided excellent remote troubleshooting for our Abu Dhabi office. Their quick response and 24/7 availability saved us from major downtime.",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.9"
+        },
+        "itemReviewed": {
+          "@type": "LocalBusiness",
+          "name": "IT Support",
+          "priceRange": "200",
+          "image": "image-url",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 High Street",
+            "addressLocality": "Abu Dhabi",
+            "postalCode": "00000",
+            "addressCountry": "AE"
+          }
+        }
+      },
+  
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.itsupport.net.in/services/remote-it-support-abu-dhabi/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is remote IT support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Remote IT support is a service where technicians resolve your computer, network, or cloud issues from a remote location using secure tools."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you provide remote IT support in Abu Dhabi?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we provide professional remote IT support services across Abu Dhabi, including 24/7 monitoring, troubleshooting, and cloud management."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is remote IT support secure?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, all remote IT support sessions are encrypted to fully protect your business data."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What types of businesses can use your remote IT support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Our remote IT support is suitable for small businesses, enterprises, and startups across Abu Dhabi."
+            }
+          }
+        ]
+      },
+  
+      {
+        "@type": "QAPage",
+        "@id": "https://www.itsupport.net.in/services/remote-it-support-abu-dhabi/#qapage",
+        "mainEntity": {
+          "@type": "Question",
+          "name": "How can remote IT support benefit businesses in Abu Dhabi?",
+          "text": "Many businesses in Abu Dhabi ask how remote IT support can save time and money compared to traditional onsite IT support.",
+          "answerCount": 1,
+          "upvoteCount": 12,
+          "datePublished": "2025-08-17T14:00:00+05:30",
+          "author": {
+            "@type": "Person",
+            "name": "Ali Hassan",
+            "url": "https://www.itsupport.net.in/services/remote-it-support-abu-dhabi"
+          },
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Remote IT support helps Abu Dhabi businesses reduce downtime, lower costs, and get 24/7 technical assistance without waiting for onsite visits.",
+            "dateCreated": "2025-07-14T10:00:00+05:30",
+            "upvoteCount": 10,
+            "url": "https://www.itsupport.net.in/services/remote-it-support-abu-dhabi",
+            "author": {
+              "@type": "Person",
+              "name": "IT Support Expert",
+              "url": "https://www.itsupport.net.in/services/remote-it-support-abu-dhabi"
+            }
+          }
+        }
+      }
+    ]
+  }
   
 },
 {
@@ -6693,7 +6932,7 @@ const cities:City[] = [
     authors: [{ name: "IT Support" }],
     copyright: "© 2025",
   },
-  
+  schema:{}
 },
 {
   cityName:"Atlanta",
@@ -6760,6 +6999,236 @@ const cities:City[] = [
     authors: [{ name: "IT Support" }],
     copyright: "© 2025",
   },
+  schema:{
+    "@context": "https://schema.org",
+    "@graph": [
+  
+      {
+        "@id": "#product",
+        "@type": "Product",
+        "name": "Remote IT Support Atlanta",
+        "image": ["https://d3euc6irt3la1j.cloudfront.net/it-support-atlanta.webp"],
+        "description": "Affordable remote IT support services in Atlanta. Includes troubleshooting, cloud support, antivirus, data backup, email setup, and more for businesses and individuals.",
+        "brand": {
+          "@type": "Brand",
+          "name": "IT Support"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "300",
+          "reviewCount": "152"
+        },
+        "audience": {
+          "@type": "Audience",
+          "description": "Business owners, IT managers, and professionals in Atlanta who require quick, affordable, and reliable remote IT support services.",
+          "audienceType": "Small Businesses, Startups, Enterprises, and Individual Professionals"
+        },
+        "url": "https://www.itsupport.net.in/cities/remote-it-support-atlanta"
+      },
+  
+      {
+        "@id": "#website",
+        "@type": "WebSite",
+        "url": "https://www.itsupport.net.in/",
+        "name": "IT Support",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://www.itsupport.net.in/services/remote-it-support-atlanta?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+  
+      {
+        "@id": "#webpage",
+        "@type": "WebPage",
+        "name": "Remote IT Support Atlanta – IT Support",
+        "url": "https://www.itsupport.net.in/services/remote-it-support-atlanta",
+        "description": "Remote IT support services in Atlanta. We provide remote troubleshooting, network support, cloud services, antivirus, backup, and more for businesses and individuals.",
+        "inLanguage": "en",
+        "publisher": {
+          "@type": "Organization",
+          "name": "IT Support",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://d3euc6irt3la1j.cloudfront.net/it-support-atlanta.webp"
+          }
+        },
+        "mainEntity": {
+          "@type": "Service",
+          "serviceType": "Remote IT Support",
+          "provider": {
+            "@type": "Organization",
+            "name": "IT Support"
+          },
+          "areaServed": {
+            "@type": "Country",
+            "name": "United States"
+          },
+          "description": "Remote IT support services for clients across Atlanta, Georgia, and nationwide."
+        }
+      },
+  
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.itsupport.net.in/" },
+          { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.itsupport.net.in/services" },
+          { "@type": "ListItem", "position": 3, "name": "Remote IT Support Atlanta", "item": "https://www.itsupport.net.in/services/remote-it-support-atlanta" }
+        ]
+      },
+  
+      {
+        "@id": "#review",
+        "@type": "Review",
+        "name": "Excellent Remote IT Support in Atlanta",
+        "url": "https://www.itsupport.net.in/reviews/remote-it-support-atlanta/michael-r",
+        "author": { "@type": "Person", "name": "Michael R." },
+        "reviewBody": "The remote IT support team in Atlanta was quick to respond and resolved my network issue within 30 minutes. Highly professional and affordable service.",
+        "reviewRating": { "@type": "Rating", "ratingValue": "4.9" },
+        "itemReviewed": {
+          "@type": "LocalBusiness",
+          "name": "IT Support Atlanta",
+          "priceRange": "200",
+          "image": "https://d3euc6irt3la1j.cloudfront.net/it-support-atlanta.webp",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 High Street",
+            "addressLocality": "Atlanta",
+            "postalCode": "30303",
+            "addressCountry": "US"
+          }
+        }
+      },
+  
+      {
+        "@id": "#service",
+        "@type": "ProfessionalService",
+        "name": "IT Support Atlanta",
+        "image": "https://d3euc6irt3la1j.cloudfront.net/it-support-atlanta.webp",
+        "url": "https://www.itsupport.net.in/services/remote-it-support-atlanta",
+        "telephone": "+91-906-968-9226",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "123 High Street",
+          "addressLocality": "Atlanta",
+          "postalCode": "30303",
+          "addressCountry": "US"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "33.7490",
+          "longitude": "-84.3880"
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens": "09:00",
+          "closes": "18:00"
+        },
+        "sameAs": [
+          "https://www.facebook.com/itsupport",
+          "https://twitter.com/itsupport",
+          "https://www.instagram.com/itsupport",
+          "https://www.youtube.com/c/itsupport",
+          "https://www.linkedin.com/company/itsupport",
+          "https://in.pinterest.com/itsupport",
+          "https://itsupport.quora.com/"
+        ]
+      },
+  
+      {
+        "@id": "#faq",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is remote IT support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Remote IT support allows IT professionals to troubleshoot and resolve computer, network, and software issues from a remote location."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you provide remote IT support in Atlanta?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we provide professional remote IT support services for businesses and individuals in Atlanta."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What services are included in remote IT support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Network troubleshooting, antivirus support, cloud solutions, data backup, email setup, hardware repair, and more."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much does remote IT support cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Our remote IT support packages start at $49 for a 30-minute session and $79 per hour."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you offer support for both businesses and individuals?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, our remote IT support services are available for small businesses, enterprises, and individuals."
+            }
+          }
+        ]
+      },
+  
+      {
+        "@id": "#qa",
+        "@type": "QAPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How do I get remote IT support in Atlanta?",
+            "text": "I need assistance with my business network and want remote IT support services in Atlanta. How do I request help?",
+            "answerCount": 1,
+            "upvoteCount": 12,
+            "datePublished": "2025-08-17T14:00:00+05:30",
+            "author": { "@type": "Person", "name": "Suresh Das", "url": "https://www.sureshdas.com/" },
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can request remote IT support in Atlanta by visiting our service page and scheduling a session online.",
+              "dateCreated": "2025-07-14T10:00:00+05:30",
+              "upvoteCount": 10,
+              "url": "https://www.itsupport.net.in/services/remote-it-support-atlanta"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What types of devices do you support remotely?",
+            "text": "Do you provide remote support for desktops, laptops, servers, or mobile devices?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we support desktops, laptops, servers, and mobile devices across all operating systems."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can remote IT support help with cloud services?",
+            "text": "I need assistance configuring cloud-based applications. Do you support this remotely?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolutely! We support cloud services including setup, configuration, troubleshooting, and optimization."
+            }
+          }
+        ]
+      }
+  
+    ]
+  }
   
 },
 {
@@ -6828,7 +7297,242 @@ const cities:City[] = [
     authors: [{ name: "IT Support" }],
     copyright: "© 2025",
   },
+  schema:{
+    "@context": "https://schema.org",
+    "@graph": [
   
+      {
+        "@id": "#product",
+        "@type": "Product",
+        "name": "Remote IT Support Birmingham",
+        "image": ["image-url"],
+        "description": "Professional remote IT support services in Birmingham, helping businesses resolve technical issues, improve cybersecurity, and maintain smooth IT operations without onsite visits.",
+        "brand": {
+          "@type": "Brand",
+          "name": "IT Support"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "150",
+          "reviewCount": "120"
+        },
+        "audience": {
+          "@type": "Audience",
+          "description": "Businesses in Birmingham requiring fast, reliable, and professional remote IT support.",
+          "audienceType": "Small to Medium Businesses"
+        },
+        "url": "https://www.itsupport.net.in/services/remote-it-support-birmingham"
+      },
+  
+      {
+        "@id": "#website",
+        "@type": "WebSite",
+        "url": "https://www.itsupport.net.in/",
+        "name": "IT Support",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://www.itsupport.net.in/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+  
+      {
+        "@id": "#webpage",
+        "@type": "WebPage",
+        "name": "Remote IT Support Birmingham",
+        "url": "https://www.itsupport.net.in/services/remote-it-support-birmingham",
+        "description": "Expert remote IT support services in Birmingham. Fast and reliable solutions for small to medium businesses.",
+        "inLanguage": "en-GB",
+        "publisher": {
+          "@type": "Organization",
+          "name": "IT Support",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "image-url"
+          }
+        },
+        "mainEntity": {
+          "@type": "Service",
+          "serviceType": "Remote IT Support",
+          "provider": {
+            "@type": "Organization",
+            "name": "IT Support"
+          },
+          "areaServed": {
+            "@type": "Country",
+            "name": "United Kingdom"
+          },
+          "description": "IT Support provides professional remote IT services for businesses across the United Kingdom."
+        }
+      },
+  
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.itsupport.net.in/" },
+          { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.itsupport.net.in/services" },
+          { "@type": "ListItem", "position": 3, "name": "Remote IT Support Birmingham", "item": "https://www.itsupport.net.in/services/remote-it-support-birmingham" }
+        ]
+      },
+  
+      {
+        "@id": "#review",
+        "@type": "Review",
+        "name": "IT Support",
+        "url": "https://www.itsupport.net.in/reviews/james-w-remote-it-support",
+        "image": "image-url",
+        "author": { "@type": "Person", "name": "James W" },
+        "reviewBody": "The remote IT support team resolved our technical issues quickly and efficiently. Highly recommended for businesses in Birmingham.",
+        "reviewRating": { "@type": "Rating", "ratingValue": "4.9" },
+        "itemReviewed": {
+          "@type": "LocalBusiness",
+          "name": "IT Support",
+          "priceRange": "200",
+          "image": "image-url",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 High Street",
+            "addressLocality": "Birmingham",
+            "postalCode": "SW1A 1AA",
+            "addressCountry": "UK"
+          }
+        }
+      },
+  
+      {
+        "@id": "#service",
+        "@type": "ProfessionalService",
+        "name": "IT Support",
+        "image": "image-url",
+        "url": "https://www.itsupport.net.in/services/remote-it-support-birmingham",
+        "telephone": "+91-906-968-9226",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "123 High Street",
+          "addressLocality": "Birmingham",
+          "postalCode": "SW1A 1AA",
+          "addressCountry": "UK"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "52.4862",
+          "longitude": "-1.8904"
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens": "09:00",
+          "closes": "18:00"
+        },
+        "sameAs": [
+          "https://www.facebook.com/itsupport",
+          "https://twitter.com/itsupport",
+          "https://www.instagram.com/itsupport",
+          "https://www.youtube.com/c/itsupport",
+          "https://www.linkedin.com/company/itsupport",
+          "https://in.pinterest.com/itsupport",
+          "https://www.quora.com/profile/IT-Support-Net",
+          "https://www.itsupport.net.in/services/remote-it-support-birmingham"
+        ]
+      },
+  
+      {
+        "@id": "#faq",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is Remote IT Support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Remote IT Support allows our experts to diagnose and resolve IT issues for your business in Birmingham without onsite visits."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How quickly can I get help?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We typically respond within 30 minutes during business hours."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which businesses can use your remote IT services?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We support small and medium businesses across Birmingham, including SMEs, startups, and corporate offices."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What services are included in your remote IT support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Troubleshooting, software updates, network monitoring, cybersecurity, and general IT maintenance."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you offer 24/7 remote IT support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we offer round-the-clock remote IT support for critical issues."
+            }
+          }
+        ]
+      },
+  
+      {
+        "@id": "#qa",
+        "@type": "QAPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How can remote IT support help my business in Birmingham?",
+            "text": "How can remote IT support help reduce downtime and save costs for my business in Birmingham?",
+            "answerCount": 1,
+            "upvoteCount": 12,
+            "datePublished": "2025-08-17T14:00:00+05:30",
+            "author": { "@type": "Person", "name": "John D.", "url": "https://www.itsupport.net.in" },
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Remote IT support allows your business to get expert assistance without waiting for an onsite visit, reducing downtime and improving operations.",
+              "dateCreated": "2025-07-14T10:00:00+05:30",
+              "upvoteCount": 10,
+              "url": "https://www.itsupport.net.in/services/remote-it-support-birmingham",
+              "author": { "@type": "Person", "name": "Millet D.", "url": "https://www.itsupport.net.in" }
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can remote IT support work for small businesses?",
+            "text": "Is remote IT support suitable for small businesses in Birmingham?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, it is cost-effective and ideal for small businesses without dedicated IT staff.",
+              "dateCreated": "2025-07-14T10:10:00+05:30",
+              "url": "https://www.itsupport.net.in/services/remote-it-support-birmingham"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What kind of IT issues can be resolved remotely?",
+            "text": "Which IT problems can be resolved via remote support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Software installation, updates, network issues, cybersecurity, performance problems, and general troubleshooting.",
+              "url": "https://www.itsupport.net.in/services/remote-it-support-birmingham"
+            }
+          }
+        ]
+      }
+  
+    ]
+  }  
 },
 {
   cityName:"Boston",
@@ -6897,6 +7601,240 @@ const cities:City[] = [
     copyright: "© 2025",
   }
   ,
+  schema:{
+    "@context": "https://schema.org",
+    "@graph": [
+  
+      {
+        "@id": "#product",
+        "@type": "Product",
+        "name": "Remote IT Support - Boston",
+        "image": ["image-url"],
+        "description": "Professional remote IT support services in Boston. Our expert team offers 24/7 assistance for businesses, ensuring seamless technology operations.",
+        "brand": {
+          "@type": "Brand",
+          "name": "IT Support Net"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "257",
+          "reviewCount": "98"
+        },
+        "audience": {
+          "@type": "Audience",
+          "description": "Designed for businesses in Boston needing reliable remote IT support, including troubleshooting, network management, cloud services, and 24/7 assistance.",
+          "audienceType": "Small to Medium Businesses, IT Managers, Startups, Enterprises"
+        },
+        "url": "https://www.itsupport.net.in/services/remote-it-support-boston"
+      },
+  
+      {
+        "@id": "#website",
+        "@type": "WebSite",
+        "url": "https://www.itsupport.net.in/",
+        "name": "IT Support Net",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://www.itsupport.net.in/?s={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+  
+      {
+        "@id": "#webpage",
+        "@type": "WebPage",
+        "name": "Remote IT Support - Boston",
+        "url": "https://www.itsupport.net.in/services/remote-it-support-boston",
+        "description": "Professional remote IT support services in Boston. Our expert team offers 24/7 assistance for businesses, ensuring smooth operations.",
+        "inLanguage": "en-US",
+        "publisher": {
+          "@type": "Organization",
+          "name": "IT Support",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "image-url"
+          }
+        },
+        "mainEntity": {
+          "@type": "Service",
+          "serviceType": "Remote IT Support",
+          "provider": {
+            "@type": "Organization",
+            "name": "IT Support Net"
+          },
+          "areaServed": { "@type": "Country", "name": "United States" },
+          "description": "Available throughout the U.S., including Boston, New York, and San Francisco."
+        }
+      },
+  
+      {
+        "@id": "#breadcrumbs",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 156790, "name": "Home", "item": "https://www.itsupport.net.in/" },
+          { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.itsupport.net.in/services" },
+          { "@type": "ListItem", "position": 3, "name": "Remote IT Support Boston", "item": "https://www.itsupport.net.in/services/remote-it-support-boston" }
+        ]
+      },
+  
+      {
+        "@id": "#review",
+        "@type": "Review",
+        "name": "Outstanding Remote IT Support in Boston",
+        "url": "https://www.itsupport.net.in/locations/de",
+        "image": "image-url",
+        "author": { "@type": "Person", "name": "Kyle" },
+        "reviewBody": "Our company received quick and reliable remote IT support from IT Support Net. Their technicians were professional and resolved our issues efficiently. Highly recommended.",
+        "reviewRating": { "@type": "Rating", "ratingValue": "4.9" },
+        "itemReviewed": {
+          "@type": "LocalBusiness",
+          "name": "IT Support Net - Remote IT Support Boston",
+          "priceRange": "200",
+          "image": "image-url",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 High Street",
+            "addressLocality": "Boston",
+            "postalCode": "02110",
+            "addressCountry": "US"
+          }
+        }
+      },
+  
+      {
+        "@id": "#service",
+        "@type": "ProfessionalService",
+        "name": "IT Support Net - Remote IT Support Boston",
+        "image": "image-url",
+        "url": "https://www.itsupport.net.in/services/remote-it-support-boston",
+        "telephone": "+91-906-968-9226",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "123 High Street",
+          "addressLocality": "Boston",
+          "postalCode": "02110",
+          "addressCountry": "US"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "42.355",
+          "longitude": "-71.056"
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens": "09:00",
+          "closes": "18:00"
+        },
+        "sameAs": [
+          "https://www.facebook.com/itsupportnetin",
+          "https://twitter.com/itsupportnetin",
+          "https://www.instagram.com/itsupportnetin",
+          "https://www.youtube.com/c/itsupportnetin",
+          "https://www.linkedin.com/company/itsupportnetin",
+          "https://in.pinterest.com/itsupportnetin",
+          "https://www.quora.com/profile/IT-Support-Net",
+          "https://www.itsupport.net.in/services/remote-it-support-boston"
+        ]
+      },
+  
+      {
+        "@id": "#faq",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is remote IT support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Remote IT support allows Boston-based experts to troubleshoot issues securely through online access, reducing downtime."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How quickly can IT Support Net resolve technical issues?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Responses are typically within minutes, and most issues are resolved the same business day."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is remote IT support secure for my business?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, secure encrypted remote access tools ensure complete protection of your data."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can remote IT support help with software installation and updates?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, technicians can install, configure, and update software remotely and securely."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you provide remote IT support outside Boston?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, support is available across the United States."
+            }
+          }
+        ]
+      },
+  
+      {
+        "@id": "#qa",
+        "@type": "QAPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How can remote IT support benefit businesses in Boston?",
+            "text": "How can remote IT support save time and reduce costs for Boston businesses?",
+            "answerCount": 2,
+            "upvoteCount": 15,
+            "datePublished": "2025-08-17T14:00:00+05:30",
+            "author": { "@type": "Person", "name": "David Johnson", "url": "https://www.itsupport.net.in" },
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Remote IT support resolves most issues instantly, cutting travel delays and reducing costs while improving uptime.",
+              "dateCreated": "2025-07-14T10:00:00+05:30",
+              "upvoteCount": 10,
+              "url": "https://www.itsupport.net.in/services/remote-it-support-boston",
+              "author": { "@type": "Person", "name": "Sarah Williams", "url": "https://www.itsupport.net.in" }
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is remote IT support secure for Boston businesses?",
+            "text": "Does remote IT support compromise data security?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. IT Support Net uses encrypted access and strict protocols to protect all client data.",
+              "dateCreated": "2025-07-14T10:10:00+05:30",
+              "url": "https://www.itsupport.net.in/services/remote-it-support-boston"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can remote IT support assist with software installation and updates?",
+            "text": "Can software deployment and maintenance be handled remotely?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Software can be installed, updated, and configured remotely with minimal downtime.",
+              "url": "https://www.itsupport.net.in/services/remote-it-support-boston"
+            }
+          }
+        ]
+      }
+  
+    ]
+  }
   
 },
 {
@@ -6965,6 +7903,248 @@ const cities:City[] = [
     authors: [{ name: "IT Support" }],
     copyright: "© 2025",
   },
+  schema:{
+    "@context": "https://schema.org",
+    "@graph": [
+  
+      {
+        "@id": "#product",
+        "@type": "Product",
+        "name": "Remote IT Support Bristol",
+        "image": ["image-url"],
+        "description": "Expert remote IT support services in Bristol, offering 24/7 assistance for businesses and individuals, including data backup, antivirus support, network troubleshooting, and cloud solutions.",
+        "brand": {
+          "@type": "Brand",
+          "name": "Remote IT Support Bristol"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "257",
+          "reviewCount": "98"
+        },
+        "audience": {
+          "@type": "Audience",
+          "description": "Expert remote IT support for Bristol businesses and individuals.",
+          "audienceType": "Businesses and Individuals"
+        },
+        "url": "https://www.itsupport.net.in/services/remote-it-support-bristol"
+      },
+  
+      {
+        "@id": "#website",
+        "@type": "WebSite",
+        "url": "https://www.itsupport.net.in/",
+        "name": "TechCare Pro IT Support",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://www.itsupport.net.in/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+  
+      {
+        "@id": "#webpage",
+        "@type": "WebPage",
+        "name": "Remote IT Support Bristol",
+        "url": "https://www.itsupport.net.in/services/remote-it-support-bristol",
+        "description": "Expert remote IT support services in Bristol for businesses and individuals.",
+        "inLanguage": "en",
+        "publisher": {
+          "@type": "Organization",
+          "name": "TechCare Pro",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "image-url"
+          }
+        },
+        "mainEntity": {
+          "@type": "Service",
+          "serviceType": "Remote IT Support",
+          "provider": {
+            "@type": "Organization",
+            "name": "TechCare Pro"
+          },
+          "areaServed": { "@type": "Country", "name": "United Kingdom" },
+          "description": "TechCare Pro provides remote IT support including network troubleshooting, antivirus support, cloud solutions, and 24/7 technical help for Bristol businesses and individuals."
+        }
+      },
+  
+      {
+        "@id": "#breadcrumbs",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.itsupport.net.in/" },
+          { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.itsupport.net.in/services" },
+          { "@type": "ListItem", "position": 3, "name": "Remote IT Support Bristol", "item": "https://www.itsupport.net.in/services/remote-it-support-bristol" }
+        ]
+      },
+  
+      {
+        "@id": "#review",
+        "@type": "Review",
+        "name": "Remote IT Support Bristol",
+        "url": "https://www.itsupport.net.in/services/remote-it-support-bristol",
+        "image": "image-url",
+        "author": { "@type": "Person", "name": "Kyle" },
+        "reviewBody": "TechCare Pro provided fast and professional remote IT support. They resolved our network issues quickly and were very responsive.",
+        "reviewRating": { "@type": "Rating", "ratingValue": "4.9" },
+        "itemReviewed": {
+          "@type": "LocalBusiness",
+          "name": "TechCare Pro - Remote IT Support Bristol",
+          "priceRange": "200",
+          "image": "image-url",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 Bristol Road",
+            "addressLocality": "Bristol",
+            "postalCode": "BS1 5TY",
+            "addressCountry": "UK"
+          }
+        }
+      },
+  
+      {
+        "@id": "#service",
+        "@type": "ProfessionalService",
+        "name": "TechCare Pro - Remote IT Support Bristol",
+        "image": "image-url",
+        "url": "https://www.itsupport.net.in/services/remote-it-support-bristol",
+        "telephone": "+91-906-968-9226",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "123 High Street",
+          "addressLocality": "Bristol",
+          "postalCode": "BS1 5TY",
+          "addressCountry": "UK"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "51.4545",
+          "longitude": "-2.5879"
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens": "09:00",
+          "closes": "18:00"
+        },
+        "sameAs": [
+          "https://www.facebook.com/TechCarePro",
+          "https://twitter.com/TechCarePro",
+          "https://www.instagram.com/TechCarePro",
+          "https://www.youtube.com/@TechCarePro",
+          "https://www.linkedin.com/company/techcarepro",
+          "https://www.pinterest.com/TechCarePro",
+          "https://www.quora.com/profile/TechCarePro",
+          "https://www.itsupport.net.in/locations/bristol"
+        ]
+      },
+  
+      {
+        "@id": "#faq",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How do I contact tech support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can reach our support team 24/7 via call, live chat, or email at support@techcarepro.com."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What hours are you available?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "TechCare Pro offers 24/7/365 support with no holidays or weekends."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much does remote IT support cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Remote IT sessions start at $49 for 30 minutes. Extended sessions are billed at $79/hour."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you provide business IT support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we provide business IT support including network monitoring, onsite visits, and preventative maintenance."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I pay my invoice?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Invoices can be paid online via credit card, PayPal, or bank transfer."
+            }
+          }
+        ]
+      },
+  
+      {
+        "@id": "#qa",
+        "@type": "QAPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How can I get remote IT support in Bristol?",
+            "text": "I need professional IT support remotely for my business in Bristol. How can I get started?",
+            "answerCount": 1,
+            "upvoteCount": 5,
+            "datePublished": "2025-08-17T14:00:00+05:30",
+            "author": {
+              "@type": "Person",
+              "name": "Jane Smith",
+              "url": "https://www.itsupport.net.in"
+            },
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can contact TechCare Pro via phone, email, or live chat. They offer 24/7 remote IT support for Bristol businesses and individuals.",
+              "dateCreated": "2025-07-14T10:00:00+05:30",
+              "upvoteCount": 10,
+              "url": "https://www.itsupport.net.in/services/remote-it-support-bristol",
+              "author": {
+                "@type": "Person",
+                "name": "John",
+                "url": "https://www.itsupport.net.in"
+              }
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you troubleshoot network issues remotely?",
+            "text": "I have network issues in my Bristol office. Can they be fixed remotely?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, TechCare Pro provides remote network troubleshooting for Bristol businesses.",
+              "dateCreated": "2025-07-14T10:10:00+05:30",
+              "url": "https://www.itsupport.net.in/services/remote-it-support-bristol"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How can I pay for remote IT services?",
+            "text": "What are the payment options for TechCare Pro remote IT support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Payments can be made via credit card, PayPal, or bank transfer, and invoices are provided.",
+              "url": "https://www.itsupport.net.in/services/remote-it-support-bristol"
+            }
+          }
+        ]
+      }
+  
+    ]
+  }
   
 },
 {
@@ -7034,6 +8214,248 @@ const cities:City[] = [
     copyright: "© 2025",
   }
   ,
+  schema:{
+    "@context": "https://schema.org",
+    "@graph": [
+  
+      {
+        "@id": "#product",
+        "@type": "Product",
+        "name": "Remote IT Support Calgary",
+        "image": ["image-url"],
+        "description": "TechCare Pro provides reliable Remote IT Support services in Calgary, assisting businesses with troubleshooting, system maintenance, and IT infrastructure management.",
+        "brand": {
+          "@type": "Brand",
+          "name": "TechCare Pro"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "257",
+          "reviewCount": "98"
+        },
+        "audience": {
+          "@type": "Audience",
+          "description": "Small and medium-sized businesses, startups, and organizations in Calgary seeking reliable remote IT support services.",
+          "audienceType": "Small and medium-sized businesses"
+        },
+        "url": "https://www.itsupport.net.in/services/remote-it-support-calgary"
+      },
+  
+      {
+        "@id": "#website",
+        "@type": "WebSite",
+        "url": "https://www.itsupport.net.in/",
+        "name": "TechCare Pro IT Support",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://www.itsupport.net.in/services/remote-it-support-calgary?service={serviceName}&location={location}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+  
+      {
+        "@id": "#webpage",
+        "@type": "WebPage",
+        "name": "Remote IT Support Calgary - TechCare Pro",
+        "url": "https://www.itsupport.net.in/services/remote-it-support-calgary",
+        "description": "TechCare Pro offers reliable remote IT support services in Calgary including troubleshooting, maintenance, and IT infrastructure management.",
+        "inLanguage": "en-CA",
+        "publisher": {
+          "@type": "Organization",
+          "name": "TechCare Pro",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "image-url"
+          }
+        },
+        "mainEntity": {
+          "@type": "Service",
+          "serviceType": "Remote IT Support",
+          "provider": {
+            "@type": "Organization",
+            "name": "TechCare Pro"
+          },
+          "areaServed": { "@type": "Country", "name": "Canada" },
+          "description": "TechCare Pro provides remote IT support for Canadian businesses including troubleshooting, maintenance, cybersecurity, and cloud solutions."
+        }
+      },
+  
+      {
+        "@id": "#breadcrumbs",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.itsupport.net.in/" },
+          { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.itsupport.net.in/services" },
+          { "@type": "ListItem", "position": 3, "name": "Remote IT Support Calgary", "item": "https://www.itsupport.net.in/services/remote-it-support-calgary" }
+        ]
+      },
+  
+      {
+        "@id": "#review",
+        "@type": "Review",
+        "name": "Excellent Remote IT Support Service in Calgary",
+        "url": "https://www.itsupport.net.in/services/remote-it-support-calgary",
+        "image": "image-url",
+        "author": { "@type": "Person", "name": "Kyle" },
+        "reviewBody": "TechCare Pro’s remote IT support team quickly resolved our network issues. Their professional service saved us hours of downtime and kept our systems running smoothly.",
+        "reviewRating": { "@type": "Rating", "ratingValue": "4.9" },
+        "itemReviewed": {
+          "@type": "LocalBusiness",
+          "name": "TechCare Pro - Remote IT Support Calgary",
+          "priceRange": "200",
+          "image": "image-url",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 Main Street",
+            "addressLocality": "Calgary",
+            "postalCode": "T1X 1A1",
+            "addressCountry": "CA"
+          }
+        }
+      },
+  
+      {
+        "@id": "#service",
+        "@type": "ProfessionalService",
+        "name": "TechCare Pro - Remote IT Support Calgary",
+        "image": "image-url",
+        "url": "https://www.itsupport.net.in/services/remote-it-support-calgary",
+        "telephone": "+91-906-968-9226",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "123 Main Street",
+          "addressLocality": "Calgary",
+          "postalCode": "T1X 1A1",
+          "addressCountry": "CA"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "51.0447",
+          "longitude": "-114.0719"
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens": "09:00",
+          "closes": "18:00"
+        },
+        "sameAs": [
+          "https://www.facebook.com/TechCarePro",
+          "https://twitter.com/TechCarePro",
+          "https://www.instagram.com/techcarepro",
+          "https://www.youtube.com/@techcarepro",
+          "https://www.linkedin.com/company/techcare-pro",
+          "https://www.pinterest.com/techcarepro",
+          "https://www.quora.com/profile/TechCare-Pro",
+          "https://www.itsupport.net.in/services/remote-it-support-calgary"
+        ]
+      },
+  
+      {
+        "@id": "#faq",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How does remote IT support help Calgary businesses?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Remote IT support helps Calgary businesses resolve issues quickly without onsite visits, reducing downtime and enhancing productivity."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is remote IT support safe for my company data?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, TechCare Pro uses encrypted connections and secure tools to protect your company’s data."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you offer 24/7 remote IT support in Calgary?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, TechCare Pro provides around-the-clock remote IT support for Calgary businesses."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much does remote IT support cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Remote support sessions start at $49 for a 30-minute session, with extended support available at $79/hour."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you provide business IT support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we offer business IT support including network monitoring, maintenance, and onsite visits if needed."
+            }
+          }
+        ]
+      },
+  
+      {
+        "@id": "#qa",
+        "@type": "QAPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How can Calgary businesses benefit from remote IT support?",
+            "text": "How can remote IT support save time and reduce costs for Calgary businesses?",
+            "answerCount": 3,
+            "upvoteCount": 12,
+            "datePublished": "2025-08-17T14:00:00+05:30",
+            "author": {
+              "@type": "Person",
+              "name": "TechCare Pro",
+              "url": "https://www.itsupport.net.in"
+            },
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Remote IT support allows businesses to quickly resolve issues through secure online access, reducing downtime and improving productivity.",
+              "dateCreated": "2025-07-14T10:00:00+05:30",
+              "upvoteCount": 10,
+              "url": "https://www.itsupport.net.in/services/remote-it-support-calgary",
+              "author": {
+                "@type": "Person",
+                "name": "Michael",
+                "url": "https://www.itsupport.net.in"
+              }
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can remote IT support fix network issues in Calgary businesses?",
+            "text": "Can remote IT support resolve network issues for Calgary businesses?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, TechCare Pro provides professional remote network troubleshooting and optimization for Calgary businesses.",
+              "dateCreated": "2025-07-14T10:10:00+05:30",
+              "url": "https://www.itsupport.net.in/services/remote-it-support-calgary"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is remote IT support suitable for small Calgary businesses?",
+            "text": "Can small Calgary businesses benefit from remote IT support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolutely! TechCare Pro’s remote IT services are ideal for small businesses, offering cost-effective solutions.",
+              "url": "https://www.itsupport.net.in/services/remote-it-support-calgary"
+            }
+          }
+        ]
+      }
+  
+    ]
+  }
   
 },
 {
@@ -7103,7 +8525,7 @@ const cities:City[] = [
     authors: [{ name: "IT Support" }],
     copyright: "© 2025",
   },
-  
+  schema:{}
 },
 {
   cityName:"Chicago",
@@ -7171,6 +8593,240 @@ const cities:City[] = [
     authors: [{ name: "IT Support" }],
     copyright: "© 2025",
   },
+  schema:{
+    "@context": "https://schema.org",
+    "@graph": [
+  
+      {
+        "@id": "#product",
+        "@type": "Product",
+        "name": "Remote IT Support - Chicago",
+        "image": ["image-url"],
+        "description": "TechCare Pro offers 24/7 remote IT support services in Chicago, providing quick and reliable assistance including data backup, antivirus support, and network troubleshooting.",
+        "brand": {
+          "@type": "Brand",
+          "name": "TechCare Pro"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "257",
+          "reviewCount": "98"
+        },
+        "audience": {
+          "@type": "Audience",
+          "description": "Small to medium businesses and individual users in Chicago needing reliable IT support such as troubleshooting, antivirus help, and backup solutions.",
+          "audienceType": "Businesses and Individuals in Chicago seeking IT support"
+        },
+        "url": "https://www.itsupport.net.in/services/remote-it-support-chicago"
+      },
+  
+      {
+        "@id": "#website",
+        "@type": "WebSite",
+        "url": "https://www.itsupport.net.in/",
+        "name": "TechCare Pro",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://www.itsupport.net.in/services/remote-it-support-chicago",
+          "query-input": "required name=search_term_string"
+        }
+      },
+  
+      {
+        "@id": "#webpage",
+        "@type": "WebPage",
+        "name": "Remote IT Support - Chicago",
+        "url": "https://www.itsupport.net.in/services/remote-it-support-chicago",
+        "description": "TechCare Pro provides 24/7 remote IT support in Chicago including troubleshooting, data backup, antivirus support, and network solutions.",
+        "inLanguage": "en",
+        "publisher": {
+          "@type": "Organization",
+          "name": "TechCare Pro",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "image-url"
+          }
+        },
+        "mainEntity": {
+          "@type": "Service",
+          "serviceType": "Remote IT Support",
+          "provider": {
+            "@type": "Organization",
+            "name": "TechCare Pro"
+          },
+          "areaServed": { "@type": "Country", "name": "United States" },
+          "description": "TechCare Pro provides remote IT support services throughout the United States including Chicago, IL."
+        }
+      },
+  
+      {
+        "@id": "#breadcrumbs",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.itsupport.net.in/" },
+          { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.itsupport.net.in/services" },
+          { "@type": "ListItem", "position": 3, "name": "Remote IT Support - Chicago", "item": "https://www.itsupport.net.in/services/remote-it-support-chicago" }
+        ]
+      },
+  
+      {
+        "@id": "#review",
+        "@type": "Review",
+        "name": "Excellent Remote IT Support in Chicago",
+        "url": "https://www.itsupport.net.in/services/remote-it-support-chicago",
+        "image": "image-url",
+        "author": { "@type": "Person", "name": "Kyle" },
+        "reviewBody": "TechCare Pro provided excellent remote IT support for our Chicago office. They resolved network issues quickly and professionally.",
+        "reviewRating": { "@type": "Rating", "ratingValue": "4.9" },
+        "itemReviewed": {
+          "@type": "LocalBusiness",
+          "name": "TechCare Pro - Chicago",
+          "priceRange": "200",
+          "image": "image-url",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 Tech Street",
+            "addressLocality": "Chicago",
+            "postalCode": "60601",
+            "addressCountry": "US"
+          }
+        }
+      },
+  
+      {
+        "@id": "#service",
+        "@type": "ProfessionalService",
+        "name": "TechCare Pro - Remote IT Support Chicago",
+        "image": "image-url",
+        "url": "https://www.itsupport.net.in/services/remote-it-support-chicago",
+        "telephone": "+91-906-968-9226",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "123 Tech Street",
+          "addressLocality": "Chicago",
+          "postalCode": "60601",
+          "addressCountry": "US"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "41.8781",
+          "longitude": "-87.6298"
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "18:00"
+        },
+        "sameAs": [
+          "https://www.facebook.com/TechCarePro",
+          "https://twitter.com/TechCarePro",
+          "https://www.instagram.com/techcarepro",
+          "https://www.youtube.com/@techcarepro",
+          "https://www.linkedin.com/company/techcarepro",
+          "https://www.pinterest.com/techcarepro",
+          "https://www.quora.com/profile/TechCare-Pro",
+          "https://www.itsupport.net.in/services/remote-it-support-chicago"
+        ]
+      },
+  
+      {
+        "@id": "#faq",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What services are included in Remote IT Support in Chicago?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Services include network troubleshooting, antivirus support, data backup, software installation, and general IT assistance for Chicago businesses and individuals."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I request remote IT support in Chicago?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can request support through the Remote IT Support Chicago page or by contacting TechCare Pro via phone or email."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is remote IT support available 24/7?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, TechCare Pro provides round-the-clock remote IT support in Chicago."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you provide IT support for Windows and Mac?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, TechCare Pro supports Windows, macOS, and Linux systems."
+            }
+          }
+        ]
+      },
+  
+      {
+        "@id": "#qa",
+        "@type": "QAPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How can remote IT support help businesses in Chicago improve productivity?",
+            "text": "How does remote IT support help Chicago businesses save time and improve performance?",
+            "answerCount": 3,
+            "upvoteCount": 12,
+            "datePublished": "2025-08-17T14:00:00+05:30",
+            "author": {
+              "@type": "Person",
+              "name": "Michael Lee",
+              "url": "https://www.itsupport.net.in"
+            },
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Remote IT support reduces downtime with instant troubleshooting, system monitoring, and maintenance without needing onsite visits.",
+              "dateCreated": "2025-07-14T10:00:00+05:30",
+              "upvoteCount": 10,
+              "url": "https://www.itsupport.net.in/services/remote-it-support-chicago",
+              "author": {
+                "@type": "Person",
+                "name": "TechCare Pro Support Team",
+                "url": "https://www.itsupport.net.in"
+              }
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the response time for TechCare Pro’s remote IT support?",
+            "text": "How quickly can Chicago clients receive IT assistance?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Our IT experts typically respond within 15–20 minutes of receiving a support request.",
+              "dateCreated": "2025-07-14T10:10:00+05:30",
+              "url": "https://www.itsupport.net.in/services/remote-it-support-chicago"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is remote IT support secure for Chicago businesses?",
+            "text": "Is remote IT support safe for business data and systems?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, encrypted remote access tools and authentication protocols ensure complete data security.",
+              "url": "https://www.itsupport.net.in/services/remote-it-support-chicago"
+            }
+          }
+        ]
+      }
+  
+    ]
+  }
   
 },
 {
@@ -7239,6 +8895,250 @@ const cities:City[] = [
     authors: [{ name: "IT Support" }],
     copyright: "© 2025",
   },
+  schema:{
+    "@context": "https://schema.org",
+    "@graph": [
+  
+      {
+        "@id": "#product",
+        "@type": "Product",
+        "name": "Remote IT Support Dallas",
+        "image": ["image-url"],
+        "description": "Expert Remote IT Support in Dallas, TX. Certified technicians provide fast, secure, and affordable remote help for computer repair, software issues, network setup, cloud support, and data recovery.",
+        "brand": {
+          "@type": "Brand",
+          "name": "IT Support"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "257",
+          "reviewCount": "98"
+        },
+        "audience": {
+          "@type": "Audience",
+          "description": "This service is ideal for Dallas-based small businesses, professionals, and individuals needing secure remote technical assistance.",
+          "audienceType": "Small Businesses, Remote Workers, Home Users"
+        },
+        "url": "https://www.itsupport.net.in/services/remote-it-support-dallas"
+      },
+  
+      {
+        "@id": "#website",
+        "@type": "WebSite",
+        "url": "https://www.itsupport.net.in/",
+        "name": "IT Support",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://www.itsupport.net.in/search?query={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+  
+      {
+        "@id": "#webpage",
+        "@type": "WebPage",
+        "name": "Remote IT Support Dallas | IT Support",
+        "url": "https://www.itsupport.net.in/services/remote-it-support-dallas",
+        "description": "Fast, secure, and affordable remote IT support in Dallas. Certified experts handle computer, network, cloud, software, and security issues remotely.",
+        "inLanguage": "en-US",
+        "publisher": {
+          "@type": "Organization",
+          "name": "IT Support",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "image-url"
+          }
+        },
+        "mainEntity": {
+          "@type": "Service",
+          "serviceType": [
+            "Remote IT Support",
+            "Network Troubleshooting",
+            "Cloud Services Support",
+            "Email & Software Setup",
+            "Antivirus & Security Support",
+            "Web Hosting & Domain Support"
+          ],
+          "provider": {
+            "@type": "Organization",
+            "name": "IT Support"
+          },
+          "areaServed": {
+            "@type": "Country",
+            "name": "United States"
+          },
+          "description": "IT Support provides remote IT services across the USA, offering troubleshooting, diagnostics, and cloud assistance for Dallas businesses."
+        }
+      },
+  
+      {
+        "@id": "#breadcrumbs",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.itsupport.net.in/" },
+          { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.itsupport.net.in/locations" },
+          { "@type": "ListItem", "position": 3, "name": "Remote IT Support Dallas", "item": "https://www.itsupport.net.in/services/remote-it-support-dallas" }
+        ]
+      },
+  
+      {
+        "@id": "#review",
+        "@type": "Review",
+        "name": "Quick and Reliable Remote IT Support",
+        "url": "https://www.itsupport.net.in/services/remote-it-support-dallas",
+        "image": "image-url",
+        "author": { "@type": "Person", "name": "Kyle" },
+        "reviewBody": "Their remote IT support team fixed my computer and Wi-Fi issues within 20 minutes. Quick and affordable service!",
+        "reviewRating": { "@type": "Rating", "ratingValue": "4.9" },
+        "itemReviewed": {
+          "@type": "LocalBusiness",
+          "name": "IT Support Dallas",
+          "priceRange": "200",
+          "image": "image-url",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 Tech Avenue",
+            "addressLocality": "Dallas",
+            "postalCode": "75201",
+            "addressCountry": "US"
+          }
+        }
+      },
+  
+      {
+        "@id": "#service",
+        "@type": "ProfessionalService",
+        "name": "IT Support Dallas",
+        "image": "image-url",
+        "url": "https://www.itsupport.net.in/services/remote-it-support-dallas",
+        "telephone": "+91-906-968-9226",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "123 Tech Avenue",
+          "addressLocality": "Dallas",
+          "postalCode": "75201",
+          "addressCountry": "US"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "32.7767",
+          "longitude": "-96.7970"
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens": "09:00",
+          "closes": "18:00"
+        },
+        "sameAs": [
+          "https://www.facebook.com/itsupport",
+          "https://twitter.com/itsupport",
+          "https://www.instagram.com/itsupport",
+          "https://www.youtube.com/@itsupport",
+          "https://www.linkedin.com/company/itsupport",
+          "https://www.pinterest.com/itsupport",
+          "https://www.quora.com/profile/itsupport",
+          "https://www.itsupport.net.in/services/remote-it-support-dallas"
+        ]
+      },
+  
+      {
+        "@id": "#faq",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is Remote IT Support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Remote IT Support allows certified professionals to fix your technical issues online without visiting your location."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How fast can Dallas IT Support respond?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The Dallas team typically responds within 15–30 minutes depending on issue severity."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What services are included in Remote IT Support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Network troubleshooting, antivirus support, data recovery, cloud support, email setup, and software installation."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Remote IT Support secure?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. All remote sessions use encrypted connections and secure authentication."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can businesses schedule recurring support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, recurring IT support plans are available for ongoing business needs."
+            }
+          }
+        ]
+      },
+  
+      {
+        "@id": "#qa",
+        "@type": "QAPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How can I get remote IT support in Dallas?",
+            "text": "I need professional remote IT support for my business in Dallas. How do I start?",
+            "answerCount": 3,
+            "upvoteCount": 12,
+            "datePublished": "2025-08-17T14:00:00+05:30",
+            "author": { "@type": "Person", "name": "Jane Doe", "url": "https://www.itsupport.net.in" },
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can start by contacting IT Support Dallas via phone or website. A certified expert will assist you remotely.",
+              "dateCreated": "2025-07-14T10:00:00+05:30",
+              "upvoteCount": 10,
+              "url": "https://www.itsupport.net.in/services/remote-it-support-dallas",
+              "author": { "@type": "Person", "name": "Expert tech support", "url": "https://www.itsupport.net.in" }
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are remote IT support sessions secure?",
+            "text": "Is remote access safe for my computer?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Sessions are encrypted and follow strict data security protocols.",
+              "dateCreated": "2025-07-14T10:10:00+05:30",
+              "url": "https://www.itsupport.net.in/services/remote-it-support-dallas"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What IT issues can be solved remotely?",
+            "text": "Can all IT issues be fixed remotely?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Most issues—network errors, software problems, cloud setup, antivirus, etc.—can be solved remotely. Hardware failures require onsite visits.",
+              "url": "https://www.itsupport.net.in/services/remote-it-support-dallas"
+            }
+          }
+        ]
+      }
+  
+    ]
+  }
   
 },
 {
@@ -7307,6 +9207,221 @@ const cities:City[] = [
     authors: [{ name: "IT Support" }],
     copyright: "© 2025",
   },
+  schema:{
+    "@context": "https://schema.org",
+    "@graph": [
+  
+      {
+        "@id": "#product",
+        "@type": "Product",
+        "name": "Remote IT Support Dubai",
+        "image": ["https://www.itsupport.net.in/images/remote-it-support-dubai.jpg"],
+        "description": "Affordable remote IT support services in Dubai. Includes troubleshooting, cloud management, antivirus setup, email configuration, and more for businesses and individuals across the UAE.",
+        "brand": {
+          "@type": "Brand",
+          "name": "IT Support"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "367",
+          "reviewCount": "185"
+        },
+        "audience": {
+          "@type": "Audience",
+          "description": "Business owners, IT professionals, and individuals in Dubai seeking reliable and affordable remote IT support.",
+          "audienceType": "Small Businesses, Startups, Corporates, Individual Users"
+        },
+        "url": "https://www.itsupport.net.in/cities/remote-it-support-dubai"
+      },
+  
+      {
+        "@id": "#website",
+        "@type": "WebSite",
+        "url": "https://www.itsupport.net.in/",
+        "name": "IT Support",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://www.itsupport.net.in/cities/remote-it-support-dubai",
+          "query-input": "required name=search_term_string"
+        }
+      },
+  
+      {
+        "@id": "#webpage",
+        "@type": "WebPage",
+        "name": "Remote IT Support Dubai – IT Support",
+        "url": "https://www.itsupport.net.in/cities/remote-it-support-dubai",
+        "description": "Remote IT support services in Dubai, UAE including troubleshooting, system maintenance, cloud support, and cybersecurity solutions for businesses and individuals.",
+        "inLanguage": "en",
+        "publisher": {
+          "@type": "Organization",
+          "name": "IT Support",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.itsupport.net.in/images/logo.png"
+          }
+        },
+        "mainEntity": {
+          "@type": "Service",
+          "serviceType": "Remote IT Support",
+          "provider": { "@type": "Organization", "name": "IT Support" },
+          "areaServed": { "@type": "Country", "name": "United Arab Emirates" },
+          "description": "Dubai, UAE’s tech hub, supported by professional remote IT services including cloud management, cybersecurity, data backup, and system optimization."
+        }
+      },
+  
+      {
+        "@id": "#breadcrumbs",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.itsupport.net.in/" },
+          { "@type": "ListItem", "position": 2, "name": "Cities", "item": "https://www.itsupport.net.in/cities" },
+          { "@type": "ListItem", "position": 3, "name": "Remote IT Support Dubai", "item": "https://www.itsupport.net.in/cities/remote-it-support-dubai" }
+        ]
+      },
+  
+      {
+        "@id": "#review",
+        "@type": "Review",
+        "name": "Reliable Remote IT Support in Dubai",
+        "url": "https://www.itsupport.net.in/reviews/remote-it-support-dubai/ahmed-s",
+        "image": "https://www.itsupport.net.in/images/review-dubai.jpg",
+        "author": { "@type": "Person", "name": "Ahmed S." },
+        "reviewBody": "Excellent remote IT support in Dubai! The technicians quickly resolved my software issue and optimized my system for better performance. Amazing service.",
+        "reviewRating": { "@type": "Rating", "ratingValue": "4.9" },
+        "itemReviewed": {
+          "@type": "LocalBusiness",
+          "name": "IT Support Dubai",
+          "priceRange": "AED 180 - AED 350",
+          "image": "https://www.itsupport.net.in/images/remote-it-support-dubai.jpg",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Business Bay",
+            "addressLocality": "Dubai",
+            "postalCode": "00000",
+            "addressCountry": "AE"
+          }
+        }
+      },
+  
+      {
+        "@id": "#service",
+        "@type": "ProfessionalService",
+        "name": "IT Support Dubai",
+        "image": "https://www.itsupport.net.in/images/remote-it-support-dubai.jpg",
+        "url": "https://www.itsupport.net.in/cities/remote-it-support-dubai",
+        "telephone": "+91-906-968-9226",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Business Bay",
+          "addressLocality": "Dubai",
+          "postalCode": "00000",
+          "addressCountry": "AE"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 25.276987,
+          "longitude": 55.296249
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          "opens": "09:00",
+          "closes": "20:00"
+        },
+        "sameAs": [
+          "https://www.facebook.com/itsupport",
+          "https://twitter.com/itsupport",
+          "https://www.instagram.com/itsupport",
+          "https://www.youtube.com/c/itsupport",
+          "https://www.linkedin.com/company/itsupport",
+          "https://in.pinterest.com/itsupport",
+          "https://itsupport.quora.com/",
+          "https://www.itsupport.net.in/cities/remote-it-support-dubai"
+        ]
+      },
+  
+      {
+        "@id": "#faq",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is remote IT support?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Remote IT support allows experts to fix your computer, server, and network issues without being physically present." }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you provide remote IT support in Dubai?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes, we provide 24/7 professional remote IT support for businesses and individuals across Dubai and the UAE." }
+          },
+          {
+            "@type": "Question",
+            "name": "What services are included?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Troubleshooting, cloud support, data backup, cybersecurity, system optimization, and email setup." }
+          },
+          {
+            "@type": "Question",
+            "name": "How much does remote IT support cost in Dubai?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Services start from AED 180 depending on the complexity of the issue." }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you support both individuals and businesses?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes, support is available for startups, SMEs, enterprises, and individual users." }
+          }
+        ]
+      },
+  
+      {
+        "@id": "#qa",
+        "@type": "QAPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How do I get remote IT support in Dubai?",
+            "text": "I need immediate IT assistance for my business network in Dubai. How do I request remote IT support?",
+            "answerCount": 1,
+            "upvoteCount": 16,
+            "datePublished": "2025-09-21T14:00:00+05:30",
+            "author": { "@type": "Person", "name": "Ahmed Al Mansoori", "url": "https://www.itsupport.net.in/" },
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can request remote IT support by visiting our service page and booking an online session or calling our helpline for immediate support.",
+              "dateCreated": "2025-08-15T10:00:00+05:30",
+              "upvoteCount": 12,
+              "url": "https://www.itsupport.net.in/cities/remote-it-support-dubai",
+              "author": { "@type": "Person", "name": "Waqar Ahmed", "url": "https://www.itsupport.net.in/" }
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you support Apple and Windows devices?",
+            "text": "Can you fix issues on both Windows and macOS systems?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, our technicians support Windows, macOS, Linux, mobile devices, and cloud applications.",
+              "url": "https://www.itsupport.net.in/cities/remote-it-support-dubai"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can remote IT support help with cybersecurity?",
+            "text": "My system may be infected. Can remote support fix this?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolutely! We can perform remote malware detection, removal, and complete security optimization.",
+              "url": "https://www.itsupport.net.in/cities/remote-it-support-dubai"
+            }
+          }
+        ]
+      }
+  
+    ]
+  }
   
 },
 {
@@ -7375,7 +9490,244 @@ const cities:City[] = [
     authors: [{ name: "IT Support" }],
     copyright: "© 2025",
   },
+  schema:{
+    "@context": "https://schema.org",
+    "@graph": [
   
+      {
+        "@id": "#product",
+        "@type": "Product",
+        "name": "Remote IT Support Edinburgh",
+        "image": ["https://www.itsupport.net.in/images/remote-it-support-edinburgh.jpg"],
+        "description": "Affordable remote IT support services in Edinburgh. Includes troubleshooting, cloud support, antivirus, data backup, email setup, and more for businesses and individuals.",
+        "brand": {
+          "@type": "Brand",
+          "name": "IT Support"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "327",
+          "reviewCount": "164"
+        },
+        "audience": {
+          "@type": "Audience",
+          "description": "Business owners, IT managers, and professionals in Edinburgh who require quick, affordable, and reliable remote IT support.",
+          "audienceType": "Small Businesses, Startups, Enterprises, Individual Professionals"
+        },
+        "url": "https://www.itsupport.net.in/cities/remote-it-support-edinburgh"
+      },
+  
+      {
+        "@id": "#website",
+        "@type": "WebSite",
+        "url": "https://www.itsupport.net.in/",
+        "name": "IT Support",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://www.itsupport.net.in/cities/remote-it-support-edinburgh",
+          "query-input": "required name=search_term_string"
+        }
+      },
+  
+      {
+        "@id": "#webpage",
+        "@type": "WebPage",
+        "name": "Remote IT Support Edinburgh – IT Support",
+        "url": "https://www.itsupport.net.in/cities/remote-it-support-edinburgh",
+        "description": "Remote IT support services in Edinburgh including troubleshooting, network support, cloud services, antivirus, backup, and more for UK businesses and individuals.",
+        "inLanguage": "en",
+        "publisher": {
+          "@type": "Organization",
+          "name": "IT Support",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.itsupport.net.in/images/logo.png"
+          }
+        },
+        "mainEntity": {
+          "@type": "Service",
+          "serviceType": "Remote IT Support",
+          "provider": { "@type": "Organization", "name": "IT Support" },
+          "areaServed": { "@type": "Country", "name": "United Kingdom" },
+          "description": "Reliable remote IT support services offered across Edinburgh and the United Kingdom."
+        }
+      },
+  
+      {
+        "@id": "#breadcrumbs",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.itsupport.net.in/" },
+          { "@type": "ListItem", "position": 2, "name": "Cities", "item": "https://www.itsupport.net.in/cities" },
+          { "@type": "ListItem", "position": 3, "name": "Remote IT Support Edinburgh", "item": "https://www.itsupport.net.in/cities/remote-it-support-edinburgh" }
+        ]
+      },
+  
+      {
+        "@id": "#review",
+        "@type": "Review",
+        "name": "Excellent Remote IT Support in Edinburgh",
+        "url": "https://www.itsupport.net.in/reviews/remote-it-support-edinburgh/james-t",
+        "image": "https://www.itsupport.net.in/images/review-edinburgh.jpg",
+        "author": { "@type": "Person", "name": "James T." },
+        "reviewBody": "The remote IT support team in Edinburgh resolved my system issues within minutes. Fast, friendly, and reliable service.",
+        "reviewRating": { "@type": "Rating", "ratingValue": "4.9" },
+        "itemReviewed": {
+          "@type": "LocalBusiness",
+          "name": "IT Support Edinburgh",
+          "priceRange": "£50–£100",
+          "image": "https://www.itsupport.net.in/images/remote-it-support-edinburgh.jpg",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "21 Princes Street",
+            "addressLocality": "Edinburgh",
+            "postalCode": "EH2 2AN",
+            "addressCountry": "UK"
+          }
+        }
+      },
+  
+      {
+        "@id": "#service",
+        "@type": "ProfessionalService",
+        "name": "IT Support Edinburgh",
+        "image": "https://www.itsupport.net.in/images/remote-it-support-edinburgh.jpg",
+        "url": "https://www.itsupport.net.in/cities/remote-it-support-edinburgh",
+        "telephone": "+91-906-968-9226",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "21 Princes Street",
+          "addressLocality": "Edinburgh",
+          "postalCode": "EH2 2AN",
+          "addressCountry": "UK"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 55.9533,
+          "longitude": -3.1883
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "18:00"
+        },
+        "sameAs": [
+          "https://www.facebook.com/itsupport",
+          "https://twitter.com/itsupport",
+          "https://www.instagram.com/itsupport",
+          "https://www.youtube.com/c/itsupport",
+          "https://www.linkedin.com/company/itsupport",
+          "https://in.pinterest.com/itsupport",
+          "https://itsupport.quora.com/",
+          "https://www.itsupport.net.in/cities/remote-it-support-edinburgh"
+        ]
+      },
+  
+      {
+        "@id": "#faq",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is remote IT support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Remote IT support allows professionals to fix computer, network, and software issues without visiting your location."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you provide remote IT support in Edinburgh?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we provide professional remote IT support services for businesses and individuals across Edinburgh."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What services are included in remote IT support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Services include network troubleshooting, antivirus setup, cloud configuration, data backup, and email support."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much does remote IT support cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Service begins at £39 for 30 minutes and £69 per hour depending on requirements."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you support both businesses and individuals?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, support is available for small businesses, enterprises, and individual clients."
+            }
+          }
+        ]
+      },
+  
+      {
+        "@id": "#qa",
+        "@type": "QAPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How do I get remote IT support in Edinburgh?",
+            "text": "I need help with my business network and want remote IT support in Edinburgh. How do I get started?",
+            "answerCount": 1,
+            "upvoteCount": 14,
+            "datePublished": "2025-08-17T14:00:00+05:30",
+            "author": {
+              "@type": "Person",
+              "name": "George Watson",
+              "url": "https://www.sureshdas.com/"
+            },
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can request remote IT support by visiting our service page, choosing a plan, and booking a session online or by phone.",
+              "dateCreated": "2025-07-14T10:00:00+05:30",
+              "upvoteCount": 11,
+              "url": "https://www.itsupport.net.in/cities/remote-it-support-edinburgh",
+              "author": {
+                "@type": "Person",
+                "name": "Waqar Ahmed",
+                "url": "https://www.sureshdas.com/"
+              }
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What devices do you support remotely?",
+            "text": "Do you support desktops, laptops, servers, or mobile devices?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, remote support is available for desktops, laptops, servers, and mobile devices across multiple operating systems.",
+              "url": "https://www.itsupport.net.in/cities/remote-it-support-edinburgh"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you support cloud-based applications?",
+            "text": "Can you troubleshoot cloud apps remotely?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we support Microsoft 365, Google Workspace, AWS, and other cloud applications.",
+              "url": "https://www.itsupport.net.in/cities/remote-it-support-edinburgh"
+            }
+          }
+        ]
+      }
+  
+    ]
+  }  
 },
 {
   cityName:"Glasgow",
@@ -7444,7 +9796,270 @@ const cities:City[] = [
     copyright: "© 2025",
   }
   ,
+  schema:{
+    "@context": "https://schema.org",
+    "@graph": [
   
+      {
+        "@type": "Product",
+        "@id": "#product",
+        "name": "Remote IT Support Glasgow",
+        "image": "https://www.itsupport.net.in/images/remote-it-support-glasgow.jpg",
+        "description": "Affordable remote IT support services in Glasgow. Includes troubleshooting, cloud support, antivirus, data backup, email setup, and more for businesses and individuals.",
+        "brand": {
+          "@type": "Brand",
+          "name": "IT Support"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "329",
+          "reviewCount": "158"
+        },
+        "audience": {
+          "@type": "Audience",
+          "description": "Business owners, IT managers, and professionals in Glasgow who need quick, affordable, and reliable remote IT support services.",
+          "audienceType": "Small Businesses, Startups, Enterprises, and Individual Professionals"
+        }
+      },
+  
+      {
+        "@type": "WebSite",
+        "@id": "#website",
+        "url": "https://www.itsupport.net.in/",
+        "name": "IT Support",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://www.itsupport.net.in/cities/remote-it-support-glasgow"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      },
+  
+      {
+        "@type": "WebPage",
+        "@id": "#webpage",
+        "name": "Remote IT Support Glasgow – IT Support",
+        "url": "https://www.itsupport.net.in/cities/remote-it-support-glasgow",
+        "description": "Remote IT support services in Glasgow. We provide remote troubleshooting, network support, cloud solutions, antivirus, data backup, and more for businesses and individuals across the UK.",
+        "inLanguage": "en",
+        "publisher": {
+          "@type": "Organization",
+          "name": "IT Support",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.itsupport.net.in/images/logo.png"
+          }
+        },
+        "mainEntity": {
+          "@type": "Service",
+          "serviceType": "Remote IT Support",
+          "provider": {
+            "@type": "Organization",
+            "name": "IT Support"
+          },
+          "areaServed": {
+            "@type": "Country",
+            "name": "United Kingdom"
+          },
+          "description": "The United Kingdom, known for its thriving tech sector, benefits from our professional remote IT support services offered in Glasgow and across the country."
+        }
+      },
+  
+      {
+        "@type": "BreadcrumbList",
+        "@id": "#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.itsupport.net.in/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Cities",
+            "item": "https://www.itsupport.net.in/cities"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Remote IT Support Glasgow",
+            "item": "https://www.itsupport.net.in/cities/remote-it-support-glasgow"
+          }
+        ]
+      },
+  
+      {
+        "@type": "Review",
+        "@id": "#review",
+        "name": "Excellent Remote IT Support in Glasgow",
+        "url": "https://www.itsupport.net.in/reviews/remote-it-support-glasgow/daniel-w",
+        "image": "https://www.itsupport.net.in/images/review-glasgow.jpg",
+        "author": "Daniel W.",
+        "reviewBody": "The IT Support Glasgow team quickly resolved my network and system issues remotely. Great experience and very affordable pricing!",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.9"
+        },
+        "itemReviewed": {
+          "@type": "LocalBusiness",
+          "name": "IT Support Glasgow",
+          "priceRange": "£40–£100",
+          "image": "https://www.itsupport.net.in/images/remote-it-support-glasgow.jpg",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "45 Queen Street",
+            "addressLocality": "Glasgow",
+            "postalCode": "G1 3EF",
+            "addressCountry": "UK"
+          }
+        }
+      },
+  
+      {
+        "@type": "ProfessionalService",
+        "@id": "#service",
+        "name": "IT Support Glasgow",
+        "image": "https://www.itsupport.net.in/images/remote-it-support-glasgow.jpg",
+        "url": "https://www.itsupport.net.in/cities/remote-it-support-glasgow",
+        "telephone": "+91-906-968-9226",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "45 Queen Street",
+          "addressLocality": "Glasgow",
+          "postalCode": "G1 3EF",
+          "addressCountry": "UK"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "55.8642",
+          "longitude": "-4.2518"
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens": "09:00",
+          "closes": "18:00"
+        },
+        "sameAs": [
+          "https://www.facebook.com/itsupport",
+          "https://twitter.com/itsupport",
+          "https://www.instagram.com/itsupport",
+          "https://www.youtube.com/c/itsupport",
+          "https://www.linkedin.com/company/itsupport",
+          "https://in.pinterest.com/itsupport",
+          "https://itsupport.quora.com/",
+          "https://www.itsupport.net.in/cities/remote-it-support-glasgow"
+        ]
+      },
+  
+      {
+        "@type": "FAQPage",
+        "@id": "#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is remote IT support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Remote IT support allows professionals to troubleshoot and fix IT, network, or software issues without visiting your location."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you provide remote IT support in Glasgow?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we provide professional remote IT support for individuals and businesses across Glasgow and the UK."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What services are included in remote IT support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Our remote IT services include network troubleshooting, antivirus setup, cloud configuration, backup, and software support."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much does remote IT support cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Our remote IT support packages start at £39 for a 30-minute session and £69 per hour for extended technical support."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you offer support for both businesses and individuals?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we support small businesses, enterprises, and individual users in Glasgow and across the UK."
+            }
+          }
+        ]
+      },
+  
+      {
+        "@type": "QAPage",
+        "@id": "#qa",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How do I get remote IT support in Glasgow?",
+            "text": "I need remote IT support for my business in Glasgow. How can I get help quickly?",
+            "answerCount": 1,
+            "upvoteCount": 15,
+            "datePublished": "2025-08-17T14:00:00+05:30",
+            "author": {
+              "@type": "Person",
+              "name": "Sarah McLeod",
+              "url": "https://www.sureshdas.com/"
+            },
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can request remote IT support in Glasgow by visiting our service page, selecting a support plan, and booking a session online or over the phone.",
+              "dateCreated": "2025-07-14T10:00:00+05:30",
+              "upvoteCount": 11,
+              "url": "https://www.itsupport.net.in/cities/remote-it-support-glasgow",
+              "author": {
+                "@type": "Person",
+                "name": "Waqar Ahmed",
+                "url": "https://www.sureshdas.com/"
+              }
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What devices are supported remotely?",
+            "text": "Do you support PCs, laptops, servers, or mobile devices?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, our team provides remote support for desktops, laptops, servers, and mobile devices across Windows, macOS, and Android.",
+              "url": "https://www.itsupport.net.in/cities/remote-it-support-glasgow"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you help with cloud services remotely?",
+            "text": "I need help configuring Microsoft 365 and Google Workspace. Do you provide that remotely?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we offer remote support for cloud-based services like Microsoft 365, Google Workspace, and AWS, including setup and troubleshooting.",
+              "url": "https://www.itsupport.net.in/cities/remote-it-support-glasgow"
+            }
+          }
+        ]
+      }
+  
+    ]
+  }
 },
 {
   cityName:"Houston",
@@ -7512,7 +10127,7 @@ const cities:City[] = [
     authors: [{ name: "IT Support" }],
     copyright: "© 2025",
   },
-  
+  schema:{}
 },
 {
   cityName:"Johannesburg",
