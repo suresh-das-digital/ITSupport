@@ -1,6 +1,7 @@
 import { getAllCities, getCityBySlug } from "@/lib/citysData";
 import { getMetaData, getStaticParams } from "@/lib/seo";
 import { Metadata } from "next";
+import Script from "next/script";
 import { use } from "react"
 
 // function Head({slug}: {slug: any}) {
@@ -46,5 +47,15 @@ export default function Cities({params}: CitiesPageProps) {
   return (<>
     {/* <Head  slug={params.slug} /> */}
     <h1>{cityDetails?.cityName}</h1>
+    {
+          cityDetails?.schema
+          &&
+          <Script
+            id="behavioral-marketing-schema"
+            type="application/ld+json"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(cityDetails?.schema) }}
+          />
+      }
   </>)
 }
