@@ -1,3 +1,7 @@
+export const dynamic = "force-dynamic";
+export const dynamicParams = true;
+
+
 import ServiceOffer from "@/app/services/_component/ServiceOffer";
 import ServiceWhyChoose from "@/app/services/_component/ServiceWhyChoose";
 import DetailPageHighlightsSection from "@/components/DetailPageHighlightsSection";
@@ -57,12 +61,11 @@ export async function generateMetadata({ params }: IndutryPageProps): Promise<Me
   };
 }
 
-export default function Page({ params }: IndustryDetailProps) {
+export default async function Page({ params }: IndustryDetailProps) {
   // const meta: IndustriesMetaType | undefined =
   //   industriesMeta[params?.slug || ""];
   const decodedString = decodeURIComponent(params?.slug || "");
 
-  const locale = useLocale();
 
   let industry: IndustryInterface = {};
 
@@ -72,7 +75,7 @@ export default function Page({ params }: IndustryDetailProps) {
     return <div className="p-8">Industry not found</div>;
   }
 
-  const industryDetails =  getIndustriesBySlug(params?.slug || "");
+  const industryDetails = await getIndustriesBySlug(params?.slug || "");
 
   // const jsonLdScripts = renderJsonLd(meta?.jsonLd ?? []);
 
