@@ -71,9 +71,9 @@ export default async function Page({ params }: IndustryDetailProps) {
 
   industry = industryDetailData.find((s) => s.slug === decodedString) || {};
 
-  if (!industry?.slug) {
-    return <div className="p-8">Industry not found</div>;
-  }
+  // if (!industry?.slug) {
+  //   return <div className="p-8"><a></a>Industry not found</div>;
+  // }
 
   const industryDetails = await getIndustriesBySlug(params?.slug || "");
 
@@ -91,7 +91,13 @@ export default async function Page({ params }: IndustryDetailProps) {
       ))} */}
       {/* <JsonLd type="industries" slug={decodedString} /> */}
       <MainWrapper>
-        <HeroSection
+        {
+          industryDetails?.title == ""
+          ?
+          <div className="p-8"><a></a>{industryDetails?.slug}</div>
+          :
+          <>
+            <HeroSection
           heroTitle={industry.title || ""}
           heroIntro={industry.subtitle || ""}
           buttonTexts={[
@@ -140,7 +146,6 @@ export default async function Page({ params }: IndustryDetailProps) {
           issuecategory4={industry.issuecategory4}
         />
 
-        dsjsjsj
         {industry?.whyChoose &&
           industry?.whyChoose?.whyChoosecategories?.length > 0 && (
             <ServiceWhyChoose
@@ -153,6 +158,9 @@ export default async function Page({ params }: IndustryDetailProps) {
         {/* <ServiceWhyChoose /> */}
 
         <FAQs data={industry.faqs} descHTMLString />
+          </>
+        }
+        
 
         {
           industryDetails?.schema
