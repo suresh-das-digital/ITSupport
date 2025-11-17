@@ -1,8 +1,11 @@
 import { JsonLd } from "@/components/JsonLd";
+import { getLocationBySlug } from "@/lib/locationsdata";
 import { metas } from "@/lib/metas";
 import { getMetaData, getStaticParams, JSONLD } from "@/lib/seo";
 import { useLocale } from "next-intl";
 import { use } from "react";
+import LocationHero from "./components/LocationHero";
+import LocationAbout from "./components/LocationAbout";
 
 interface LocationDetailProps {
   params: { slug: string };
@@ -16,14 +19,28 @@ export default function LocationDetail(props: PageProps<'/locations/[slug]'>) {
   // const decodedString = decodeURIComponent(params.slug);
   // const locale = useLocale();
   const params = use(props.params);
+  const loactionDetails = getLocationBySlug(params.slug);
   return (
     <>
       <JsonLd type="locations" slug={params.slug} />
       <section
-        className="flex md:flex-row flex-col h-auto py-5 px-4 align-center bg-gradient-to-r from-slate-200 via-sky-100 to-indigo-300 shadow-md rounded-lg mb-6"
+        className=""
         style={{ alignItems: "center" }}
       >
-        Location Detail Page {params.slug}
+        <LocationHero 
+          title={loactionDetails?.heroSection.heroTitle || ""}
+          subtitle={loactionDetails?.heroSection.heroSubTitle || ""}
+          pageName={loactionDetails?.loaction || ""}
+        />
+        {
+          loactionDetails?.aboutSection
+          &&
+          <LocationAbout
+            title={loactionDetails.aboutSection.title}
+            descriptions={loactionDetails.aboutSection.deatsils}
+            image={loactionDetails.aboutSection.image}
+          />
+        }
       </section>
     </>
   );

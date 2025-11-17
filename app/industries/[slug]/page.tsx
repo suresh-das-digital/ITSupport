@@ -2,46 +2,34 @@ export const dynamic = "force-dynamic";
 export const dynamicParams = true;
 
 
-import ServiceOffer from "@/app/services/_component/ServiceOffer";
-import ServiceWhyChoose from "@/app/services/_component/ServiceWhyChoose";
-import DetailPageHighlightsSection from "@/components/DetailPageHighlightsSection";
-import FAQs from "@/components/FAQ/FAQs";
-import HeroSection from "@/components/HeroSection";
-import { JsonLd } from "@/components/JsonLd";
+
 import MainWrapper from "@/components/MainWrapper";
 import { getAllIndustries, getIndustriesBySlug } from "@/lib/Industriesdata";
-// import { industriesMeta, IndustriesMetaType } from "@/lib/IndustriesMeta";
-import { buildMetadata, getMetaData, getStaticParams, renderJsonLd } from "@/lib/seo";
+
 import { industryDetailData } from "@/utils/constant/IndustryDetailData";
 import { Service as IndustryInterface } from "@/utils/constant/serviceDetailData";
 import { Metadata } from "next";
 import { useLocale } from "next-intl";
 import Head from "next/head";
 import Script from "next/script";
+import HeroSection from "./components/IndustryHeroSection";
+import IndustriesAbout from "./components/IndustriesAbout";
+import SpecializedSection from "./components/SpecializedSection";
+import ServicesInDetail from "./components/IndustriesInDetailSection";
+import IndustriesBenifit from "./components/IndustriesBenifit";
+import FaqSection from "@/components/common/FaqSection";
 
 interface IndustryDetailProps {
   params?: { slug: string };
 }
-
-// generateMetadata runs at build/server time and populates <head>
-// export const generateMetadata = getMetaData('industry')
-// export const generateStaticParams = getStaticParams('industries')
-// export const generateMetadata = getMetaData('industries');
-
-// optional: pre-render known service slugs at build
-// export async function generateStaticParams() {
-//   return Object.values(industriesMeta).map((m) => ({ slug: m?.slug || "" }));
-// }
-
 
 interface IndutryPageProps {
   params: { slug: string };
 }
 
 export async function generateStaticParams() {
-  const industries = await getAllIndustries(); // Use the function to fetch all blog posts
+  const industries = await getAllIndustries(); 
 
-  // Map the blog posts to the required format: { slug: 'value' }
   return industries.map((props) => ({
     slug: props.slug,
   }));
@@ -55,15 +43,13 @@ export async function generateMetadata({ params }: IndutryPageProps): Promise<Me
       description: "The blog post you are looking for does not exist.",
     };
   }
-  // Return full metadata object from blog.metadata
   return {
     ...industry.metadata,
   };
 }
 
 export default async function Page({ params }: IndustryDetailProps) {
-  // const meta: IndustriesMetaType | undefined =
-  //   industriesMeta[params?.slug || ""];
+
   const decodedString = decodeURIComponent(params?.slug || "");
 
 
@@ -71,94 +57,78 @@ export default async function Page({ params }: IndustryDetailProps) {
 
   industry = industryDetailData.find((s) => s.slug === decodedString) || {};
 
-  // if (!industry?.slug) {
-  //   return <div className="p-8"><a></a>Industry not found</div>;
-  // }
-
   const industryDetails = await getIndustriesBySlug(params?.slug || "");
 
-  // const jsonLdScripts = renderJsonLd(meta?.jsonLd ?? []);
+  const pageName = params?.slug
+  .split("-")
+  .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+  .join(" ");
+
 
   return (
     <>
-      {/* {jsonLdScripts.map((s) => (
-        <script
-          key={s.key}
-          type="application/ld+json"
-          // eslint-disable-next-line react/no-danger
-          dangerouslySetInnerHTML={{ __html: s.json }}
-        />
-      ))} */}
-      {/* <JsonLd type="industries" slug={decodedString} /> */}
       <MainWrapper>
         {
-          industryDetails?.title == ""
-          ?
-          <div className="p-8"><a></a>{industryDetails?.slug}</div>
-          :
-          <>
-            <HeroSection
-          heroTitle={industry.title || ""}
-          heroIntro={industry.subtitle || ""}
-          buttonTexts={[
-            { label: "Get Support Now" },
-            { label: "Request a Call" },
-          ]}
-          breadcrumbs={[
-            {
-              home: "Home",
-            },
-            {
-              home: "Industry",
-            },
-            {
-              home: "Industry Support",
-            },
-          ]}
-          imageSrc={industry.heroImage}
-        />
+          industryDetails?.heroSection
+          &&
+          <HeroSection
+            title={industryDetails.heroSection.title}
+            subtitle={industryDetails.heroSection.subtitle}
+            heroimage={industryDetails.heroSection.imageUrl }
+            pageName={pageName || ""}
+            icon={industryDetails.heroSection.icon || null}
+          />
+        }
 
-        <ServiceOffer
-          serviceProvider={{
-            title: industry?.intro?.headline || "",
-            description: industry?.intro?.description || "",
-            imageAlt: industry?.intro?.headline || "",
-            imageTitle: industry?.intro?.headline || "",
-            imageSrc: industry?.intro?.image || "",
-            subtitle: industry?.subtitle1 || "",
-          }}
-        />
+        {
+          industryDetails?.aboutSection
+          &&
+          <IndustriesAbout
+            description1={industryDetails.aboutSection.detail}
+            description2={industryDetails.aboutSection.subDetails}
+            imageTitle={industryDetails.aboutSection.imageTitle}
+            imageAlt={industryDetails.aboutSection.imageAlt}
+            image={industryDetails.aboutSection.aboutImage}
+          />
+        }
 
-        <DetailPageHighlightsSection
-          issuecategory={
-            industry.issuecategory ?? {
-              title: "",
-              subTitle: "",
-              issueCategories: [],
-            }
-          }
-          serviceHighlightsItems={"even"}
-          serviceHighlights={
-            industry.serviceHighlights ?? { title: "", services: [] }
-          }
-          issuecategory2={industry.issuecategory2}
-          issuecategory3={industry.issuecategory3}
-          issuecategory4={industry.issuecategory4}
-        />
+        {
+          industryDetails?.specializedSection
+          &&
+          <SpecializedSection
+            title={industryDetails.specializedSection.title}
+            subTitle={industryDetails.specializedSection.desc}
+            services={industryDetails.specializedSection.list}
+          />
+        }
 
-        {industry?.whyChoose &&
-          industry?.whyChoose?.whyChoosecategories?.length > 0 && (
-            <ServiceWhyChoose
-              cards={industry.whyChoose.whyChoosecategories}
-              title={industry.whyChoose.title}
-              desc={industry.whyChoose.desc}
-            />
-          )}
+        {
+          industryDetails?.services_in_Detail
+          &&
+          <ServicesInDetail
+            title={industryDetails.services_in_Detail.title}
+            services={industryDetails.services_in_Detail.services}
 
-        {/* <ServiceWhyChoose /> */}
+          />
+        }
 
-        <FAQs data={industry.faqs} descHTMLString />
-          </>
+
+        {
+          industryDetails?.benefits_Section
+          &&
+          <IndustriesBenifit
+            title={industryDetails.benefits_Section.title}
+            benifits={industryDetails.benefits_Section.benifits}
+
+          />
+        }
+
+        {
+          industryDetails?.faq
+          &&
+          <FaqSection
+            faqs={industryDetails.faq}
+          />
         }
         
 
@@ -172,6 +142,8 @@ export default async function Page({ params }: IndustryDetailProps) {
             dangerouslySetInnerHTML={{ __html: JSON.stringify(industryDetails?.schema) }}
           />
       }
+
+      
       </MainWrapper>
     </>
   );

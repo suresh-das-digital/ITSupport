@@ -40,7 +40,7 @@ export default function PricingList() {
 
   return (
     <section
-      className="relative isolate overflow-hidden border border-white/10 bg-gradient-to-br from-slate-900 via-gray-900 to-cyan-500/60 py-10"
+      className="relative isolate overflow-hidden border border-white/10 bg-gradient-to-br from-slate-900 via-gray-900 to-cyan-400/60 py-10"
       aria-labelledby="ratecard-title"
       role="region"
     >
@@ -49,7 +49,7 @@ export default function PricingList() {
         aria-hidden="true"
         className="pointer-events-none absolute inset-x-0 -top-16 h-36 blur-2xl"
       >
-        <div className="mx-auto h-full w-3/4 rounded-full bg-gradient-to-r from-fuchsia-500/40 via-indigo-500/40 to-cyan-500/40" />
+        <div className="mx-auto h-full w-3/4 rounded-full bg-gradient-to-r from-purple-500/40 via-indigo-500/40 to-cyan-500/40" />
       </div>
 
       <div className="mb-4 sm:mb-6 md:mb-8 flex items-center gap-3 max-w-6xl 2xl:max-w-[1488px] mx-auto">
@@ -123,7 +123,7 @@ export default function PricingList() {
               {filtered.map((r, i) => (
                 <tr
                   key={r.id}
-                  className={i % 2 ? "bg-white/0" : "bg-white/[0.02]"}
+                  className={i % 2 ? "bg-white/0 hover:bg-white/25 transition-all duration-100" : "bg-white/[0.02] hover:bg-white/25 transition-all duration-100"}
                 >
                   <Td>{r.service}</Td>
                   <Td>

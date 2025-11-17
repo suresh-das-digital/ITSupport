@@ -1,21 +1,3 @@
-export const achievementData = [
-  {
-    title: "20+",
-    desc: "Years of Experience",
-  },
-  {
-    title: "1 Million+",
-    desc: "Service Requests Resolved",
-  },
-  {
-    title: "50+",
-    desc: "Countries Covered",
-  },
-  {
-    title: "20,000+",
-    desc: "Loyal Clients",
-  },
-];
 
 export const partners = [
     {

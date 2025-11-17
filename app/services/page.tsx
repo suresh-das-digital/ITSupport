@@ -16,6 +16,8 @@ import ServiceOffer from "./_component/ServiceOffer";
 import HeroSection from "@/components/HeroSection";
 import { whyChooseDataDetail } from "./_component/ServiceWhyChooseConstant";
 import { getMetaData, getStaticParams } from "@/lib/seo";
+import HeroInformattionPage from "@/components/common/HeroInformattionPage";
+import FaqSection from "@/components/common/FaqSection";
 
 export const generateStaticParams = getStaticParams('services', ['/'])
 export const generateMetadata = getMetaData('services');
@@ -40,7 +42,7 @@ export default function Services() {
 
   return (
     <>
-      <HeroSection
+      {/* <HeroSection
         heroTitle={`${t(
           "heroTitle"
         )} <span class="text-[#61CE70] hover:text-[#4CAF50] transition-colors duration-300">${t(
@@ -58,6 +60,12 @@ export default function Services() {
         buttonTexts={[{ label: "Explore Service", href: "#" }]}
         breadcrumbs={[{ home: "Home" }, { home: "Services" }]}
         imageSrc="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80"
+      /> */}
+      <HeroInformattionPage
+        title="ITSupport.net.in — Our Services"
+        subtitle1="Delivering Reliable, Secure IT Support You Can Count On"
+        subtitle2="At ITSupport.net.in, we offer a full spectrum of tech support services—whether you’re a startup, evolving SMB, or established enterprise. Our suite of services is designed to keep your technology running efficiently, securely, and future-ready."
+        pageName="Services"
       />
 
       <ServiceOffer
@@ -65,9 +73,9 @@ export default function Services() {
         heroServices={heroServices}
       />
 
-      <section className="py-16 px-4 sm:px-6 bg-[#f4f7fa]">
+      <section className="py-16 px-4 sm:px-6 bg-[#f4f7fa] max-w-6xl 2xl:max-w-[1488px] mx-auto xl:px-0">
         <div className="flex flex-col md:flex-row gap-4 w-full">
-          <div className="w-full p-4">
+          <div className="w-full p-4 xl:px-0">
             <div className="text-center mb-16">
               <span className="inline-block bg-gradient-to-r from-[#61CE70] via-blue-500 to-[#61CE70] text-white px-1 py-1 sm:px-1 sm:py-1 rounded-full font-semibold shadow-xl text-xs tracking-wide group mb-4">
                 {t("coreServices")}
@@ -114,7 +122,9 @@ export default function Services() {
         title="Why Partner with ITSupport.net.in for Email Excellence"
         desc="Choosing ITSupport.net.in as your email support partner means leveraging over a decade of specialized expertise and a global track record of empowering 100,000+ satisfied customers. Our commitment to your uninterrupted communication is built on"
       />
-      <FAQs data={serviceFQA} />
+      {/* <FAQs data={serviceFQA} /> */}
+
+      <FaqSection faqs={serviceFQA} />
     </>
   );
 }

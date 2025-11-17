@@ -148,9 +148,11 @@ export default function Footer() {
               <span className="text-gray-400 hover:text-sky-400 transition-colors cursor-pointer">
                 {t("termsOfService")}
               </span>
+              <Link href="/cookies">
               <span className="cursor-pointer text-gray-400 hover:text-sky-400 transition-colors">
                 {t("cookiePolicy")}
               </span>
+              </Link>
               <a
                 className="text-gray-400 hover:text-sky-400 transition-colors"
                 href="/sitemap.xml"

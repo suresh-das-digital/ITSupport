@@ -31,7 +31,7 @@ export default function ServiceOffer({
       className="bg-white flex md:flex-row flex-col h-auto py-4 sm:px-16 px-2 align-center shadow-md rounded-lg mb-6 justify-center"
       style={{ alignItems: "center" }}
     >
-      <div className="flex relative flex-col px-6 text-start w-full my-6">
+      <div className="flex relative flex-col px-6 xl:px-0 text-start w-full my-6 max-w-6xl 2xl:max-w-[1488px]">
         <div className="relative flex justify-between lg:flex-row flex-col-reverse w-full lg:items-start items-center">
           <div className="flex-1 mr-4">
             <Typography variant="h3" className="font-bold text-gray-900 mb-4">
