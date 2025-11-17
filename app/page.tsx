@@ -22,7 +22,7 @@ import OurCommitment from "@/components/OurCommitment";
 import ITSupportInsights from "@/components/ITSupportInsights";
 import FAQs from "@/components/FAQ/FAQs";
 import ScrollToTop from "@/components/ScrollToTop";
-import FaqSection from "./services/[slug]/newcompoennts/FaqSection";
+import FaqSection from "../components/common/FaqSection";
 
 export const viewport: Viewport = {
   width: "device-width",

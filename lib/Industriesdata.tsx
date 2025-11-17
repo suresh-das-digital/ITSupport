@@ -1,375 +1,662 @@
 // new shivam
+import { ChartColumnIncreasing, HeartPlus, MonitorCheck, RefreshCcw, Shield, TrendingUp, Wifi } from 'lucide-react';
+import React from 'react';
+import { BiChip } from 'react-icons/bi';
+import { BsDatabaseLock } from 'react-icons/bs';
+import { LuMonitorStop } from 'react-icons/lu';
+import { TbCloudComputing } from 'react-icons/tb';
 
-import { title } from "process";
+export interface IndustryPageData {
+  slug: string;
+  title: string;
 
-interface Industry {
-    slug: string;
-    title?: string;
-    subtitle?: string;
-    description?: string;
-    imageUrl?: string;
-    metadata?: any;
-    schema:any;
+  metadata: any;
+  schema: any;
+
+  heroSection?: HeroSection;
+  aboutSection?: AboutSection;
+  specializedSection?: SpecializedSection;
+  services_in_Detail?: ServicesInDetail;
+  benefits_Section?: BenefitsSection;
+  faq?: FAQItem[];
+  getStartedSection?: GetStartedSection;
 }
 
-const industriesData:Industry[] = [
+
+export interface HeroSection {
+  title: string;
+  subtitle: string;
+  imageUrl: string;
+  icon?: React.ReactNode; // JSX icons
+}
+
+export interface AboutSection {
+  detail: string;
+  subDetails: string;
+  aboutImage : string;
+  imageAlt:string;
+  imageTitle:string;
+}
+
+export interface SpecializedSection {
+  title: string;
+  desc: string;
+  list: SpecializedItem[];
+}
+
+export interface SpecializedItem {
+  title: string;
+  icon: string | React.ReactNode; // JSX icons
+  desc: string;
+  color: string;
+}
+
+export interface ServicesInDetail {
+  title: string;
+  services: ServiceDetailItem[];
+}
+
+export interface ServiceDetailItem {
+  title: string;
+  desc: string;
+  List: string[];
+  color: string;
+}
+
+export interface BenefitsSection {
+  title: string;
+  benifits: BenefitItem[];
+}
+
+export interface BenefitItem {
+  title: string;
+  desc: string;
+  bg: string;
+}
+
+export interface FAQItem {
+  label: string;
+  desc: string;
+}
+
+export interface GetStartedSection {
+  title: string;
+  desc: string;
+  call: string;
+  email: string;
+  website: string;
+}
+
+
+
+const industriesData:IndustryPageData[] = [
     {
-        slug:"healthcare",
-        title:"Healthcare IT Support Services",
-        subtitle:"",
-        description:"",
-        imageUrl:"",
-        metadata:{
-            title: "Healthcare IT Support Services",
-            description:
-              "Specialized IT support for hospitals, clinics, and medical facilities. HIPAA compliance, EHR management, secure backups, and 24/7 assistance.",
-            keywords: [
-              "healthcare IT support",
-              "healthcare IT services",
-              "hospital IT assistance",
-              "medical network support",
-              "EHR support",
-              "HIPAA compliant IT services",
-              "healthcare data backup",
-              "healthcare cloud solutions",
-              "healthcare network troubleshooting",
-              "managed healthcare IT services",
-            ],
-            openGraph: {
-              title: "Healthcare IT Support Services",
-              description:
-                "Specialized healthcare IT support for hospitals, clinics, and medical facilities. HIPAA compliance, EHR assistance, secure backups, and 24/7 technical help.",
-              url: "https://www.itsupport.net.in/industries/healthcare/",
-              siteName: "Healthcare IT Support Services",
-              images: [
-                {
-                  url: "image-url",
-                  alt: "Professional Healthcare IT Support Services",
-                  type: "images/png",
-                  width: "Fix Size",
-                  height: "Fix Size",
-                  secureUrl: "image-url",
-                },
-              ],
-              type: "website",
-              locale: "en_US",
+      "slug": "healthcare",
+      "title": "Healthcare IT Support Services",
+      "metadata":{
+        title: "Healthcare IT Support Services",
+        description:
+          "Specialized IT support for hospitals, clinics, and medical facilities. HIPAA compliance, EHR management, secure backups, and 24/7 assistance.",
+        keywords: [
+          "healthcare IT support",
+          "healthcare IT services",
+          "hospital IT assistance",
+          "medical network support",
+          "EHR support",
+          "HIPAA compliant IT services",
+          "healthcare data backup",
+          "healthcare cloud solutions",
+          "healthcare network troubleshooting",
+          "managed healthcare IT services",
+        ],
+        openGraph: {
+          title: "Healthcare IT Support Services",
+          description:
+            "Specialized healthcare IT support for hospitals, clinics, and medical facilities. HIPAA compliance, EHR assistance, secure backups, and 24/7 technical help.",
+          url: "https://www.itsupport.net.in/industries/healthcare/",
+          siteName: "Healthcare IT Support Services",
+          images: [
+            {
+              url: "image-url",
+              alt: "Professional Healthcare IT Support Services",
+              type: "images/png",
+              width: "Fix Size",
+              height: "Fix Size",
+              secureUrl: "image-url",
             },
-            twitter: {
-              card: "summary_large_image",
-              title: "Hospital & Medical IT Services",
-              description:
-                "Trusted healthcare IT support solutions. Network monitoring, cloud services, and HIPAA-compliant assistance for medical organizations.",
-              image: "image-url",
-              imageAlt: "Healthcare IT Support Services",
-              imageType: "images/png",
-              creator: "@L4RGINDIA",
-              url: "https://www.itsupport.net.in/industries/healthcare/",
-            },
-            authors: [{ name: "Healthcare Support industry" }],
-            copyright: "© 2025",
-            robots: { index: true, follow: true },
-            alternates: {
-              canonical: "https://www.itsupport.net.in/industries/healthcare/",
-              languages: {
-                "en-US": "https://www.itsupport.net.in/industries/healthcare/",
-              },
-            },
+          ],
+          type: "website",
+          locale: "en_US",
+        },
+        twitter: {
+          card: "summary_large_image",
+          title: "Hospital & Medical IT Services",
+          description:
+            "Trusted healthcare IT support solutions. Network monitoring, cloud services, and HIPAA-compliant assistance for medical organizations.",
+          image: "image-url",
+          imageAlt: "Healthcare IT Support Services",
+          imageType: "images/png",
+          creator: "@L4RGINDIA",
+          url: "https://www.itsupport.net.in/industries/healthcare/",
+        },
+        authors: [{ name: "Healthcare Support industry" }],
+        copyright: "© 2025",
+        robots: { index: true, follow: true },
+        alternates: {
+          canonical: "https://www.itsupport.net.in/industries/healthcare/",
+          languages: {
+            "en-US": "https://www.itsupport.net.in/industries/healthcare/",
           },
-        schema:{
-            "@context": "https://schema.org",
-            "@graph": [
-              {
-                "@id": "#product",
-                "@type": "Product",
-                "name": "Healthcare IT Support Services",
-                "description": "Comprehensive IT support for the healthcare industry, including EHR system assistance, HIPAA-compliant cloud solutions, secure data backup, network monitoring, and 24/7 technical help for hospitals, clinics, and medical facilities.",
-                "url": "https://www.itsupport.net.in/industries/healthcare",
-                "aggregateRating": {
-                  "@type": "AggregateRating",
-                  "ratingValue": "4.9",
-                  "reviewCount": "986518"
-                },
-                "audience": {
-                  "@type": "Audience",
-                  "description": "Healthcare providers and organizations seeking specialized IT support services including secure network management, HIPAA compliance, data protection, and 24/7 technical assistance.",
-                  "audienceType": "Healthcare Organizations, Hospitals, Clinics, Medical Practices"
-                }
+        },
+      },
+    "schema":{
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@id": "#product",
+            "@type": "Product",
+            "name": "Healthcare IT Support Services",
+            "description": "Comprehensive IT support for the healthcare industry, including EHR system assistance, HIPAA-compliant cloud solutions, secure data backup, network monitoring, and 24/7 technical help for hospitals, clinics, and medical facilities.",
+            "url": "https://www.itsupport.net.in/industries/healthcare",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "reviewCount": "986518"
+            },
+            "audience": {
+              "@type": "Audience",
+              "description": "Healthcare providers and organizations seeking specialized IT support services including secure network management, HIPAA compliance, data protection, and 24/7 technical assistance.",
+              "audienceType": "Healthcare Organizations, Hospitals, Clinics, Medical Practices"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "url": "https://www.itsupport.net.in/industries/healthcare",
+            "name": "L4RG Healthcare IT Support Services",
+            "description": "Specialized IT support services for the healthcare industry, including EHR assistance, HIPAA-compliant cloud solutions, secure backups, and 24/7 technical help for hospitals and clinics.",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://www.itsupport.net.in/search?q={search_term_string}"
               },
-              {
-                "@type": "WebSite",
-                "url": "https://www.itsupport.net.in/industries/healthcare",
-                "name": "L4RG Healthcare IT Support Services",
-                "description": "Specialized IT support services for the healthcare industry, including EHR assistance, HIPAA-compliant cloud solutions, secure backups, and 24/7 technical help for hospitals and clinics.",
-                "potentialAction": {
-                  "@type": "SearchAction",
-                  "target": {
-                    "@type": "EntryPoint",
-                    "urlTemplate": "https://www.itsupport.net.in/search?q={search_term_string}"
-                  },
-                  "query-input": "required name=search_term_string"
-                }
-              },
-              {
-                "@type": "Review",
-                "name": "Expert Healthcare IT Support Services | HIPAA-Compliant Assistance",
-                "url": "https://www.itsupport.net.in/industries/healthcare",
-                "image": "https://www.itsupport.net.in/images/healthcare-it-support.jpg",
-                "author": {
-                  "@type": "Person",
-                  "name": "Mike"
-                },
-                "reviewBody": "Best healthcare IT support in the USA, offering HIPAA compliance, EHR management, secure data backup, and 24/7 technical assistance for hospitals and clinics.",
-                "reviewRating": {
-                  "@type": "Rating",
-                  "ratingValue": "4.8"
-                },
-                "itemReviewed": {
-                  "@type": "LocalBusiness",
-                  "name": "L4RG US LLC",
-                  "priceRange": "12000",
-                  "address": {
-                    "@type": "PostalAddress",
-                    "streetAddress": "L4RG US LLC, 105 ELMSFORD ST, DURHAM, NC 27703, USA",
-                    "addressLocality": "ELMSFORD ST",
-                    "addressRegion": "ELMSFORD ST",
-                    "postalCode": "27703",
-                    "telephone": "+1-978-615-9403",
-                    "addressCountry": {
-                      "@type": "Country",
-                      "name": "US"
-                    }
-                  }
-                }
-              },
-              {
-                "@type": "ProfessionalService",
-                "name": "Healthcare IT Support Services",
-                "image": "https://www.itsupport.net.in/images/healthcare-it-support.jpg",
-                "@id": "https://www.itsupport.net.in/industries/healthcare",
-                "url": "https://www.itsupport.net.in/",
+              "query-input": "required name=search_term_string"
+            }
+          },
+          {
+            "@type": "Review",
+            "name": "Expert Healthcare IT Support Services | HIPAA-Compliant Assistance",
+            "url": "https://www.itsupport.net.in/industries/healthcare",
+            "image": "https://www.itsupport.net.in/images/healthcare-it-support.jpg",
+            "author": {
+              "@type": "Person",
+              "name": "Mike"
+            },
+            "reviewBody": "Best healthcare IT support in the USA, offering HIPAA compliance, EHR management, secure data backup, and 24/7 technical assistance for hospitals and clinics.",
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "4.8"
+            },
+            "itemReviewed": {
+              "@type": "LocalBusiness",
+              "name": "L4RG US LLC",
+              "priceRange": "12000",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "L4RG US LLC, 105 ELMSFORD ST, DURHAM, NC 27703, USA",
+                "addressLocality": "ELMSFORD ST",
+                "addressRegion": "ELMSFORD ST",
+                "postalCode": "27703",
                 "telephone": "+1-978-615-9403",
-                "address": {
-                  "@type": "PostalAddress",
-                  "streetAddress": "L4RG US LLC, 105 ELMSFORD ST, DURHAM, NC 27703, USA",
-                  "addressLocality": "ELMSFORD ST",
-                  "postalCode": "27703",
-                  "addressCountry": "US"
-                },
-                "geo": {
-                  "@type": "GeoCoordinates",
-                  "latitude": 35.960390,
-                  "longitude": -78.827200
-                },
-                "openingHoursSpecification": {
-                  "@type": "OpeningHoursSpecification",
-                  "dayOfWeek": [
-                    "Monday",
-                    "Tuesday",
-                    "Wednesday",
-                    "Thursday",
-                    "Friday"
-                  ],
-                  "opens": "09:00",
-                  "closes": "18:00"
-                },
-                "sameAs": [
-                  "https://www.facebook.com/L4RGINDIA/",
-                  "https://twitter.com/L4rgindia",
-                  "https://www.instagram.com/l4rgllc/",
-                  "https://www.youtube.com/c/L4RGINDIA",
-                  "https://in.linkedin.com/company/l4rgindia",
-                  "https://in.pinterest.com/L4RGINDIA/",
-                  "https://l4rgcompany.quora.com/",
-                  "https://www.itsupport.net.in/"
-                ]
+                "addressCountry": {
+                  "@type": "Country",
+                  "name": "US"
+                }
+              }
+            }
+          },
+          {
+            "@type": "ProfessionalService",
+            "name": "Healthcare IT Support Services",
+            "image": "https://www.itsupport.net.in/images/healthcare-it-support.jpg",
+            "@id": "https://www.itsupport.net.in/industries/healthcare",
+            "url": "https://www.itsupport.net.in/",
+            "telephone": "+1-978-615-9403",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "L4RG US LLC, 105 ELMSFORD ST, DURHAM, NC 27703, USA",
+              "addressLocality": "ELMSFORD ST",
+              "postalCode": "27703",
+              "addressCountry": "US"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 35.960390,
+              "longitude": -78.827200
+            },
+            "openingHoursSpecification": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "09:00",
+              "closes": "18:00"
+            },
+            "sameAs": [
+              "https://www.facebook.com/L4RGINDIA/",
+              "https://twitter.com/L4rgindia",
+              "https://www.instagram.com/l4rgllc/",
+              "https://www.youtube.com/c/L4RGINDIA",
+              "https://in.linkedin.com/company/l4rgindia",
+              "https://in.pinterest.com/L4RGINDIA/",
+              "https://l4rgcompany.quora.com/",
+              "https://www.itsupport.net.in/"
+            ]
+          },
+          {
+            "@type": "EmployerAggregateRating",
+            "itemReviewed": {
+              "@type": "Organization",
+              "name": "Healthcare IT Support Services - itsupport.net.in",
+              "sameAs": "https://www.itsupport.net.in/industries/healthcare"
+            },
+            "ratingValue": "99",
+            "bestRating": "100",
+            "worstRating": "1",
+            "ratingCount": "4574"
+          },
+          {
+            "@type": "WebPage",
+            "name": "Expert Healthcare IT Support Services",
+            "url": "https://www.itsupport.net.in/industries/healthcare",
+            "inLanguage": "en-US",
+            "isPartOf": {
+              "@type": "WebSite",
+              "url": "https://www.itsupport.net.in/",
+              "name": "L4RG US LLC"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 156790,
+                "name": "Home",
+                "item": "https://www.itsupport.net.in/"
               },
               {
-                "@type": "EmployerAggregateRating",
-                "itemReviewed": {
-                  "@type": "Organization",
-                  "name": "Healthcare IT Support Services - itsupport.net.in",
-                  "sameAs": "https://www.itsupport.net.in/industries/healthcare"
-                },
-                "ratingValue": "99",
-                "bestRating": "100",
-                "worstRating": "1",
-                "ratingCount": "4574"
+                "@type": "ListItem",
+                "position": 156791,
+                "name": "industries",
+                "item": "https://www.itsupport.net.in/industries"
               },
               {
-                "@type": "WebPage",
-                "name": "Expert Healthcare IT Support Services",
-                "url": "https://www.itsupport.net.in/industries/healthcare",
-                "inLanguage": "en-US",
-                "isPartOf": {
-                  "@type": "WebSite",
-                  "url": "https://www.itsupport.net.in/",
-                  "name": "L4RG US LLC"
+                "@type": "ListItem",
+                "position": 156792,
+                "name": "finance & banking support industries",
+                "item": "https://www.itsupport.net.in/industries/healthcare"
+              }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How do you ensure HIPAA compliance for healthcare IT systems?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "We conduct detailed security audits, implement data encryption, access controls, and maintain audit logs to ensure complete HIPAA compliance."
                 }
               },
               {
-                "@type": "BreadcrumbList",
-                "itemListElement": [
-                  {
-                    "@type": "ListItem",
-                    "position": 156790,
-                    "name": "Home",
-                    "item": "https://www.itsupport.net.in/"
-                  },
-                  {
-                    "@type": "ListItem",
-                    "position": 156791,
-                    "name": "industries",
-                    "item": "https://www.itsupport.net.in/industries"
-                  },
-                  {
-                    "@type": "ListItem",
-                    "position": 156792,
-                    "name": "finance & banking support industries",
-                    "item": "https://www.itsupport.net.in/industries/healthcare"
-                  }
-                ]
-              },
-              {
-                "@type": "FAQPage",
-                "mainEntity": [
-                  {
-                    "@type": "Question",
-                    "name": "How do you ensure HIPAA compliance for healthcare IT systems?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "We conduct detailed security audits, implement data encryption, access controls, and maintain audit logs to ensure complete HIPAA compliance."
-                    }
-                  },
-                  {
-                    "@type": "Question",
-                    "name": "Can you integrate our existing EMR system with new telemedicine software?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "Yes. Our team specializes in integrating EMR/EHR systems with telemedicine platforms, ensuring secure and seamless data flow."
-                    }
-                  },
-                  {
-                    "@type": "Question",
-                    "name": "Do you offer 24/7 healthcare IT support?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": " Absolutely. We provide round-the-clock remote and on-site IT assistance for healthcare facilities worldwide."
-                    }
-                  },
-                  {
-                    "@type": "Question",
-                    "name": "How do you protect against healthcare cyberattacks?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": "We use advanced cybersecurity measures like intrusion detection, MFA, endpoint protection, and regular vulnerability scanning to safeguard your network."
-                    }
-                  },
-                  {
-                    "@type": "Question",
-                    "name": "Can you work with multi-location hospitals and clinics?",
-                    "acceptedAnswer": {
-                      "@type": "Answer",
-                      "text": " Yes, we provide centralized IT management and secure networking solutions for healthcare organizations with multiple locations."
-                    }
-                  }
-                ]
-              },
-              {
-                "@type": "QAPage",
-                "mainEntity": {
-                  "@type": "Question",
-                  "name": "Can you help with setting up secure healthcare IT systems?",
-                  "text": "Absolutely. We provide complete setup and configuration of secure healthcare IT systems, including HIPAA-compliant networks, encrypted communications, access control management, and performance optimization to keep patient data secure and systems running efficiently.",
-                  "url": "https://www.itsupport.net.in/industries/healthcare#q1a1",
-                  "answerCount": 1,
-                  "upvoteCount": 0,
-                  "datePublished": "2025-07-14T10:00:00+05:30",
-                  "author": {
-                    "@type": "Person",
-                    "name": "IT Support Team",
-                    "url": "https://www.itsupport.net.in/"
-                  },
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Absolutely. We provide complete setup and configuration of secure healthcare IT systems, including HIPAA-compliant networks, encrypted communications, access control management, and performance optimization to keep patient data secure and systems running efficiently.",
-                    "url": "https://www.itsupport.net.in/industries/healthcare#q1a1",
-                    "dateCreated": "2025-07-14T10:00:00+05:30",
-                    "upvoteCount": 0,
-                    "author": {
-                      "@type": "Person",
-                      "name": "IT Support Team",
-                      "url": "https://www.itsupport.net.in/"
-                    }
-                  }
+                "@type": "Question",
+                "name": "Can you integrate our existing EMR system with new telemedicine software?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Our team specializes in integrating EMR/EHR systems with telemedicine platforms, ensuring secure and seamless data flow."
                 }
               },
               {
-                "@type": "QAPage",
-                "mainEntity": {
-                  "@type": "Question",
-                  "name": "What’s the difference between healthcare IT support and general IT support?",
-                  "text": "Healthcare IT support specializes in managing medical systems, ensuring HIPAA compliance, securing patient data, and maintaining healthcare-specific applications, while general IT support covers broader hardware, software, and network needs. We provide both for complete coverage in healthcare organizations.",
-                  "url": "https://www.itsupport.net.in/industries/healthcare#q3a1",
-                  "answerCount": 1,
-                  "upvoteCount": 0,
-                  "datePublished": "2025-07-14T10:10:00+05:30",
-                  "author": {
-                    "@type": "Person",
-                    "name": "IT Support Team",
-                    "url": "https://www.itsupport.net.in/"
-                  },
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Healthcare IT support specializes in managing medical systems, ensuring HIPAA compliance, securing patient data, and maintaining healthcare-specific applications, while general IT support covers broader hardware, software, and network needs. We provide both for complete coverage in healthcare organizations.",
-                    "url": "https://www.itsupport.net.in/industries/healthcare#q3a1",
-                    "dateCreated": "2025-07-14T10:10:00+05:30",
-                    "upvoteCount": 0,
-                    "author": {
-                      "@type": "Person",
-                      "name": "IT Support Team",
-                      "url": "https://www.itsupport.net.in/"
-                    }
-                  }
+                "@type": "Question",
+                "name": "Do you offer 24/7 healthcare IT support?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": " Absolutely. We provide round-the-clock remote and on-site IT assistance for healthcare facilities worldwide."
                 }
               },
               {
-                "@type": "QAPage",
-                "mainEntity": {
-                  "@type": "Question",
-                  "name": "Can you help secure our healthcare network from cyber threats?",
-                  "text": "Yes. We provide healthcare-specific network security solutions, including HIPAA-compliant security assessments, firewall configuration, intrusion detection, and best-practice setups to protect patient data, medical devices, and healthcare systems from viruses, malware, and unauthorized access.",
-                  "url": "https://www.itsupport.net.in/industries/healthcare#q4a1",
-                  "answerCount": 1,
-                  "upvoteCount": 0,
-                  "datePublished": "2025-07-14T10:15:00+05:30",
-                  "author": {
-                    "@type": "Person",
-                    "name": "IT Support Team",
-                    "url": "https://www.itsupport.net.in/"
-                  },
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes. We provide healthcare-specific network security solutions, including HIPAA-compliant security assessments, firewall configuration, intrusion detection, and best-practice setups to protect patient data, medical devices, and healthcare systems from viruses, malware, and unauthorized access.",
-                    "url": "https://www.itsupport.net.in/industries/healthcare#q4a1",
-                    "dateCreated": "2025-07-14T10:15:00+05:30",
-                    "upvoteCount": 0,
-                    "author": {
-                      "@type": "Person",
-                      "name": "IT Support Team",
-                      "url": "https://www.itsupport.net.in/"
-                    }
-                  }
+                "@type": "Question",
+                "name": "How do you protect against healthcare cyberattacks?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "We use advanced cybersecurity measures like intrusion detection, MFA, endpoint protection, and regular vulnerability scanning to safeguard your network."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can you work with multi-location hospitals and clinics?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": " Yes, we provide centralized IT management and secure networking solutions for healthcare organizations with multiple locations."
                 }
               }
             ]
-          }          
-    },
+          },
+          {
+            "@type": "QAPage",
+            "mainEntity": {
+              "@type": "Question",
+              "name": "Can you help with setting up secure healthcare IT systems?",
+              "text": "Absolutely. We provide complete setup and configuration of secure healthcare IT systems, including HIPAA-compliant networks, encrypted communications, access control management, and performance optimization to keep patient data secure and systems running efficiently.",
+              "url": "https://www.itsupport.net.in/industries/healthcare#q1a1",
+              "answerCount": 1,
+              "upvoteCount": 0,
+              "datePublished": "2025-07-14T10:00:00+05:30",
+              "author": {
+                "@type": "Person",
+                "name": "IT Support Team",
+                "url": "https://www.itsupport.net.in/"
+              },
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Absolutely. We provide complete setup and configuration of secure healthcare IT systems, including HIPAA-compliant networks, encrypted communications, access control management, and performance optimization to keep patient data secure and systems running efficiently.",
+                "url": "https://www.itsupport.net.in/industries/healthcare#q1a1",
+                "dateCreated": "2025-07-14T10:00:00+05:30",
+                "upvoteCount": 0,
+                "author": {
+                  "@type": "Person",
+                  "name": "IT Support Team",
+                  "url": "https://www.itsupport.net.in/"
+                }
+              }
+            }
+          },
+          {
+            "@type": "QAPage",
+            "mainEntity": {
+              "@type": "Question",
+              "name": "What’s the difference between healthcare IT support and general IT support?",
+              "text": "Healthcare IT support specializes in managing medical systems, ensuring HIPAA compliance, securing patient data, and maintaining healthcare-specific applications, while general IT support covers broader hardware, software, and network needs. We provide both for complete coverage in healthcare organizations.",
+              "url": "https://www.itsupport.net.in/industries/healthcare#q3a1",
+              "answerCount": 1,
+              "upvoteCount": 0,
+              "datePublished": "2025-07-14T10:10:00+05:30",
+              "author": {
+                "@type": "Person",
+                "name": "IT Support Team",
+                "url": "https://www.itsupport.net.in/"
+              },
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Healthcare IT support specializes in managing medical systems, ensuring HIPAA compliance, securing patient data, and maintaining healthcare-specific applications, while general IT support covers broader hardware, software, and network needs. We provide both for complete coverage in healthcare organizations.",
+                "url": "https://www.itsupport.net.in/industries/healthcare#q3a1",
+                "dateCreated": "2025-07-14T10:10:00+05:30",
+                "upvoteCount": 0,
+                "author": {
+                  "@type": "Person",
+                  "name": "IT Support Team",
+                  "url": "https://www.itsupport.net.in/"
+                }
+              }
+            }
+          },
+          {
+            "@type": "QAPage",
+            "mainEntity": {
+              "@type": "Question",
+              "name": "Can you help secure our healthcare network from cyber threats?",
+              "text": "Yes. We provide healthcare-specific network security solutions, including HIPAA-compliant security assessments, firewall configuration, intrusion detection, and best-practice setups to protect patient data, medical devices, and healthcare systems from viruses, malware, and unauthorized access.",
+              "url": "https://www.itsupport.net.in/industries/healthcare#q4a1",
+              "answerCount": 1,
+              "upvoteCount": 0,
+              "datePublished": "2025-07-14T10:15:00+05:30",
+              "author": {
+                "@type": "Person",
+                "name": "IT Support Team",
+                "url": "https://www.itsupport.net.in/"
+              },
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. We provide healthcare-specific network security solutions, including HIPAA-compliant security assessments, firewall configuration, intrusion detection, and best-practice setups to protect patient data, medical devices, and healthcare systems from viruses, malware, and unauthorized access.",
+                "url": "https://www.itsupport.net.in/industries/healthcare#q4a1",
+                "dateCreated": "2025-07-14T10:15:00+05:30",
+                "upvoteCount": 0,
+                "author": {
+                  "@type": "Person",
+                  "name": "IT Support Team",
+                  "url": "https://www.itsupport.net.in/"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "heroSection": {
+        "title": "Healthcare IT Support Services – ITSupport.net.in",
+        "subtitle": "Delivering secure, reliable, and compliant healthcare IT solutions for hospitals, clinics, diagnostic centers, pharmacies, and telemedicine platforms across 50+ countries.",
+        "imageUrl": "/images/healthcare-it-support.webp"
+      },
+      "aboutSection": {
+        "aboutImage":"/industries/healthcare-about.svg",
+        "imageAlt":"About Healthcare IT Support Services",
+        "imageTitle":"About Healthcare IT Support Services",
+        "detail": "For over two decades, ITSupport.net.in has been providing innovative and secure IT support services to the global healthcare industry. With 1M+ service cases handled and 20,000+ satisfied customers, we understand that uptime, security, and compliance directly affect patient care.",
+        "subDetails": "We specialize in supporting hospitals, clinics, diagnostic centers, telemedicine providers, pharmacies, and healthcare startups—ensuring uninterrupted operations and strict adherence to HIPAA and GDPR standards."
+      },
+      "specializedSection": {
+        "title": "Why Healthcare Needs Specialized IT Support",
+        "desc": "Healthcare systems require advanced security, seamless integration, and uninterrupted operations. Generic IT services often fall short of these industry-specific needs.",
+        "list": [
+          {
+            "title": "Data Security & Compliance",
+            "icon": <Shield size={30}/>,
+            "desc": "Protecting sensitive patient health records through strong cybersecurity and regulatory compliance.",
+            "color": "#4F46E5"
+
+          },
+          {
+            "title": "High Availability",
+            "icon": <ChartColumnIncreasing size={30}/>,
+            "desc": "Ensuring 24/7 system and network uptime to prevent disruptions in patient care.",
+            "color": "#22C55E"
+          },
+          {
+            "title": "Healthcare System Integration",
+            "icon": <HeartPlus size={30}/>,
+            "desc": "Connecting EMR/EHR platforms, lab equipment, and third-party tools with seamless interoperability.",
+            "color": "#F59E0B"
+          },
+          {
+            "title": "Scalability",
+            "icon": <TrendingUp size={30}/>,
+            "desc": "Supporting growing patient volumes, expanding healthcare infrastructure, and digital transformation.",
+            "color": "#06B6D4"
+          },
+          {
+            "title": "Disaster Recovery",
+            "icon": <RefreshCcw size={30}/>,
+            "desc": "Protecting data and ensuring fast recovery in case of failures or cyberattacks.",
+            "color": "#EF4444"
+          }
+        ]
+      },
+      "services_in_Detail": {
+        "title": "Our Healthcare IT Services in Detail",
+        "services": [
+          {
+            "title": "EMR & EHR Support",
+            "desc": "Complete support for Epic, Cerner, Allscripts, Meditech, and other healthcare record systems.",
+            "List": [
+              "Installation & configuration",
+              "Data migration from legacy systems",
+              "Real-time performance monitoring",
+              "User training for healthcare staff",
+              "Integration with lab equipment and pharmacy systems"
+            ],
+            "color": "#4F46E5"
+          },
+          {
+            "title": "HIPAA & GDPR Compliance Management",
+            "desc": "Ensuring full compliance through audits, security controls, encryption, and staff training.",
+            "List": [
+              "Security risk assessments",
+              "Data encryption (at rest & in transit)",
+              "Access control & audit logging",
+              "Regular compliance audits",
+              "Staff compliance training"
+            ],
+            "color": "#22C55E"
+          },
+          {
+            "title": "Telemedicine & Remote Patient Monitoring",
+            "desc": "End-to-end IT support for telehealth platforms and remote monitoring systems.",
+            "List": [
+              "Video consultation platform support",
+              "Secure patient data exchange",
+              "Integration with wearable devices",
+              "Remote monitoring dashboard setup",
+              "Cloud-based telehealth hosting"
+            ],
+            "color": "#06B6D4"
+          },
+          {
+            "title": "Healthcare Cybersecurity Solutions",
+            "desc": "Advanced cybersecurity to safeguard patient records and healthcare data.",
+            "List": [
+              "24/7 threat monitoring",
+              "Multi-factor authentication (MFA)",
+              "Firewalls & intrusion detection",
+              "Endpoint security",
+              "Incident response & recovery"
+            ],
+            "color": "#EF4444"
+          },
+          {
+            "title": "Medical Device & Equipment Integration",
+            "desc": "Integrating diagnostic equipment, imaging systems, and monitoring devices with EHR platforms.",
+            "List": [
+              "Real-time data syncing",
+              "Automated reporting",
+              "Secure device connectivity",
+              "Multi-vendor equipment integration",
+              "Improved diagnostic accuracy"
+            ],
+            "color": "#F59E0B"
+          },
+          {
+            "title": "Cloud Solutions for Healthcare",
+            "desc": "Secure, compliant, and scalable cloud services for healthcare organizations.",
+            "List": [
+              "Microsoft Azure for Healthcare",
+              "AWS HealthLake integration",
+              "Cloud backup & disaster recovery",
+              "Hybrid cloud deployments",
+              "Secure data hosting"
+            ],
+            "color": "#7C3AED"
+          },
+          {
+            "title": "24/7 Remote & On-Site IT Support",
+            "desc": "Always-available healthcare IT helpdesk for global organizations.",
+            "List": [
+              "Real-time issue resolution",
+              "Remote desktop support",
+              "Doctor & staff IT assistance",
+              "On-site engineer dispatch",
+              "Proactive system monitoring"
+            ],
+            "color": "#0EA5E9"
+          },
+          {
+            "title": "Data Backup & Disaster Recovery",
+            "desc": "Protecting healthcare data with secure and automated recovery solutions.",
+            "List": [
+              "Automated daily backups",
+              "Multi-location redundant storage",
+              "Rapid data recovery systems",
+              "High-availability architecture",
+              "Ransomware-resilient backups"
+            ],
+            "color": "#6366F1"
+          },
+          {
+            "title": "Healthcare IT Infrastructure Management",
+            "desc": "End-to-end setup and management of healthcare IT environments.",
+            "List": [
+              "Network setup & optimization",
+              "Server installation & management",
+              "Data center maintenance",
+              "Hardware procurement",
+              "Lifecycle management"
+            ],
+            "color": "#3B82F6"
+          }
+        ]
+      },
+      "benefits_Section": {
+        "title": "Benefits of Choosing ITSupport.net.in",
+        "benifits": [
+          {
+            "title": "20+ Years of Expertise",
+            "desc": "Two decades of proven success in healthcare IT operations and security.",
+            "bg": "#EEF2FF"
+          },
+          {
+            "title": "Global Reach",
+            "desc": "Trusted in 50+ countries with 20,000+ happy healthcare customers.",
+            "bg": "#ECFDF5"
+          },
+          {
+            "title": "End-to-End Healthcare IT",
+            "desc": "From infrastructure to cloud, cybersecurity, and compliance — everything under one roof.",
+            "bg": "#F0F9FF"
+          },
+          {
+            "title": "Certified Healthcare IT Professionals",
+            "desc": "A team trained in EMR/EHR support, compliance, and healthcare workflows.",
+            "bg": "#FEF3C7"
+          }
+        ]
+      },
+      "faq": [
+        {
+          "label": "How do you ensure HIPAA compliance for healthcare IT systems?",
+          "desc": "We conduct regular security audits, enable encryption, implement access controls, and maintain detailed audit logs."
+        },
+        {
+          "label": "Can you integrate our EMR with telemedicine platforms?",
+          "desc": "Yes, we specialize in seamless and secure integration of EMR/EHR systems with any telehealth solution."
+        },
+        {
+          "label": "Do you provide 24/7 healthcare IT support?",
+          "desc": "Yes, our support teams are available round-the-clock for remote and on-site assistance worldwide."
+        },
+        {
+          "label": "How do you protect healthcare systems from cyberattacks?",
+          "desc": "We deploy intrusion detection, MFA, endpoint security, continuous monitoring, and vulnerability scans."
+        },
+        {
+          "label": "Can you support multi-location hospitals?",
+          "desc": "Absolutely. We provide centralized management, secure networking, and unified infrastructure support."
+        }
+      ],
+      "getStartedSection": {
+        "title": "Get Started with Reliable Healthcare IT Support",
+        "desc": "Whether you manage a clinic or a global healthcare network, we ensure your IT environment is secure, compliant, and always available.",
+        "call": "+91-XXX-XXXXXXX",
+        "email": "support@itsupport.net.in",
+        "website": "www.itsupport.net.in"
+      }
+    },    
     {
         slug:"construction",
-        title:"",
-        subtitle:"",
-        description:"",
-        imageUrl:"",
+        title:"Construction Industry IT Support Services",
         metadata:{
             title: "Construction IT Services – Network, Cloud & BIM Support | ITSupport.net.in",
             description:
@@ -694,14 +981,238 @@ const industriesData:Industry[] = [
                 }
               }
             ]
+          },
+        "heroSection": {
+        "title": "Construction Industry IT Support – ITSupport.net.in",
+        "subtitle": "Secure, scalable, and high-performance IT solutions for builders, contractors, architects, engineering firms, and real estate developers across 50+ countries.",
+        "imageUrl": "/images/construction-it-support.webp"
+        },
+        "aboutSection": {
+          "imageAlt":"About Construction IT Support Services",
+          "imageTitle":"About Construction IT Support Services",
+          "aboutImage":"/industries/construction-about.svg",
+          "detail": "For over 20 years, ITSupport.net.in has been delivering advanced IT services to construction and infrastructure companies worldwide. With 1 million+ support cases and 20,000+ satisfied clients, we help construction firms increase efficiency, improve coordination, enhance data security, and streamline site-to-office operations.",
+          "subDetails": "We support contractors, developers, architects, field engineers, and project teams with IT systems designed for real-time collaboration, safety compliance, on-site performance, and multi-location project oversight."
+        },
+        "specializedSection": {
+          "title": "Why the Construction Industry Needs Specialized IT Support",
+          "desc": "Construction businesses face unique field-to-office challenges that require specialized IT infrastructure, secure collaboration systems, and high-performance tools.",
+          "list": [
+            {
+              "title": "Remote Site Connectivity",
+              "icon": <Wifi size={30}/>,
+              "desc": "High-speed, secure connectivity for teams working on remote or multi-location sites.",
+              "color": "#4F46E5"
+            },
+            {
+              "title": "Real-time Collaboration",
+              "icon": <MonitorCheck size={30}/>,
+              "desc": "Enabling seamless communication between field teams, offices, architects, and stakeholders.",
+              "color": "#22C55E"
+            },
+            {
+              "title": "CAD & BIM Integration",
+              "icon": <LuMonitorStop size={30}/>,
+              "desc": "Support for AutoCAD, Revit, ArchiCAD, and BIM workflows with optimized hardware.",
+              "color": "#F59E0B"
+            },
+            {
+              "title": "Data Security",
+              "icon": <BsDatabaseLock size={30}/>,
+              "desc": "Protecting confidential project files, blueprints, and contracts from cyber threats.",
+              "color": "#06B6D4"
+            },
+            {
+              "title": "IoT & Equipment Tracking",
+              "icon": <BiChip size={30}/>,
+              "desc": "Managing assets with RFID, IoT devices, and real-time monitoring solutions.",
+              "color": "#EF4444"
+            },
+            {
+              "title": "Cloud-Based Project Management",
+              "icon": <TbCloudComputing size={30}/>,
+              "desc": "Centralized access to updates, documents, schedules, and blueprints across sites.",
+              "color": "#7C3AED"
+            }
+          ]
+        },
+        "services_in_Detail": {
+          "title": "Our Construction IT Services in Detail",
+          "services": [
+            {
+              "title": "Project Management Software Support",
+              "desc": "End-to-end setup and management of leading construction project platforms.",
+              "List": [
+                "Setup of Procore, Buildertrend, and PlanGrid",
+                "Customization for schedules, budgets & resources",
+                "ERP system integration",
+                "24/7 troubleshooting and updates"
+              ],
+              "color": "#4F46E5"
+            },
+            {
+              "title": "BIM (Building Information Modeling) IT Support",
+              "desc": "Optimized BIM tools and workflows for architectural and engineering teams.",
+              "List": [
+                "Setup and optimization of Revit, Navisworks, ArchiCAD",
+                "Cloud storage for large 3D models",
+                "Hardware optimization for fast rendering",
+                "Team training for BIM workflows"
+              ],
+              "color": "#22C55E"
+            },
+            {
+              "title": "Remote Site Connectivity Solutions",
+              "desc": "Reliable internet and secure network access for all construction locations.",
+              "List": [
+                "High-speed wireless deployment",
+                "Secure VPN access",
+                "Satellite connectivity for remote regions",
+                "Real-time communication systems"
+              ],
+              "color": "#06B6D4"
+            },
+            {
+              "title": "Data Backup & Disaster Recovery",
+              "desc": "Prevent data loss, project delays, and downtime with secure backup systems.",
+              "List": [
+                "Automated daily backups",
+                "Cloud and offsite backup solutions",
+                "Quick data restoration",
+                "Compliance with data protection standards"
+              ],
+              "color": "#EF4444"
+            },
+            {
+              "title": "Cybersecurity for Construction Companies",
+              "desc": "Advanced security for protecting blueprints, contracts, and sensitive files.",
+              "List": [
+                "Network audits & penetration testing",
+                "Firewalls and malware protection",
+                "Role-based access control",
+                "Employee cybersecurity training"
+              ],
+              "color": "#F59E0B"
+            },
+            {
+              "title": "Hardware & Network Setup",
+              "desc": "Robust IT infrastructure tailored for both office and field environments.",
+              "List": [
+                "Rugged laptops & tablets for field",
+                "Server installation and maintenance",
+                "Office & site Wi-Fi and LAN setup",
+                "IoT-enabled equipment tracking"
+              ],
+              "color": "#3B82F6"
+            },
+            {
+              "title": "Cloud Solutions for Collaboration",
+              "desc": "Cloud platforms for storing and sharing project data across multiple sites.",
+              "List": [
+                "Cloud hosting for documents & blueprints",
+                "Integration with Microsoft 365 & Google Workspace",
+                "Real-time file sharing",
+                "Version control for project files"
+              ],
+              "color": "#7C3AED"
+            },
+            {
+              "title": "ERP & Accounting System Support",
+              "desc": "Streamlined financial and procurement management for construction workflows.",
+              "List": [
+                "Construction-focused ERP implementation",
+                "Integration with QuickBooks, SAP, Sage",
+                "Inventory and supply chain tracking",
+                "Reporting and analytics dashboards"
+              ],
+              "color": "#0EA5E9"
+            },
+            {
+              "title": "On-Site IT Support Services",
+              "desc": "Direct technical help at construction locations to avoid downtime.",
+              "List": [
+                "Field technician visits",
+                "On-site training for staff",
+                "Preventive maintenance",
+                "Hardware & network troubleshooting"
+              ],
+              "color": "#10B981"
+            },
+            {
+              "title": "24/7 IT Help Desk for Construction Firms",
+              "desc": "Round-the-clock assistance for urgent project IT needs.",
+              "List": [
+                "Phone, email, and remote support",
+                "Fast response for critical issues",
+                "Ongoing system performance monitoring",
+                "Dedicated account managers"
+              ],
+              "color": "#6366F1"
+            }
+          ]
+        },
+        "benefits_Section": {
+          "title": "Benefits of Choosing ITSupport.net.in",
+          "benifits": [
+            {
+              "title": "20+ Years of Construction IT Expertise",
+              "desc": "Decades of experience supporting global construction and engineering firms.",
+              "bg": "#EEF2FF"
+            },
+            {
+              "title": "Global Presence",
+              "desc": "Operations in 50+ countries with dedicated on-site and remote support.",
+              "bg": "#ECFDF5"
+            },
+            {
+              "title": "Security-Driven Approach",
+              "desc": "Advanced protection for confidential project files and contracts.",
+              "bg": "#F0F9FF"
+            },
+            {
+              "title": "Tailored for On-Site & Office Teams",
+              "desc": "Solutions designed specifically for construction workflows and multi-site operations.",
+              "bg": "#FEF3C7"
+            }
+          ]
+        },
+        "faq": [
+          {
+            "label": "Can you help integrate our construction software with existing systems?",
+            "desc": "Yes. We integrate project management platforms, BIM tools, and ERP systems for seamless workflows."
+          },
+          {
+            "label": "How do you ensure data security for sensitive construction projects?",
+            "desc": "We use encryption, role-based access control, firewalls, and comprehensive security audits."
+          },
+          {
+            "label": "Do you provide IT support for multiple construction sites?",
+            "desc": "Yes. We support both remote and on-site IT needs across multiple project locations."
+          },
+          {
+            "label": "Can you optimize hardware for CAD and BIM applications?",
+            "desc": "Absolutely. We configure and maintain high-performance systems for rendering and design workloads."
+          },
+          {
+            "label": "Do you offer cloud solutions for real-time document sharing?",
+            "desc": "Yes. We deploy secure cloud platforms for collaboration, version control, and remote access."
+          },
+          {
+            "label": "How fast can you respond to an urgent IT issue at a job site?",
+            "desc": "With local technicians in 50+ countries and a 24/7 help desk, we respond rapidly to critical issues."
           }
+        ],
+        "getStartedSection": {
+          "title": "Build Your Success with Reliable IT Support",
+          "desc": "From planning to project delivery, we ensure your construction business runs on secure, high-performance IT systems designed for field and office teams.",
+          "call": "+91-XXX-XXXXXXX",
+          "email": "support@itsupport.net.in",
+          "website": "www.itsupport.net.in"
+        }
     },
     {
         slug:"education",
         title:"",
-        subtitle:"",
-        description:"",
-        imageUrl:"",
         metadata:{
             title: "Reliable Education Sector IT Solutions – School & University Support",
             description:
@@ -1041,14 +1552,23 @@ const industriesData:Industry[] = [
                 }
               }              
             ]
-          }          
+          },
+         "heroSection": {
+        "title": "Healthcare IT Support Services – ITSupport.net.in",
+        "subtitle": "Delivering secure, reliable, and compliant healthcare IT solutions for hospitals, clinics, diagnostic centers, pharmacies, and telemedicine platforms across 50+ countries.",
+        "imageUrl": "/images/healthcare-it-support.webp"
+      },
+      "aboutSection": {
+        "aboutImage":"/industries/education-about.svg",
+        "imageAlt":"About Healthcare IT Support Services",
+        "imageTitle":"About Healthcare IT Support Services",
+        "detail": "For over two decades, ITSupport.net.in has been providing innovative and secure IT support services to the global healthcare industry. With 1M+ service cases handled and 20,000+ satisfied customers, we understand that uptime, security, and compliance directly affect patient care.",
+        "subDetails": "We specialize in supporting hospitals, clinics, diagnostic centers, telemedicine providers, pharmacies, and healthcare startups—ensuring uninterrupted operations and strict adherence to HIPAA and GDPR standards."
+      },           
     },
     {
         slug:"finance-banking",
         title:"",
-        subtitle:"",
-        description:"",
-        imageUrl:"",
         metadata:{
             title: "Secure Banking IT Solutions | Finance Industry Support",
             description:
@@ -1374,14 +1894,23 @@ const industriesData:Industry[] = [
                     }
                 }
             ]
-          }          
+          },
+          "heroSection": {
+        "title": "Healthcare IT Support Services – ITSupport.net.in",
+        "subtitle": "Delivering secure, reliable, and compliant healthcare IT solutions for hospitals, clinics, diagnostic centers, pharmacies, and telemedicine platforms across 50+ countries.",
+        "imageUrl": "/images/healthcare-it-support.webp"
+      },
+      "aboutSection": {
+        "aboutImage":"/industries/banking-about.svg",
+        "imageAlt":"About Healthcare IT Support Services",
+        "imageTitle":"About Healthcare IT Support Services",
+        "detail": "For over two decades, ITSupport.net.in has been providing innovative and secure IT support services to the global healthcare industry. With 1M+ service cases handled and 20,000+ satisfied customers, we understand that uptime, security, and compliance directly affect patient care.",
+        "subDetails": "We specialize in supporting hospitals, clinics, diagnostic centers, telemedicine providers, pharmacies, and healthcare startups—ensuring uninterrupted operations and strict adherence to HIPAA and GDPR standards."
+      },                
     },
     {
         slug:"manufacturing",
         title:"",
-        subtitle:"",
-        description:"",
-        imageUrl:"",
         metadata:{
             title: "Manufacturing IT Solutions – Network, Security & Automation Support",
             description:
@@ -1731,14 +2260,23 @@ const industriesData:Industry[] = [
                 }
               }
             ]
-          }          
+          },
+          "heroSection": {
+        "title": "Healthcare IT Support Services – ITSupport.net.in",
+        "subtitle": "Delivering secure, reliable, and compliant healthcare IT solutions for hospitals, clinics, diagnostic centers, pharmacies, and telemedicine platforms across 50+ countries.",
+        "imageUrl": "/images/healthcare-it-support.webp"
+      },
+      "aboutSection": {
+        "aboutImage":"/industries/Manufacturing.svg",
+        "imageAlt":"About Healthcare IT Support Services",
+        "imageTitle":"About Healthcare IT Support Services",
+        "detail": "For over two decades, ITSupport.net.in has been providing innovative and secure IT support services to the global healthcare industry. With 1M+ service cases handled and 20,000+ satisfied customers, we understand that uptime, security, and compliance directly affect patient care.",
+        "subDetails": "We specialize in supporting hospitals, clinics, diagnostic centers, telemedicine providers, pharmacies, and healthcare startups—ensuring uninterrupted operations and strict adherence to HIPAA and GDPR standards."
+      },               
     },
     {
         slug:"professional",
         title:"",
-        subtitle:"",
-        description:"",
-        imageUrl:"",
         metadata:{
             title: "Expert IT Support Services for Professional Services",
             description:
@@ -2087,14 +2625,24 @@ const industriesData:Industry[] = [
                 }
               }
             ]
-          }          
+          },
+          "heroSection": {
+        "title": "Healthcare IT Support Services – ITSupport.net.in",
+        "subtitle": "Delivering secure, reliable, and compliant healthcare IT solutions for hospitals, clinics, diagnostic centers, pharmacies, and telemedicine platforms across 50+ countries.",
+        "imageUrl": "/images/healthcare-it-support.webp"
+      },
+      "aboutSection": {
+        "aboutImage":"/industries/professional.svg",
+        "imageAlt":"About Healthcare IT Support Services",
+        "imageTitle":"About Healthcare IT Support Services",
+        "detail": "For over two decades, ITSupport.net.in has been providing innovative and secure IT support services to the global healthcare industry. With 1M+ service cases handled and 20,000+ satisfied customers, we understand that uptime, security, and compliance directly affect patient care.",
+        "subDetails": "We specialize in supporting hospitals, clinics, diagnostic centers, telemedicine providers, pharmacies, and healthcare startups—ensuring uninterrupted operations and strict adherence to HIPAA and GDPR standards."
+      },          
     },
     {
         slug:"retail-ecommerce",
         title:"",
-        subtitle:"",
-        description:"",
-        imageUrl:"",
+
         metadata:{
             title: "IT Support for Retail & eCommerce | Secure & Scalable Solutions",
             description:
@@ -2439,15 +2987,24 @@ const industriesData:Industry[] = [
                 }
               ]              
             ]
-          }
+          },
+          "heroSection": {
+        "title": "Healthcare IT Support Services – ITSupport.net.in",
+        "subtitle": "Delivering secure, reliable, and compliant healthcare IT solutions for hospitals, clinics, diagnostic centers, pharmacies, and telemedicine platforms across 50+ countries.",
+        "imageUrl": "/images/healthcare-it-support.webp"
+      },
+      "aboutSection": {
+        "aboutImage":"/industries/retail-commerce-about.svg",
+        "imageAlt":"About Healthcare IT Support Services",
+        "imageTitle":"About Healthcare IT Support Services",
+        "detail": "For over two decades, ITSupport.net.in has been providing innovative and secure IT support services to the global healthcare industry. With 1M+ service cases handled and 20,000+ satisfied customers, we understand that uptime, security, and compliance directly affect patient care.",
+        "subDetails": "We specialize in supporting hospitals, clinics, diagnostic centers, telemedicine providers, pharmacies, and healthcare startups—ensuring uninterrupted operations and strict adherence to HIPAA and GDPR standards."
+      },
           
     },
     {
         slug:"travel-hospitality",
         title:"",
-        subtitle:"",
-        description:"",
-        imageUrl:"",
         metadata:{
             title: "Travel & Hospitality IT Solutions | Network, PMS, Cybersecurity Support",
             description:
@@ -2808,9 +3365,40 @@ const industriesData:Industry[] = [
                 }
               }
             ]
-          }
+          },
+          "heroSection": {
+        "title": "Healthcare IT Support Services – ITSupport.net.in",
+        "subtitle": "Delivering secure, reliable, and compliant healthcare IT solutions for hospitals, clinics, diagnostic centers, pharmacies, and telemedicine platforms across 50+ countries.",
+        "imageUrl": "/images/healthcare-it-support.webp"
+      },
+      "aboutSection": {
+        "aboutImage":"/industries/travel-hospitality.svg",
+        "imageAlt":"About Healthcare IT Support Services",
+        "imageTitle":"About Healthcare IT Support Services",
+        "detail": "For over two decades, ITSupport.net.in has been providing innovative and secure IT support services to the global healthcare industry. With 1M+ service cases handled and 20,000+ satisfied customers, we understand that uptime, security, and compliance directly affect patient care.",
+        "subDetails": "We specialize in supporting hospitals, clinics, diagnostic centers, telemedicine providers, pharmacies, and healthcare startups—ensuring uninterrupted operations and strict adherence to HIPAA and GDPR standards."
+      },
           
     },
+    {
+      slug:"logistics",
+      title:"",
+      metadata:{},
+      schema:{},
+        "heroSection": {
+      "title": "Healthcare IT Support Services – ITSupport.net.in",
+      "subtitle": "Delivering secure, reliable, and compliant healthcare IT solutions for hospitals, clinics, diagnostic centers, pharmacies, and telemedicine platforms across 50+ countries.",
+      "imageUrl": "/images/healthcare-it-support.webp"
+    },
+    "aboutSection": {
+      "aboutImage":"/industries/logistics-about.svg",
+      "imageAlt":"About Healthcare IT Support Services",
+      "imageTitle":"About Healthcare IT Support Services",
+      "detail": "For over two decades, ITSupport.net.in has been providing innovative and secure IT support services to the global healthcare industry. With 1M+ service cases handled and 20,000+ satisfied customers, we understand that uptime, security, and compliance directly affect patient care.",
+      "subDetails": "We specialize in supporting hospitals, clinics, diagnostic centers, telemedicine providers, pharmacies, and healthcare startups—ensuring uninterrupted operations and strict adherence to HIPAA and GDPR standards."
+    },
+        
+  },
     
 ]
 
@@ -2821,7 +3409,7 @@ const industriesData:Industry[] = [
 //     );
 // }
 
-export function getIndustriesBySlug(slug: string): Industry | undefined {
+export function getIndustriesBySlug(slug: string): IndustryPageData | undefined {
   return industriesData.find(
     (cat) => cat.slug.toLowerCase() === slug.trim().toLowerCase()
   );
@@ -2830,3 +3418,77 @@ export function getIndustriesBySlug(slug: string): Industry | undefined {
 export function getAllIndustries() {
   return [...industriesData]
 }
+
+
+
+
+
+
+// {
+//   slug:"healthcare",
+//   title:"Healthcare IT Support Services",
+//   metadata:{},
+//   schema:{},
+//   heroSection:{
+//     title:"",
+//     subtitle:"",          
+//     imageUrl:"",
+
+//   },
+//   aboutSection:{
+//     detail:"",
+//     subDetails:"",
+//   },
+//   specializedSection:{
+//     title:"",
+//     descr:"",
+//     list:[
+//       {
+//         title:"",
+//         icon: <Shield size={30}/>,
+//         desc:"",
+//         color:"",
+//       }
+//     ]
+//   },
+//   services_in_Detail:{
+//     title:"",
+//     services:[
+//       {
+//         title:"",
+//         desc:"",
+//         List:[
+//           "Installation & configuration",
+//           "Data migration from legacy systems",
+//           "Real-time performance monitoring",
+//           "User training for healthcare staff",
+//           "Integration with lab equipment and pharmacy systems"
+//         ],
+//         color:""
+//       }
+//     ]
+//   },
+//   benefits_Section:{
+//     title:"",
+//     benifits:[
+//       {
+//         title:"",
+//         desc:"",
+//         bg:""
+//       }
+//     ]
+//   },
+//   faq:[
+//     {
+//       label: "How do I contact tech support?",
+//       desc:""
+//     }
+//   ],
+//   getStartedSection:{
+//     title:"",
+//     desc:"",
+//     call:"",
+//     email:"",
+//     website:""
+//   }
+// },

@@ -1,13 +1,36 @@
-import HeroSection from "@/components/HeroSection";
-import PageCard from "@/components/PageCard";
-import { PagePara, PageParaPara } from "@/components/PagePara";
+
 import { getBasicMarkup } from "@/lib/markup";
 import { getMetaData, getStaticParams } from "@/lib/seo";
-import { highlightAsSiteTitle } from "@/utils/helpers/i18n";
+
 import { useTranslations } from "next-intl";
-import { get } from "node:https";
-import parse from "html-react-parser";
-import FAQs from "@/components/FAQ/FAQs";
+
+import HeroInformattionPage from "@/components/common/HeroInformattionPage";
+import FaqSection from "@/components/common/FaqSection";
+import InsightAboutSection from "./components/InsightAboutSection";
+
+const faqs = [
+  {
+    label: "How can I use your Insights section to improve my IT strategy?",
+    desc: "Our Insights provide expert analysis, actionable recommendations, and industry trends that you can apply directly to strengthen your IT strategy, enhance planning, and stay ahead of emerging technology challenges."
+  },
+  {
+    label: "Can I contribute to the ITSupport.net.in Blog?",
+    desc: "Yes. We welcome guest contributions from IT professionals who can offer valuable, original, and relevant insights to our audience. Approved submissions are featured on our Blog for wider reach."
+  },
+  {
+    label: "How do you choose which case studies to feature?",
+    desc: "We highlight case studies that showcase meaningful challenges, strong problem-solving approaches, measurable results, and innovations that offer learning value to our readers."
+  },
+  {
+    label: "How often is the News section updated?",
+    desc: "Our News section is updated regularly with company announcements, service improvements, industry updates, and other important developments to keep you informed."
+  },
+  {
+    label: "Why should I read your Blog and Insights regularly?",
+    desc: "By staying engaged with our Blog and Insights, you gain continuous access to expert tips, best practices, and strategic guidance that help you optimize your IT systems and strengthen your business operations."
+  }
+];
+
 
 
 
@@ -16,45 +39,24 @@ export const generateMetadata = getMetaData('insights');
 
 export default function Insights() {
   const t = useTranslations("InsightsPage");
-  const basicMarkup = getBasicMarkup(t);
-  let boxIndex = 0;
+
   
   return (<>
-    <div className="h-full flex flex-col text-gray-900 font-[family-name:var(--font-geist-sans)]">
-      <HeroSection
-        heroTitle={t.markup("hero.title", basicMarkup)}
-        heroIntro={t("hero.intro")}
-        buttonTexts={[{ label: "Get Support Now" }]}
-        breadcrumbs={[
-          {home: 'Home'},
-          {home: 'Insights'},
-        ]}
-        imageSrc={
-          "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80"
-        }
-      />
-    </div>
+   
+    <HeroInformattionPage
+      title="Insights, Blog, Case Studies & News – ITSupport.net.in"
+      subtitle1=""
+      subtitle2=""
+      pageName="Insights"
+    />
 
-    <PageCard serial={boxIndex+=1} imageRatio={0.3}>
-        <PagePara>
-          <PageParaPara className="px-8">
-           {parse(t.markup("para.0", basicMarkup))}
-          </PageParaPara>
-          <PageParaPara className="px-8">
-           {parse(t.markup("para.1", basicMarkup))} 
-          </PageParaPara>
-        </PagePara>
-    </PageCard>
-
-    <PageCard noImage serial={boxIndex+=1}>
-      <FAQs data={[
-        {label: t("faq.0.label"), desc: t("faq.0.desc"), expanded: true},
-        {label: t("faq.1.label"), desc: t("faq.1.desc")},
-        {label: t("faq.2.label"), desc: t("faq.2.desc")},
-        {label: t("faq.3.label"), desc: t("faq.3.desc")},
-        {label: t("faq.4.label"), desc: t("faq.4.desc")},
-      ]} />
-    </PageCard>
+    <InsightAboutSection/>
+    
+    <FaqSection
+      faqs={
+        faqs
+      }
+    /> 
     
   </>
   );

@@ -30,7 +30,7 @@ import HeroSection from "./newcompoennts/HeroSection";
 import { LucideDatabase } from "lucide-react";
 import DecriptionSection from "./newcompoennts/DecriptionSection";
 import InfoSection1 from "./newcompoennts/InfoSection1";
-import FaqSection from "./newcompoennts/FaqSection";
+import FaqSection from "../../../components/common/FaqSection";
 import InfoSection2 from "./newcompoennts/InfoSection2";
 import InfoSection3 from "./newcompoennts/InfoSection3";
 import InfoSection4 from "./newcompoennts/InfoSection4";

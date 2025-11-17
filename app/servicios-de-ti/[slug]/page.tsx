@@ -26,7 +26,7 @@ import DecriptionSection from "@/app/services/[slug]/newcompoennts/DecriptionSec
 import InfoSection1 from "@/app/services/[slug]/newcompoennts/InfoSection1";
 import InfoSection2 from "@/app/services/[slug]/newcompoennts/InfoSection2";
 import InfoSection3 from "@/app/services/[slug]/newcompoennts/InfoSection3";
-import FaqSection from "@/app/services/[slug]/newcompoennts/FaqSection";
+import FaqSection from "@/components/common/FaqSection";
 import InfoSection4 from "@/app/services/[slug]/newcompoennts/InfoSection4";
 // import { ServiceMeta, servicesMetaEs } from "@/_lib_back/servicesMeta";
 

@@ -1,4 +1,4 @@
-import PricingList from "./_component/PricingList";
+import PricingList from "./components/PricingList";
 
 export default function Pricing() {
   return (

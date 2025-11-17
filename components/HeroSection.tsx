@@ -85,14 +85,14 @@ const HeroSection: React.FC<HeroSectionProps> = ({
 }) => {
   return (<>
     <section
-      className="flex md:flex-row flex-col h-auto py-5 px-4 align-center shadow-md rounded-lg rounded-bl-none"
+      className="flex md:flex-row flex-col h-auto py-5 px-4 xl:px-0 align-center shadow-md rounded-lg rounded-bl-none"
       style={{
         alignItems: "center",
         background:
           "linear-gradient(135deg, #001731 0%, #00426F 50%, #0D76B1 100%)",
       }}
     >
-      <div className="w-full px-4">
+      <div className="w-full max-w-6xl 2xl:max-w-[1488px] mx-auto px-4 xl:px-0">
         <div className="flex flex-col md:flex-row gap-8 w-full">
           {/* Left side text */}
           <div
@@ -208,7 +208,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
               "linear-gradient(135deg, #001731 0%, #00426F88 50%, #0D76B100 100%)",
           }}
           >
-          <div className="flex items-center gap-2 text-xs">
+          <div className="flex items-center gap-2 text-xs max-w-6xl 2xl:max-w-[1488px] mx-auto">
             {breadcrumbs.map((breadcrumb, index) => (
               <React.Fragment key={index}>
                 {Boolean(index) && (
