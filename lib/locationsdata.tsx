@@ -56,12 +56,8 @@ interface LocationItem {
   
     whyChooseSection: {
       title: string;
-      desc: string;
-      cards: {
-        icon: React.ReactNode;
-        color: string;
-        desc: string;
-      }[];
+      desc?: string;
+      cards: string[];
     };
   
     partnerSection: {
@@ -97,36 +93,36 @@ const locationData:LocationItem[] = [
       
         "whysection": {
           "title": "Why U.S. Companies Need Professional IT Support",
-          "desc": "Modern businesses in the United States face increasing technology challenges. Expert IT support ensures security, compliance, efficiency, and seamless operations across locations.",
+          "desc": "",
           "list": [
             {
               "icon": <LuShield size={30} />,
-              "title": "Rising Cybersecurity Risks",
-              "desc": "Ransomware, phishing, and data breaches can disrupt operations and result in major financial loss.",
+              "title": "Cybersecurity risks are rising",
+              "desc": "ransomware, phishing, and data breaches can disrupt any organization",
               "color": "from-sky-600 to-blue-500"
             },
             {
               "icon": <LuFileCheck size={30} />,
-              "title": "Strict Compliance Requirements",
-              "desc": "Industries must comply with HIPAA, SOC 2, PCI DSS and other U.S. regulatory standards.",
+              "title": "Compliance requirements",
+              "desc": "HIPAA, SOC 2, and PCI DSS demand secure and well-managed systems.",
               "color": "from-indigo-500 to-purple-500"
             },
             {
               "icon": <LuLaptop size={30} />,
-              "title": "Hybrid & Remote Work",
-              "desc": "Teams need secure, uninterrupted access to networks and data from anywhere.",
+              "title": "Hybrid and remote work",
+              "desc": "teams need secure, uninterrupted access from anywhere.",
               "color": "from-emerald-500 to-green-600"
             },
             {
               "icon": <LuChartColumnIncreasing size={30} />,
-              "title": "Cost & Productivity Optimization",
-              "desc": "Outsourced IT support reduces overhead and improves operational efficiency.",
+              "title": "Cost and productivity pressures",
+              "desc": "outsourced IT reduces overhead while improving efficiency.",
               "color": "from-orange-500 to-red-500"
             },
             {
               "icon": <LuClock size={30} />,
               "title": "24/7 Availability",
-              "desc": "Round-the-clock monitoring and support ensure uptime for U.S. businesses.",
+              "desc": "U.S. businesses require constant uptime to meet customer expectations.",
               "color": "from-yellow-500 to-amber-600"
             }
           ]
@@ -134,17 +130,17 @@ const locationData:LocationItem[] = [
       
         "coreSection": {
           "title": "Our Core IT Support Services in the U.S.",
-          "desc": "We provide comprehensive IT services designed to support U.S. businesses with reliability, scalability, and security.",
+          "desc": "",
           "cards": [
             {
               "title": "Managed IT Services",
-              "desc": "Proactive monitoring, maintenance, and patching to prevent downtime and keep systems optimized.",
+              "desc": "<p>Proactive monitoring, maintenance, and patching to prevent issues before they disrupt your operations. Our managed services keep your network, servers, and endpoints <strong>optimized and secure</strong> at all times.</p>",
               "color": "from-blue-600 to-indigo-600",
               "icon": <LuSettings2 size={28} />
             },
             {
               "title": "24/7 Help Desk & Remote Support",
-              "desc": "Instant assistance for system crashes, errors, and technical issues to maintain productivity.",
+              "desc": "<p>Immediate assistance for software issues, system crashes, or user problems. We provide <strong>round-the-clock support</strong> to minimize downtime and keep employees productive</p>",
               "color": "from-green-600 to-emerald-600",
               "icon": <LuHeadphones size={28} />
             },
@@ -195,33 +191,12 @@ const locationData:LocationItem[] = [
       
         "whyChooseSection": {
           "title": "Why Choose ITSupport.net.in?",
-          "desc": "With over 15 years of supporting U.S. businesses, we deliver reliable, secure, and cost-effective IT solutions.",
           "cards": [
-            {
-              "icon": <LuClock size={30} />,
-              "color": "from-blue-500 to-sky-500",
-              "desc": "Certified engineers available 24/7 for remote and onsite support."
-            },
-            {
-              "icon": <LuChartColumnIncreasing size={30} />,
-              "color": "from-green-500 to-teal-500",
-              "desc": "Affordable, scalable plans for SMBs and enterprises."
-            },
-            {
-              "icon": <LuBackpack size={30} />,
-              "color": "from-purple-500 to-pink-500",
-              "desc": "Expertise in compliance-heavy industries like healthcare, finance, and retail."
-            },
-            {
-              "icon": <LuLightbulb size={30} />,
-              "color": "from-orange-500 to-red-500",
-              "desc": "Fast response and efficient problem resolution with minimal downtime."
-            },
-            {
-              "icon": <LuMapPin size={30} />,
-              "color": "from-amber-500 to-yellow-500",
-              "desc": "Proven service excellence with clients across major U.S. regions."
-            }
+            "Certified engineers available 24/7",
+            "Affordable, scalable plans for SMBs and enterprises.",
+            "Expertise in compliance-driven industries (healthcare, finance, retail)",
+            "Fast issue resolution with minimal downtime",
+            "Proven track record supporting U.S. businesses for over 15 years"
           ]
         },
       
@@ -375,34 +350,11 @@ const locationData:LocationItem[] = [
           "desc":
             "With over 15 years of experience supporting UK businesses, we provide dependable, secure, and cost-effective IT solutions.",
           "cards": [
-            {
-              "icon": <LuClock size={30} />,
-              "color": "from-blue-500 to-sky-500",
-              "desc": "Certified IT engineers available 24/7 for remote and onsite support."
-            },
-            {
-              "icon": <LuChartColumnIncreasing size={30} />,
-              "color": "from-green-500 to-teal-500",
-              "desc": "Affordable and scalable plans for SMEs and large enterprises."
-            },
-            {
-              "icon": <LuBackpack size={30} />,
-              "color": "from-purple-500 to-pink-500",
-              "desc":
-                "Industry-specific expertise for finance, healthcare, retail, and manufacturing sectors."
-            },
-            {
-              "icon": <LuLightbulb size={30} />,
-              "color": "from-orange-500 to-red-500",
-              "desc":
-                "Fast response and efficient issue resolution with minimal business disruption."
-            },
-            {
-              "icon": <LuMapPin size={30} />,
-              "color": "from-amber-500 to-yellow-500",
-              "desc":
-                "A proven track record supporting businesses across major UK regions."
-            }
+            "Certified engineers available 24/7",
+            "Affordable, scalable plans for SMBs and enterprises.",
+            "Expertise in compliance-driven industries (healthcare, finance, retail)",
+            "Fast issue resolution with minimal downtime",
+            "Proven track record supporting U.K. businesses for over 15 years"
           ]
         },
       
@@ -557,32 +509,11 @@ const locationData:LocationItem[] = [
           "desc":
             "With over 15 years of experience supporting Indian businesses, we provide secure, scalable, and cost-effective IT solutions.",
           "cards": [
-            {
-              "icon": <LuClock size={30} />,
-              "color": "from-blue-500 to-sky-500",
-              "desc": "Dedicated IT engineers available 24/7 for remote and onsite support."
-            },
-            {
-              "icon": <LuChartColumnIncreasing size={30} />,
-              "color": "from-green-500 to-teal-500",
-              "desc": "Cost-effective and scalable plans for startups, SMEs, and enterprises."
-            },
-            {
-              "icon": <LuBackpack size={30} />,
-              "color": "from-purple-500 to-pink-500",
-              "desc":
-                "Expertise across IT, BFSI, healthcare, manufacturing, and other major Indian sectors."
-            },
-            {
-              "icon": <LuLightbulb size={30} />,
-              "color": "from-orange-500 to-red-500",
-              "desc": "Quick response times and fast issue resolution with minimal downtime."
-            },
-            {
-              "icon": <LuMapPin size={30} />,
-              "color": "from-amber-500 to-yellow-500",
-              "desc": "A trusted IT partner for businesses across India for more than 15 years."
-            }
+            "Certified engineers available 24/7",
+            "Affordable, scalable plans for SMBs and enterprises.",
+            "Expertise in compliance-driven industries (healthcare, finance, retail)",
+            "Fast issue resolution with minimal downtime",
+            "Trusted by Indian businesses for over 15 years"
           ]
         },
       
@@ -737,33 +668,11 @@ const locationData:LocationItem[] = [
           "desc":
             "We combine global IT expertise with deep Australian market experience, delivering secure, scalable, and cost-effective solutions.",
           "cards": [
-            {
-              "icon": <LuClock size={30} />,
-              "color": "from-blue-500 to-sky-500",
-              "desc": "Dedicated IT teams available 24/7 for remote and onsite support."
-            },
-            {
-              "icon": <LuChartColumnIncreasing size={30} />,
-              "color": "from-green-500 to-teal-500",
-              "desc": "Affordable service plans tailored for SMEs and large enterprises."
-            },
-            {
-              "icon": <LuBackpack size={30} />,
-              "color": "from-purple-500 to-pink-500",
-              "desc":
-                "Expertise across finance, healthcare, education, mining, and retail sectors."
-            },
-            {
-              "icon": <LuLightbulb size={30} />,
-              "color": "from-orange-500 to-red-500",
-              "desc": "Fast issue resolution and proactive monitoring to reduce downtime."
-            },
-            {
-              "icon": <LuMapPin size={30} />,
-              "color": "from-amber-500 to-yellow-500",
-              "desc":
-                "A trusted partner for businesses across Australia's major cities and regions."
-            }
+            "Certified engineers available 24/7",
+            "Affordable, scalable plans for SMBs and enterprises.",
+            "Expertise in compliance-driven industries (healthcare, finance, retail)",
+            "Fast issue resolution with minimal downtime",
+            "Trusted partner for businesses across multiple industries"
           ]
         },
       
@@ -918,34 +827,11 @@ const locationData:LocationItem[] = [
           "desc":
             "We combine expertise in German compliance with global IT standards to deliver secure, efficient, and cost-effective solutions for all business types.",
           "cards": [
-            {
-              "icon": <LuClock size={30} />,
-              "color": "from-blue-500 to-sky-500",
-              "desc": "24/7 IT support with multilingual engineering teams."
-            },
-            {
-              "icon": <LuChartColumnIncreasing size={30} />,
-              "color": "from-green-500 to-teal-500",
-              "desc": "Flexible and affordable plans for SMEs and large enterprises."
-            },
-            {
-              "icon": <LuBackpack size={30} />,
-              "color": "from-purple-500 to-pink-500",
-              "desc":
-                "Expertise across finance, manufacturing, logistics, and technology sectors."
-            },
-            {
-              "icon": <LuLightbulb size={30} />,
-              "color": "from-orange-500 to-red-500",
-              "desc":
-                "Proactive monitoring and fast problem resolution for maximum uptime."
-            },
-            {
-              "icon": <LuMapPin size={30} />,
-              "color": "from-amber-500 to-yellow-500",
-              "desc":
-                "Strong presence supporting businesses across Germany's major industries and regions."
-            }
+            "Certified engineers available 24/7",
+            "Affordable, scalable plans for SMBs and enterprises.",
+            "Expertise in compliance-driven industries (healthcare, finance, retail)",
+            "Fast issue resolution with minimal downtime",
+            "Trusted partner for businesses across multiple industries"
           ]
         },
       

@@ -14,7 +14,7 @@ export default function OurCoreServices() {
 
   return (
     <section id="services" className="py-16 px-4 sm:px-6 bg-[#f4f7fa]">
-      <div className="max-w-6xl mx-auto" style={{ opacity: 1 }}>
+      <div className="max-w-6xl 2xl:max-w-[1488px] mx-auto" style={{ opacity: 1 }}>
         <h2
           className="text-3xl sm:text-4xl font-bold text-center mb-12"
           style={{ opacity: 1, transform: "none" }}
