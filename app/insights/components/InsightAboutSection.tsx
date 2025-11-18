@@ -7,9 +7,9 @@ export default function InsightAboutSection() {
   return (
     <section
       aria-labelledby="exclusive-tech-heading"
-      className="w-full py-16  bg-white"
+      className="w-full pt-8"
     >
-      <div className="mx-auto max-w-7xl 2xl:max-w-[1488px] px-4 lg:px-6 xl:px-0 grid lg:grid-cols-2 gap-12 items-center">
+      <div className="mx-auto max-w-7xl 2xl:max-w-[1488px] px-4 lg:px-6 xl:px-0 lg:grid lg:grid-cols-2 gap-12 items-center">
         
         {/* LEFT IMAGES */}
         

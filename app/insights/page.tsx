@@ -7,6 +7,10 @@ import { useTranslations } from "next-intl";
 import HeroInformattionPage from "@/components/common/HeroInformattionPage";
 import FaqSection from "@/components/common/FaqSection";
 import InsightAboutSection from "./components/InsightAboutSection";
+import InsightBlogsSection from "./components/InsightBlogsSection";
+import InsightCaseStudySection from "./components/InsightCaseStudySection";
+import InsightNewsSection from "./components/InsightNewsSec";
+import InsightMattersSection from "./components/InsightMattersSection";
 
 const faqs = [
   {
@@ -51,7 +55,10 @@ export default function Insights() {
     />
 
     <InsightAboutSection/>
-    
+    <InsightBlogsSection/>
+    <InsightCaseStudySection/>
+    <InsightNewsSection/>
+    <InsightMattersSection/>
     <FaqSection
       faqs={
         faqs
