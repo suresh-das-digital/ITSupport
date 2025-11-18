@@ -16,7 +16,7 @@ type GradientCardSectionProps = {
 export default function GradientCardSection({ title, intro, footerIntro, cards }:GradientCardSectionProps) {
   return (
     <section className="py-16 px-4 sm:px-6 bg-white">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl 2xl:max-w-[1488px] mx-auto">
         <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
           {title}
         </h2>
