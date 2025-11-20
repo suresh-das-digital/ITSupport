@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import { Check } from "lucide-react";
+import Link from "next/link";
+import { LuArrowBigRight, LuArrowRight } from "react-icons/lu";
 
 export default function InsightBlogsSection() {
   return (
@@ -83,7 +85,13 @@ export default function InsightBlogsSection() {
           We write with<strong>clarity, accuracy, and relevance,</strong> ensuring each post delivers 
           <strong> real value </strong> to your business operations and technology management.
           </p>
+          
 
+          <Link href={"/insights/blog"}>
+            <button className="mt-6 flex items-center bg-gradient-to-br from-blue-500 to-purple-500 text-white font-semibold px-6 py-3 rounded-lg group cursor-pointer">
+              Visit Our Blogs <LuArrowRight size={25} className="ml-1 group-hover:translate-x-2 transition-all duration-300"/>
+            </button>
+          </Link>
           
         </div>
         

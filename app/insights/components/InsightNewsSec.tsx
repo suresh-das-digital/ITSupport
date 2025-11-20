@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import { Check } from "lucide-react";
+import Link from "next/link";
+import { LuArrowRight } from "react-icons/lu";
 
 export default function InsightNewsSection() {
   return (
@@ -78,7 +80,11 @@ export default function InsightNewsSection() {
           <strong> shifts in industry regulations,</strong> and learn how they might affect your business. 
           </p>
 
-          
+          <Link href={"/insights/news"}>
+            <button className="mt-6 flex items-center bg-gradient-to-br from-blue-500 to-purple-500 text-white font-semibold px-6 py-3 rounded-lg group cursor-pointer">
+              Visit News <LuArrowRight size={25} className="ml-1 group-hover:translate-x-2 transition-all duration-300"/>
+            </button>
+          </Link>
         </div>
         
       </div>
