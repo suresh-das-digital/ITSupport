@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import { Check } from "lucide-react";
+import { LuArrowBigRight, LuArrowRight } from "react-icons/lu";
+import Link from "next/link";
 
 export default function InsightCaseStudySection() {
   return (
@@ -68,7 +70,12 @@ export default function InsightCaseStudySection() {
           <p className="mt-4 text-gray-600 ">
           Our case studies are more than just success stories—they’re <strong>proof of our capability, innovation, and commitment </strong> to excellence.
           </p>
-
+          
+          <Link href={"/insights/case-studies"}>
+            <button className="mt-6 flex items-center bg-gradient-to-br from-blue-500 to-purple-500 text-white font-semibold px-6 py-3 rounded-lg group cursor-pointer">
+              Visit Case Study <LuArrowRight size={25} className="ml-1 group-hover:translate-x-2 transition-all duration-300"/>
+            </button>
+          </Link>
           
         </div>
         <div className="relative flex flex-col gap-6">

@@ -39,9 +39,7 @@ export default function LocationInfoSection({title, desc, list }: props) {
             </div>
           ))}
         </div>
-        {/* <p className="text-gray-500 mb-10 text-xl mt-4 text-center">
-        Our <strong>certified IT professionals</strong> use the latest tools and industry best practices to ensure <strong>maximum uptime, security, and efficiency.</strong>
-        </p> */}
+        
       </div>
     </section>
   );

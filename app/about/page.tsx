@@ -21,7 +21,7 @@ const OurCoreValues = dynamic(
 );
 
 
-var faqs = [
+const faqs = [
   {
     label: "What industries do you serve?",
     desc: "We provide IT support for finance, healthcare, logistics, construction, manufacturing, retail, travel, hospitality, and more. Our solutions are tailored to meet industry-specific compliance and performance needs.",
