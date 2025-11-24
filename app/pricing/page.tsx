@@ -3,6 +3,9 @@ import PricingList from "./components/PricingList";
 import PricingAbout from "./components/PricingAbout";
 import FaqSection from "@/components/common/FaqSection";
 import PricingWhyChooseSection from "./components/PricingWhyChooseSection";
+import PricingPlans from "./components/PricingPlans";
+import PricingDeliverValue from "./components/PricingDeliverValue";
+import PricingAdditionalServices from "./components/PricingAdditionalServices";
 
 
 const faqs = [
@@ -45,6 +48,9 @@ export default function Pricing() {
       <PricingAbout/>
       {/* <PricingList/> */}
       <PricingWhyChooseSection/>
+      <PricingPlans/>
+      <PricingDeliverValue/>
+      <PricingAdditionalServices/>
       <FaqSection
         faqs={faqs}
       />
