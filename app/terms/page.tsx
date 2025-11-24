@@ -18,8 +18,8 @@ export default function TermsPage() {
   const basicMarkup = getBasicMarkup(t);
 
   return (
-    <>
-      <Typography variant="h2" className="text-left mt-5 mb-2">{t("pageHeading")}</Typography>
+    <div className="max-w-6xl 2xl:max-w-[1488px] mx-auto bg-white px-4 xl:px-0 py-5">
+      <Typography variant="h2" className="text-center mt-8 mb-2">{t("pageHeading")}</Typography>
       
       <PageCard noImage serial={boxIndex+=1}>
         <div className="italic flex w-full">{t("effectiveDateTitle")} <span className="font-bold">{t("effectiveDate")}</span></div>
@@ -120,6 +120,6 @@ export default function TermsPage() {
         </PageSubSection>
       </PageCard>
 
-    </>
+    </div>
   );
 }

@@ -1,11 +1,11 @@
 // app/components/SupportRateCard.tsx
 "use client";
 
-import { useMemo, useState } from "react";
-import Image from "next/image";
+import React, { useMemo, useState } from "react";
 
 // Data model
 type Segment = "All" | "Individual" | "SMB" | "Enterprise";
+
 type Row = {
   id: string;
   service: string;
@@ -30,7 +30,7 @@ const rows: Row[] = [
 
 const segments: Segment[] = ["All", "Individual", "SMB", "Enterprise"];
 
-export default function PricingList() {
+export default function SupportRateCard() {
   const [segment, setSegment] = useState<Segment>("All");
 
   const filtered = useMemo(
@@ -40,32 +40,39 @@ export default function PricingList() {
 
   return (
     <section
-      className="relative isolate overflow-hidden border border-white/10 bg-gradient-to-br from-slate-900 via-gray-900 to-cyan-400/60 py-10"
+      className="relative isolate w-full overflow-hidden border border-white/10 bg-gradient-to-br from-slate-900 via-gray-900 to-cyan-400/60 px-2 sm:px-6 py-8 sm:py-10"
       aria-labelledby="ratecard-title"
       role="region"
     >
-      {/* Decorative glow (aria-hidden) */}
+      {/* Decorative glow */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 -top-16 h-36 blur-2xl"
+        className="pointer-events-none absolute inset-x-0 -top-16 h-24 sm:h-36 blur-2xl"
       >
-        <div className="mx-auto h-full w-3/4 rounded-full bg-gradient-to-r from-purple-500/40 via-indigo-500/40 to-cyan-500/40" />
+        <div className="mx-auto h-full w-11/12 sm:w-3/4 rounded-full bg-gradient-to-r from-purple-500/40 via-indigo-500/40 to-cyan-500/40" />
       </div>
 
-      <div className="mb-4 sm:mb-6 md:mb-8 flex items-center gap-3 max-w-6xl 2xl:max-w-[1488px] mx-auto">
-        <div className="grid h-10 w-10 place-items-center rounded-xl bg-white/10 text-xs font-semibold text-white">
+      {/* Header row */}
+      <div className="relative mb-4 sm:mb-6 flex items-center gap-3 sm:gap-4 max-w-6xl 2xl:max-w-[1488px] mx-auto">
+        <div className="grid h-8 w-8 sm:h-10 sm:w-10 place-items-center rounded-xl bg-white/10 text-xs font-semibold text-white">
           AI
         </div>
         <div className="min-w-0">
-          <h2 id="ratecard-title" className="truncate text-lg font-semibold text-white">
+          <h2
+            id="ratecard-title"
+            className="truncate text-base sm:text-lg font-semibold text-white"
+          >
             CyberRadar Systems — Support Rate Card
           </h2>
-          <p className="text-sm text-slate-300">
-            AI‑assisted, animated price table — hourly, project & monthly plans
+          <p className="text-xs sm:text-sm text-slate-300">
+            AI‑assisted price table — hourly, project & monthly plans
           </p>
         </div>
         <div className="ml-auto hidden sm:flex items-center gap-2">
-          <span className="inline-flex h-3 w-3 rounded-full bg-cyan-400 animate-pulse" aria-hidden="true" />
+          <span
+            className="inline-flex h-3 w-3 rounded-full bg-cyan-400 animate-pulse"
+            aria-hidden="true"
+          />
           <span className="text-sm text-slate-200">AI‑assisted</span>
           <button
             type="button"
@@ -77,18 +84,24 @@ export default function PricingList() {
       </div>
 
       {/* Filters */}
-      <div className="mb-3 flex flex-wrap items-center gap-2 text-sm text-slate-200 max-w-6xl 2xl:max-w-[1488px] mx-auto overflow-hidden">
+      <div className="mb-3 flex flex-wrap items-center gap-2 text-xs sm:text-sm text-slate-200 max-w-6xl 2xl:max-w-[1488px] mx-auto">
         <span className="opacity-80">Showing:</span>
-        <div role="tablist" aria-label="Customer segment">
+        <div
+          role="tablist"
+          aria-label="Customer segment"
+          className="flex flex-wrap sm:flex-row gap-1 w-full sm:w-auto mb-2"
+        >
           {segments.map(s => (
             <button
               key={s}
               role="tab"
+              type="button"
               aria-selected={segment === s}
-              aria-controls="ratecard-table"
+              // Avoid aria-controls pointing to the whole table; keep it simple
               onClick={() => setSegment(s)}
               className={[
-                "mr-1 rounded-full px-3 py-1 transition-colors",
+                "rounded-full px-3 py-1 transition-colors",
+                "text-xs sm:text-sm",
                 segment === s
                   ? "bg-slate-700 text-white"
                   : "bg-white/5 text-slate-200 hover:bg-white/10",
@@ -101,11 +114,11 @@ export default function PricingList() {
       </div>
 
       {/* Table wrapper with responsive overflow */}
-      <div className="relative rounded-xl border border-white/10 bg-slate-900/40 backdrop-blur max-w-6xl 2xl:max-w-[1488px] mx-auto">
+      <div className="relative rounded-xl border border-white/10 bg-slate-900/40 backdrop-blur w-11/12 sm:max-w-6xl 2xl:max-w-[1488px] mx-auto overflow-hidden">
         <div className="overflow-x-auto">
           <table
             id="ratecard-table"
-            className="min-w-[720px] w-full border-separate border-spacing-0"
+            className="min-w-0 w-full text-[10px] sm:text-sm"
           >
             <caption className="sr-only">
               Support rates by service, segment, hourly, project, and monthly plans
@@ -123,7 +136,11 @@ export default function PricingList() {
               {filtered.map((r, i) => (
                 <tr
                   key={r.id}
-                  className={i % 2 ? "bg-white/0 hover:bg-white/25 transition-all duration-100" : "bg-white/[0.02] hover:bg-white/25 transition-all duration-100"}
+                  className={
+                    i % 2
+                      ? "bg-white/0 hover:bg-white/20 transition-colors duration-100"
+                      : "bg-white/[0.03] hover:bg-white/20 transition-colors duration-100"
+                  }
                 >
                   <Td>{r.service}</Td>
                   <Td>
@@ -160,7 +177,7 @@ export default function PricingList() {
       <div className="mt-4 sm:hidden">
         <button
           type="button"
-          className="w-full rounded-lg bg-indigo-500 px-4 py-2.5 text-sm font-medium text-white hover:bg-indigo-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-300 focus-visible:ring-offset-slate-900"
+          className="w-11/12 rounded-lg bg-indigo-500 px-4 py-2.5 text-sm font-medium text-white hover:bg-indigo-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-300 focus-visible:ring-offset-slate-900"
         >
           Request Quote
         </button>
@@ -181,7 +198,7 @@ function Th({
     <th
       scope="col"
       className={[
-        "px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-200",
+        "px-3 sm:px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-slate-200",
         numeric ? "text-right" : "",
       ].join(" ")}
     >
@@ -200,7 +217,7 @@ function Td({
   return (
     <td
       className={[
-        "px-4 py-4 align-middle text-sm text-slate-100",
+        "px-3 sm:px-4 py-3 align-middle text-xs sm:text-sm text-slate-100",
         numeric ? "text-right" : "",
       ].join(" ")}
     >
@@ -211,7 +228,7 @@ function Td({
 
 function Pill({ children }: { children: React.ReactNode }) {
   return (
-    <span className="inline-flex rounded-full bg-white/5 px-2.5 py-1 text-sm text-white ring-1 ring-inset ring-white/10">
+    <span className="inline-flex rounded-full bg-white/5 px-2.5 py-1 text-xs sm:text-sm text-white ring-1 ring-inset ring-white/10">
       {children}
     </span>
   );
