@@ -18,8 +18,8 @@ export default function PrivacyPage() {
   const t = useTranslations('PrivacyPage');
   
   return (
-    <>
-      <Typography variant="h2" className="text-left mt-5 mb-2">Privacy Policy - ITSupport.net.in</Typography>
+    <div className="max-w-6xl 2xl:max-w-[1488px] mx-auto bg-white px-4 xl:px-0 py-5">
+      <Typography variant="h2" className="text-center mt-8 mb-2">Privacy Policy - ITSupport.net.in</Typography>
       
       <PageCard noImage serial={boxIndex+=1}>
         <div className="italic flex w-full">Effective date: <span className="font-bold">August 27, 2025</span></div>
@@ -139,6 +139,6 @@ export default function PrivacyPage() {
           <span>{parse(t('changesDesc'))}</span>
         </PagePara>
       </PageCard>
-    </>
+    </div>
   );
 }

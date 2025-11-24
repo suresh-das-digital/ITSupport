@@ -17,7 +17,7 @@ export default function Footer() {
     locale === "es" ? footerServicesLinksEs : footerServicesLinks;
 
   return (
-    <footer className="flex flex-col lg:items-center justify-center w-[100%] bg-gray-900 text-white">
+    <footer className="flex w-full flex-col lg:items-center justify-center bg-gray-900 text-white">
       <div className="py-12 px-4 sm:px-6 md:px-6 lg:px-6 xl:px-40 max-w-[1920px]">
         <div className="grid grid-cols-1 lg:grid-cols-6 gap-5">
           <div className="lg:col-span-1 flex flex-col md:items-start">
@@ -142,12 +142,16 @@ export default function Footer() {
               </span>
             </div>
             <div className="flex space-x-6 text-sm">
+              <Link href="/privacy">
               <span className="text-gray-400 hover:text-sky-400 transition-colors cursor-pointer">
                 {t("privacyPolicy")}
               </span>
+              </Link>
+              <Link href="/terms">
               <span className="text-gray-400 hover:text-sky-400 transition-colors cursor-pointer">
                 {t("termsOfService")}
               </span>
+              </Link>
               <Link href="/cookies">
               <span className="cursor-pointer text-gray-400 hover:text-sky-400 transition-colors">
                 {t("cookiePolicy")}
