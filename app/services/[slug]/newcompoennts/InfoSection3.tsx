@@ -129,7 +129,7 @@ export default function InfoSection3({title, subTitle, services}:{
                     &&
                     <div className="mb-6">
                     {
-                        s.issues[0].options.map((item:any, index:number)=>{
+                        s.issues[0].options?.map((item:any, index:number)=>{
                             return(
                                 <div key={index} className="flex flex-col mt-1">
                                     <p className="text-base font-bold text-gray-900">{item.title}</p>

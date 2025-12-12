@@ -53,9 +53,7 @@ export default function ServiceDetail({params}: any) {
 
   let service: Service = {};
 
-  // if (locale === "es") {
-  //   service = serviceDetailDataEs.find((s) => s.slug === decodedString) || {};
-  // } else {
+  
   service = servicesDetailData.find((s) => s.slug === decodedString) || {};
   // }
   const menuItem = servicesMenuItem.find((s) => s.href.includes(decodedString));
