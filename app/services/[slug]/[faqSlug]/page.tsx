@@ -1,5 +1,7 @@
 // app/services/[serviceSlug]/[faqSlug]/page.tsx
 
+export const dynamic = 'force-dynamic';
+
 import Link from 'next/link';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
