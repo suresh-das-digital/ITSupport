@@ -37,6 +37,7 @@ const nextConfig: NextConfig = {
 
     return config;
   },
+  trailingSlash: true,
   reactStrictMode: true,
 };
 
