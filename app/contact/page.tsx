@@ -1,7 +1,6 @@
-import { getMetaData } from "@/lib/seo";
 import Script from "next/script";
 
-export const generateMetadata = getMetaData('contact')
+// export const generateMetadata = getMetaData('contact')
 
 export const metedata = {
   title: "Contact IT Support – Remote Technical Assistance & Services", // [cite: 6]
